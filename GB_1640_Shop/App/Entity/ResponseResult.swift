@@ -9,4 +9,5 @@ import Foundation
 
 struct ResponseResult: Codable {
     let result: Int
+    let userMessage: String?
 }

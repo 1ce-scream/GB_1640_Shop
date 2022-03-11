@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func sendTestLogOutRequest() {
         let request = requestFactory.makeLogOutRequestFactory()
         
-        request.logOut(userId: 1) { response in
+        request.logOut(userID: 1) { response in
             switch response.result {
             case let .success(logOut):
                 print("testLogOut ", logOut)

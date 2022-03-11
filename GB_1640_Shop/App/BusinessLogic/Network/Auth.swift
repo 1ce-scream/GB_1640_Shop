@@ -31,9 +31,9 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "login.json"
-        
         let login: String
         let password: String
+        
         var parameters: Parameters? {
             return [
                 "username": login,
@@ -103,22 +103,22 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "logout.json"
-        let userId: Int
+        let userID: Int
         
         var parameters: Parameters? {
             return [
-                "id_user": userId,
+                "id_user": userID,
             ]
         }
     }
 }
 
 extension Auth: LogOutRequestFactory {
-    func logOut(userId: Int,
+    func logOut(userID: Int,
                 completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = LogOut(baseUrl: baseUrl,
-                                  userId: userId)
+                                  userID: userID)
         
         request(request: requestModel,
                 completionHandler: completionHandler)
