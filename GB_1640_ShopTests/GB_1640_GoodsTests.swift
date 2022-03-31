@@ -10,14 +10,16 @@ import XCTest
 
 class GB_1640_GoodsTests: XCTestCase {
 
-    let requestFactory = RequestFactory()
     let timeout: TimeInterval = 5
+    var requestFactory: RequestFactory!
     
     override func setUpWithError() throws {
+        requestFactory = RequestFactory()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
+        requestFactory = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
