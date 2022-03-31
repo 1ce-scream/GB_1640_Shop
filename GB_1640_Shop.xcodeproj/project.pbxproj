@@ -27,7 +27,6 @@
 		FED7521F27DA241400E8AC56 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FED7521E27DA241400E8AC56 /* Alamofire */; };
 		FED7522127DA265500E8AC56 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522027DA265500E8AC56 /* AbstractRequestFactory.swift */; };
 		FED7522327DA26D700E8AC56 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522227DA26D700E8AC56 /* RequestRouter.swift */; };
-		FED7522627DA298500E8AC56 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522527DA298500E8AC56 /* LoginResult.swift */; };
 		FED7522827DA29D700E8AC56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522727DA29D700E8AC56 /* User.swift */; };
 		FED7522B27DA2A2100E8AC56 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522A27DA2A2100E8AC56 /* AuthRequestFactory.swift */; };
 		FED7522D27DA2A9000E8AC56 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522C27DA2A9000E8AC56 /* Auth.swift */; };
@@ -81,7 +80,6 @@
 		FED7521B27DA23A000E8AC56 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		FED7522027DA265500E8AC56 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		FED7522227DA26D700E8AC56 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
-		FED7522527DA298500E8AC56 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		FED7522727DA29D700E8AC56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FED7522A27DA2A2100E8AC56 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		FED7522C27DA2A9000E8AC56 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 		FE399C6627D0CAF2002C9FA1 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				FED7522527DA298500E8AC56 /* LoginResult.swift */,
 				FED7522727DA29D700E8AC56 /* User.swift */,
 				FED7523227DA371D00E8AC56 /* ResponseResult.swift */,
 				FE45B08F27F09BD800E9F875 /* Good.swift */,
@@ -439,7 +436,6 @@
 				FED7522327DA26D700E8AC56 /* RequestRouter.swift in Sources */,
 				FED7523927DA420D00E8AC56 /* ViewController.swift in Sources */,
 				FE399C3527D0C6E0002C9FA1 /* AppDelegate.swift in Sources */,
-				FED7522627DA298500E8AC56 /* LoginResult.swift in Sources */,
 				FED7522D27DA2A9000E8AC56 /* Auth.swift in Sources */,
 				FE45B09827F09E6D00E9F875 /* Goods.swift in Sources */,
 				FED7522827DA29D700E8AC56 /* User.swift in Sources */,

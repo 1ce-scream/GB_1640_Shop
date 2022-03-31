@@ -27,7 +27,7 @@ class GB_1640_AuthTests: XCTestCase {
         var requestResult = 0
         
         request.login(userName: "Somebody",
-                      password: "mypassword") { response in
+                      password: "Password") { response in
             
             switch response.result {
             case .success(let result):

@@ -12,7 +12,7 @@ class Auth: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://ancient-ravine-42236.herokuapp.com/")!
     
     init(errorParser: AbstractErrorParser,
          sessionManager: Session,
@@ -29,8 +29,8 @@ class Auth: AbstractRequestFactory {
 extension Auth {
     struct Login: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "login.json"
+        let method: HTTPMethod = .post
+        let path: String = "login"
         let login: String
         let password: String
         
@@ -46,7 +46,7 @@ extension Auth {
 extension Auth: AuthRequestFactory {
     func login(userName: String,
                password: String,
-               completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
+               completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = Login(baseUrl: baseUrl,
                                  login: userName,
@@ -62,8 +62,8 @@ extension Auth: AuthRequestFactory {
 extension Auth {
     struct Registration: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
+        let method: HTTPMethod = .post
+        let path: String = "register"
         let userID: Int
         let login: String
         let password: String
@@ -101,8 +101,8 @@ extension Auth: RegistrationRequestFactory {
 extension Auth {
     struct LogOut: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "logout.json"
+        let method: HTTPMethod = .post
+        let path: String = "logout"
         let userID: Int
         
         var parameters: Parameters? {
@@ -130,8 +130,8 @@ extension Auth: LogOutRequestFactory {
 extension Auth {
     struct ChangeUserData: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
+        let method: HTTPMethod = .post
+        let path: String = "changeUserData"
         let userID: Int
         let login: String
         let password: String

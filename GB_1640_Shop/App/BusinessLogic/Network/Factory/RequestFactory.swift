@@ -54,11 +54,15 @@ class RequestFactory {
     
     func makeGoodsCatalogRequestFactory() -> GoodsCatalogRequestFactory {
         let errorParser = makeErrorParser()
-        return Goods(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return Goods(errorParser: errorParser,
+                     sessionManager: commonSession,
+                     queue: sessionQueue)
     }
     
     func makeGoodRequestFactory() -> GoodRequestFactory {
         let errorParser = makeErrorParser()
-        return Goods(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return Goods(errorParser: errorParser,
+                     sessionManager: commonSession,
+                     queue: sessionQueue)
     }
 }

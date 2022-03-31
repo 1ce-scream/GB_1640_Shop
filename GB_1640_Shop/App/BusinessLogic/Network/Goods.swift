@@ -12,7 +12,7 @@ class Goods: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://ancient-ravine-42236.herokuapp.com/")!
     
     init(errorParser: AbstractErrorParser,
          sessionManager: Session,
@@ -28,15 +28,15 @@ class Goods: AbstractRequestFactory {
 extension Goods {
     struct GetGoodsCatalog: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "catalogData.json"
+        let method: HTTPMethod = .post
+        let path: String = "getGoodsCatalog"
         
         let pageNumber: Int
         let categoryId: Int
         var parameters: Parameters? {
             return [
-                "page_number": pageNumber,
-                "id_category": categoryId,
+                "pageNumber": pageNumber,
+                "categoryId": categoryId,
             ]
         }
     }
@@ -45,7 +45,7 @@ extension Goods {
 extension Goods: GoodsCatalogRequestFactory {
     func getGoodsCatalog(pageNumber: Int,
                          categoryId: Int,
-                         completionHandler: @escaping (AFDataResponse<[GoodsCatalog]>) -> Void) {
+                         completionHandler: @escaping (AFDataResponse<GoodsCatalog>) -> Void) {
         
         let requestModel = GetGoodsCatalog(baseUrl: baseUrl,
                                            pageNumber: pageNumber,
@@ -58,13 +58,13 @@ extension Goods: GoodsCatalogRequestFactory {
 extension Goods {
     struct GetGood: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "getGoodById.json"
+        let method: HTTPMethod = .post
+        let path: String = "getGoodsById"
         
         let productId: Int
         var parameters: Parameters? {
             return [
-                "id_product": productId,
+                "productId": productId,
             ]
         }
     }

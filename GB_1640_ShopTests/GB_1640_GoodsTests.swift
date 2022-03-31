@@ -24,14 +24,14 @@ class GB_1640_GoodsTests: XCTestCase {
     func testGetGoodsCatalogRequest() throws {
         let expectation = expectation(description: "Have a catalog with 2 goods")
         let request = requestFactory.makeGoodsCatalogRequestFactory()
-        var requestResult: [GoodsCatalog] = []
+        var requestResult: [Good] = []
         
         request.getGoodsCatalog(pageNumber: 1,
                                 categoryId: 1) { response in
-            
+            print(response)
             switch response.result {
             case .success(let result):
-                requestResult = result
+                requestResult = result.products
             case .failure:
                 XCTFail()
             }
@@ -47,11 +47,12 @@ class GB_1640_GoodsTests: XCTestCase {
         let request = requestFactory.makeGoodRequestFactory()
         var productName = ""
         
-        request.getGoodByID(productId: 1) { response in
+        request.getGoodByID(productId: 123) { response in
             switch response.result {
             case let .success(result):
                 productName = result.productName
             case .failure:
+                
                 XCTFail()
             }
             expectation.fulfill()

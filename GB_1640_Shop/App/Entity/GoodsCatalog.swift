@@ -8,13 +8,16 @@
 import Foundation
 
 struct GoodsCatalog: Codable {
-    let id: Int
-    let productName: String
-    let productPrice: Double
+    let id = UUID()
+    let result: Int?
+    let page_number: Int?
+    let products: [Good]
+    let error_message: String?
+    
     
     enum CodingKeys: String, CodingKey {
-        case id = "id_product"
-        case productName = "product_name"
-        case productPrice = "price"
+        case result, page_number
+        case products
+        case error_message
     }
 }

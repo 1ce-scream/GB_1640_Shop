@@ -11,5 +11,5 @@ import Alamofire
 protocol GoodsCatalogRequestFactory {
      func getGoodsCatalog(pageNumber: Int,
                           categoryId: Int,
-                          completionHandler: @escaping (AFDataResponse<[GoodsCatalog]>) -> Void)
+                          completionHandler: @escaping (AFDataResponse<GoodsCatalog>) -> Void)
  }
