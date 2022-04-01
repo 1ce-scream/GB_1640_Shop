@@ -86,4 +86,11 @@ class RequestFactory {
                       sessionManager: commonSession,
                       queue: sessionQueue)
     }
+    
+    func makeGetReviewListByIdFactory() -> GetReviewListByIdFactory {
+        let errorParser = makeErrorParser()
+        return Review(errorParser: errorParser,
+                      sessionManager: commonSession,
+                      queue: sessionQueue)
+    }
 }

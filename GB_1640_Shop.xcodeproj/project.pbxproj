@@ -45,6 +45,8 @@
 		FEFD348727F723F700BBCE2F /* RemoveReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348627F723F700BBCE2F /* RemoveReviewRequestFactory.swift */; };
 		FEFD348927F7242E00BBCE2F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348827F7242E00BBCE2F /* Review.swift */; };
 		FEFD348B27F728D700BBCE2F /* GB_1640_ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */; };
+		FEFD348D27F7320F00BBCE2F /* ReviewListResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348C27F7320F00BBCE2F /* ReviewListResponseResult.swift */; };
+		FEFD348F27F732A200BBCE2F /* GetReviewListByIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348E27F732A200BBCE2F /* GetReviewListByIdFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		FEFD348627F723F700BBCE2F /* RemoveReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewRequestFactory.swift; sourceTree = "<group>"; };
 		FEFD348827F7242E00BBCE2F /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_ReviewTests.swift; sourceTree = "<group>"; };
+		FEFD348C27F7320F00BBCE2F /* ReviewListResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListResponseResult.swift; sourceTree = "<group>"; };
+		FEFD348E27F732A200BBCE2F /* GetReviewListByIdFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewListByIdFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,7 @@
 				FED7523227DA371D00E8AC56 /* ResponseResult.swift */,
 				FE45B08F27F09BD800E9F875 /* Good.swift */,
 				FE45B09127F09C6700E9F875 /* GoodsCatalog.swift */,
+				FEFD348C27F7320F00BBCE2F /* ReviewListResponseResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				FEFD348027F722D500BBCE2F /* AddReviewRequestFactory.swift */,
 				FEFD348427F723BB00BBCE2F /* ApproveReviewRequestFactory.swift */,
 				FEFD348627F723F700BBCE2F /* RemoveReviewRequestFactory.swift */,
+				FEFD348E27F732A200BBCE2F /* GetReviewListByIdFactory.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				FED7521C27DA23A000E8AC56 /* DataRequest.swift in Sources */,
 				FED7523127DA34C600E8AC56 /* RegistrationRequestFactory.swift in Sources */,
 				FEFD348927F7242E00BBCE2F /* Review.swift in Sources */,
+				FEFD348F27F732A200BBCE2F /* GetReviewListByIdFactory.swift in Sources */,
 				FED7522B27DA2A2100E8AC56 /* AuthRequestFactory.swift in Sources */,
 				FED7523327DA371D00E8AC56 /* ResponseResult.swift in Sources */,
 				FED7522327DA26D700E8AC56 /* RequestRouter.swift in Sources */,
@@ -615,6 +622,7 @@
 				FED7522827DA29D700E8AC56 /* User.swift in Sources */,
 				FE399C3727D0C6E0002C9FA1 /* SceneDelegate.swift in Sources */,
 				FED7522127DA265500E8AC56 /* AbstractRequestFactory.swift in Sources */,
+				FEFD348D27F7320F00BBCE2F /* ReviewListResponseResult.swift in Sources */,
 				FED7521A27DA22FC00E8AC56 /* ErrorParser.swift in Sources */,
 				FE45B09627F09D4B00E9F875 /* GoodRequestFactory.swift in Sources */,
 			);

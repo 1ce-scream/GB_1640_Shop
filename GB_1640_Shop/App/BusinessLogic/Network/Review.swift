@@ -115,3 +115,31 @@ extension Review: RemoveReviewRequestFactory {
     }
     
 }
+
+// MARK: - Get review list by id
+
+extension Review {
+    struct GetReviewListById: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .post
+        let path: String = "getReviewListById"
+        let productId: Int
+
+        var parameters: Parameters? {
+            return [
+                "id_product": productId
+            ]
+        }
+    }
+}
+
+extension Review: GetReviewListByIdFactory {
+    func getReviewListById(productId: Int,
+                           completionHandler: @escaping (AFDataResponse<ReviewListResponseResult>) -> Void) {
+        
+        let requestModel = GetReviewListById(baseUrl: baseUrl,
+                                             productId: 123)
+        request(request: requestModel,
+                completionHandler: completionHandler)
+    }
+}

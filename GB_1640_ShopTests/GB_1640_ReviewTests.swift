@@ -77,4 +77,22 @@ class GB_1640_ReviewTests: XCTestCase {
         waitForExpectations(timeout: timeout)
         XCTAssertEqual(requestResult, 1)
     }
+    
+    func testGetReviewListByIdRequest() throws {
+        let expectation = expectation(description: "Review list received, amount of reviews more than 1")
+        let request = requestFactory.makeGetReviewListByIdFactory()
+        var requestResult: Int = 0
+        
+        request.getReviewListById(productId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                requestResult = result.reviewList?.count ?? 0
+            case .failure:
+                XCTFail()
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: timeout)
+        XCTAssertGreaterThan(requestResult, 1)
+    }
 }
