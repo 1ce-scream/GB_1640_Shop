@@ -86,6 +86,7 @@ extension Auth {
 }
 
 extension Auth: RegistrationRequestFactory {
+    // swiftlint:disable function_parameter_count
     func registration(userID: Int,
                       username: String,
                       password: String,

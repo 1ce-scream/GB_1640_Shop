@@ -24,6 +24,8 @@ class Goods: AbstractRequestFactory {
     }
 }
 
+// MARK: - Goods catalog
+
 extension Goods {
     struct GetGoodsCatalog: RequestRouter {
         let baseUrl: URL
@@ -53,6 +55,8 @@ extension Goods: GoodsCatalogRequestFactory {
                 completionHandler: completionHandler)
     }
 }
+
+// MARK: - Good by id
 
 extension Goods {
     struct GetGood: RequestRouter {
