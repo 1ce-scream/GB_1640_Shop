@@ -30,7 +30,6 @@ class GB_1640_GoodsTests: XCTestCase {
         
         request.getGoodsCatalog(pageNumber: 1,
                                 categoryId: 1) { response in
-            print(response)
             switch response.result {
             case .success(let result):
                 requestResult = result.products

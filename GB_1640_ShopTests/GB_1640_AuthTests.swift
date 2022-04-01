@@ -24,7 +24,7 @@ class GB_1640_AuthTests: XCTestCase {
     }
 
     func testLoginRequest() throws {
-        let expectation = expectation(description: "Login complete")
+        let expectation = expectation(description: "Login complete, server returned 1")
         let request = requestFactory.makeAuthRequestFatory()
         var requestResult = 0
         
@@ -44,58 +44,67 @@ class GB_1640_AuthTests: XCTestCase {
     }
     
     func testLogoutRequest() throws {
-        let expectation = expectation(description: "Logout complete")
+        let expectation = expectation(description: "Logout complete, server returned 1")
         let request = requestFactory.makeLogOutRequestFactory()
+        var requestResult = 0
         
         request.logOut(userID: 1) { response in
             switch response.result {
-            case .success(_):
-                break
+            case .success(let result):
+                requestResult = result.result
             case .failure(_):
                XCTFail()
             }
             expectation.fulfill()
         }
         waitForExpectations(timeout: timeout)
+        XCTAssertEqual(requestResult, 1)
         
     }
     
     func testRegistrationRequest() throws {
-        let expectation = expectation(description: "Registration complete")
+        let expectation = expectation(description: "Registration complete, server returned 1")
         let request = requestFactory.makeRegistrationRequestFactory()
+        var requestResult = 0
         
         request.registration(userID: 123,
                              userName: "Somebody",
                              password: "mypassword",
-                             email: "email") { response in
+                             email: "email",
+                             gender: "m",
+                             creditCard: "1234-5678-9876",
+                             bio: "Smth") { response in
             switch response.result {
-            case .success(_):
-                break
+            case .success(let result):
+                requestResult = result.result
             case .failure(_):
                 XCTFail()
             }
             expectation.fulfill()
         }
         waitForExpectations(timeout: timeout)
+        XCTAssertEqual(requestResult, 1)
     }
     
     func testChangeUserDataRequest() throws {
-        let expectation = expectation(description: "User data was changed")
+        let expectation = expectation(description: "User data was changed, server  returned 1")
         let request = requestFactory.makeChangeUserDataFactory()
+        var requestResult = 0
         
         request.changeUserData(userID: 123,
-                               userName: "Somebody2",
+                               username: "Somebody2",
                                password: "mypassword2",
                                email: "email2") { response in
             switch response.result {
-            case .success(_):
-               break
+            case .success(let result):
+                requestResult = result.result
             case .failure(_):
                XCTFail()
             }
             expectation.fulfill()
         }
         waitForExpectations(timeout: timeout)
+        XCTAssertEqual(requestResult, 1)
     }
 
 }

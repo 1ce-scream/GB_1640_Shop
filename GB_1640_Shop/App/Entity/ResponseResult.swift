@@ -9,6 +9,6 @@ import Foundation
 
 struct ResponseResult: Codable {
     let result: Int
-    let userMessage: String?
-    let errorMessage: String?
+    let user_message: String?
+    let error_message: String?
 }

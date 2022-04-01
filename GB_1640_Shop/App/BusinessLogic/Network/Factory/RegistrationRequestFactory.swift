@@ -10,8 +10,11 @@ import Alamofire
 
 protocol RegistrationRequestFactory {
     func registration(userID: Int,
-                  userName: String,
-                  password: String,
-                  email: String,
-                  completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void)
+                      userName: String,
+                      password: String,
+                      email: String,
+                      gender: String,
+                      creditCard: String,
+                      bio: String,
+                      completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void)
 }

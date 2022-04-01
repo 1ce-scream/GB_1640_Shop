@@ -10,7 +10,7 @@ import Alamofire
 
 protocol ChangeUserDataRequestFactory {
     func changeUserData(userID: Int,
-                        userName: String,
+                        username: String,
                         password: String,
                         email: String,
                         completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void)

@@ -68,12 +68,18 @@ extension Auth {
         let login: String
         let password: String
         let email: String
+        let gender: String
+        let creditCard: String
+        let bio: String
         
         var parameters: Parameters? {
             return ["id_user": userID,
                     "username": login,
                     "password": password,
-                    "email": email
+                    "email": email,
+                    "gender": gender,
+                    "credit_card": creditCard,
+                    "bio": bio
             ]
         }
     }
@@ -84,12 +90,18 @@ extension Auth: RegistrationRequestFactory {
                       userName: String,
                       password: String,
                       email: String,
+                      gender: String,
+                      creditCard: String,
+                      bio: String,
                       completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl,
                                         userID: userID,
                                         login: userName,
                                         password: password,
-                                        email: email)
+                                        email: email,
+                                        gender: gender,
+                                        creditCard: creditCard,
+                                        bio: bio)
         
         self.request(request: requestModel,
                      completionHandler: completionHandler)
@@ -107,7 +119,7 @@ extension Auth {
         
         var parameters: Parameters? {
             return [
-                "id_user": userID,
+                "userID": userID,
             ]
         }
     }
@@ -133,13 +145,13 @@ extension Auth {
         let method: HTTPMethod = .post
         let path: String = "changeUserData"
         let userID: Int
-        let login: String
+        let username: String
         let password: String
         let email: String
         
         var parameters: Parameters? {
-            return ["id_user": userID,
-                    "username": login,
+            return ["userID": userID,
+                    "userName": username,
                     "password": password,
                     "email": email
             ]
@@ -149,14 +161,14 @@ extension Auth {
 
 extension Auth: ChangeUserDataRequestFactory {
     func changeUserData(userID: Int,
-                        userName: String,
+                        username: String,
                         password: String,
                         email: String,
                         completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = ChangeUserData(baseUrl: baseUrl,
                                           userID: userID,
-                                          login: userName,
+                                          username: username,
                                           password: password,
                                           email: email)
         
