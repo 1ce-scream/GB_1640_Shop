@@ -161,7 +161,7 @@ extension Auth {
 
 extension Auth: ChangeUserDataRequestFactory {
     func changeUserData(userID: Int,
-                        username: String,
+                        userName: String,
                         password: String,
                         email: String,
                         completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
