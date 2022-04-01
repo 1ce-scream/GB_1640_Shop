@@ -10,14 +10,14 @@ import Foundation
 struct GoodsCatalog: Codable {
     let id = UUID()
     let result: Int?
-    let page_number: Int?
+    let pageNumber: Int?
     let products: [Good]
-    let error_message: String?
-    
+    let errorMessage: String?
     
     enum CodingKeys: String, CodingKey {
-        case result, page_number
+        case result
+        case pageNumber = "page_number"
         case products
-        case error_message
+        case errorMessage = "error_message"
     }
 }

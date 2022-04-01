@@ -39,7 +39,6 @@ class GB_1640_GoodsTests: XCTestCase {
             expectation.fulfill()
         }
         waitForExpectations(timeout: timeout)
-        
         XCTAssertEqual(requestResult.count, 2)
     }
     
@@ -59,7 +58,6 @@ class GB_1640_GoodsTests: XCTestCase {
             expectation.fulfill()
         }
         waitForExpectations(timeout: timeout)
-        
         XCTAssertEqual(productName, "Ноутбук")
     }
 }

@@ -28,9 +28,8 @@ class GB_1640_AuthTests: XCTestCase {
         let request = requestFactory.makeAuthRequestFatory()
         var requestResult = 0
         
-        request.login(userName: "Somebody",
+        request.login(username: "Somebody",
                       password: "Password") { response in
-            
             switch response.result {
             case .success(let result):
                 requestResult = result.result
@@ -68,12 +67,12 @@ class GB_1640_AuthTests: XCTestCase {
         var requestResult = 0
         
         request.registration(userID: 123,
-                             userName: "Somebody",
+                             username: "Somebody",
                              password: "mypassword",
                              email: "email",
                              gender: "m",
                              creditCard: "1234-5678-9876",
-                             bio: "Smth") { response in
+                             biography: "Smth") { response in
             switch response.result {
             case .success(let result):
                 requestResult = result.result

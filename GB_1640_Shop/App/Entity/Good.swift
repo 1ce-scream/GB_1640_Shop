@@ -13,7 +13,7 @@ struct Good: Codable {
     let productName: String
     let productPrice: Double
     let productDescription: String?
-    let error_message: String?
+    let errorMessage: String?
     
     enum CodingKeys: String, CodingKey {
         case result
@@ -21,6 +21,6 @@ struct Good: Codable {
         case productName = "product_name"
         case productPrice = "product_price"
         case productDescription = "product_description"
-        case error_message
+        case errorMessage = "error_message"
     }
 }

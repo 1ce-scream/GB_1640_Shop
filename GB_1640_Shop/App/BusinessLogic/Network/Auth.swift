@@ -24,7 +24,7 @@ class Auth: AbstractRequestFactory {
     }
 }
 
-//MARK: -Login
+// MARK: - Login
 
 extension Auth {
     struct Login: RequestRouter {
@@ -37,19 +37,19 @@ extension Auth {
         var parameters: Parameters? {
             return [
                 "username": login,
-                "password": password,
+                "password": password
             ]
         }
     }
 }
 
 extension Auth: AuthRequestFactory {
-    func login(userName: String,
+    func login(username: String,
                password: String,
                completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = Login(baseUrl: baseUrl,
-                                 login: userName,
+                                 login: username,
                                  password: password)
         
         request(request: requestModel,
@@ -57,7 +57,7 @@ extension Auth: AuthRequestFactory {
     }
 }
 
-// MARK: -Registration
+// MARK: - Registration
 
 extension Auth {
     struct Registration: RequestRouter {
@@ -70,7 +70,7 @@ extension Auth {
         let email: String
         let gender: String
         let creditCard: String
-        let bio: String
+        let biography: String
         
         var parameters: Parameters? {
             return ["id_user": userID,
@@ -79,7 +79,7 @@ extension Auth {
                     "email": email,
                     "gender": gender,
                     "credit_card": creditCard,
-                    "bio": bio
+                    "bio": biography
             ]
         }
     }
@@ -87,28 +87,29 @@ extension Auth {
 
 extension Auth: RegistrationRequestFactory {
     func registration(userID: Int,
-                      userName: String,
+                      username: String,
                       password: String,
                       email: String,
                       gender: String,
                       creditCard: String,
-                      bio: String,
+                      biography: String,
                       completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
+        
         let requestModel = Registration(baseUrl: baseUrl,
                                         userID: userID,
-                                        login: userName,
+                                        login: username,
                                         password: password,
                                         email: email,
                                         gender: gender,
                                         creditCard: creditCard,
-                                        bio: bio)
+                                        biography: biography)
         
         self.request(request: requestModel,
                      completionHandler: completionHandler)
     }
 }
 
-// MARK: -LogOut
+// MARK: - LogOut
 
 extension Auth {
     struct LogOut: RequestRouter {
@@ -119,7 +120,7 @@ extension Auth {
         
         var parameters: Parameters? {
             return [
-                "userID": userID,
+                "userID": userID
             ]
         }
     }
@@ -137,7 +138,7 @@ extension Auth: LogOutRequestFactory {
     }
 }
 
-// MARK: -Change user data
+// MARK: - Change user data
 
 extension Auth {
     struct ChangeUserData: RequestRouter {
@@ -161,7 +162,7 @@ extension Auth {
 
 extension Auth: ChangeUserDataRequestFactory {
     func changeUserData(userID: Int,
-                        userName: String,
+                        username: String,
                         password: String,
                         email: String,
                         completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {

@@ -24,7 +24,6 @@ class Goods: AbstractRequestFactory {
     }
 }
 
-
 extension Goods {
     struct GetGoodsCatalog: RequestRouter {
         let baseUrl: URL
@@ -36,7 +35,7 @@ extension Goods {
         var parameters: Parameters? {
             return [
                 "pageNumber": pageNumber,
-                "categoryId": categoryId,
+                "categoryId": categoryId
             ]
         }
     }
@@ -64,7 +63,7 @@ extension Goods {
         let productId: Int
         var parameters: Parameters? {
             return [
-                "productId": productId,
+                "productId": productId
             ]
         }
     }

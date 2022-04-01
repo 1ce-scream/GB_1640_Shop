@@ -153,7 +153,6 @@
 				E8B42BAB9AFC033BE5433D67 /* Pods-GB_1640_ShopTests.debug.xcconfig */,
 				C90BED02A610CB2779294D06 /* Pods-GB_1640_ShopTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -337,6 +336,7 @@
 				FE399C2D27D0C6DF002C9FA1 /* Sources */,
 				FE399C2E27D0C6DF002C9FA1 /* Frameworks */,
 				FE399C2F27D0C6DF002C9FA1 /* Resources */,
+				FEFD347C27F6FA0A00BBCE2F /* Lint */,
 			);
 			buildRules = (
 			);
@@ -421,7 +421,7 @@
 			);
 			mainGroup = FE399C2827D0C6DF002C9FA1;
 			packageReferences = (
-				FED7521D27DA241400E8AC56 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				FED7521D27DA241400E8AC56 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = FE399C3227D0C6DF002C9FA1 /* Products */;
 			projectDirPath = "";
@@ -527,6 +527,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FEFD347C27F6FA0A00BBCE2F /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\" --config .swiftlint.yml\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -901,7 +919,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FED7521D27DA241400E8AC56 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		FED7521D27DA241400E8AC56 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -914,7 +932,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		FED7521E27DA241400E8AC56 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FED7521D27DA241400E8AC56 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = FED7521D27DA241400E8AC56 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

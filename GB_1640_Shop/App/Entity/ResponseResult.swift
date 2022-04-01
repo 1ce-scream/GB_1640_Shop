@@ -9,6 +9,12 @@ import Foundation
 
 struct ResponseResult: Codable {
     let result: Int
-    let user_message: String?
-    let error_message: String?
+    let userMessage: String?
+    let errorMessage: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case userMessage = "user_message"
+        case errorMessage = "error_message"
+    }
 }
