@@ -24,6 +24,11 @@
 		FE45B09627F09D4B00E9F875 /* GoodRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09527F09D4B00E9F875 /* GoodRequestFactory.swift */; };
 		FE45B09827F09E6D00E9F875 /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09727F09E6D00E9F875 /* Goods.swift */; };
 		FE45B09A27F0A01A00E9F875 /* GB_1640_GoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09927F0A01A00E9F875 /* GB_1640_GoodsTests.swift */; };
+		FEA0C47928042A8E00565760 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47828042A8E00565760 /* Basket.swift */; };
+		FEA0C47B28042BB600565760 /* AddToBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47A28042BB600565760 /* AddToBasketRequestFactory.swift */; };
+		FEA0C47D28042C4500565760 /* RemoveFromBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47C28042C4500565760 /* RemoveFromBasketRequestFactory.swift */; };
+		FEA0C47F28042CBD00565760 /* PayBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47E28042CBD00565760 /* PayBasketRequestFactory.swift */; };
+		FEA0C4812804345900565760 /* GB_1640_BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C4802804345900565760 /* GB_1640_BasketTests.swift */; };
 		FED7521827DA22A100E8AC56 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7521727DA22A100E8AC56 /* AbstractErrorParser.swift */; };
 		FED7521A27DA22FC00E8AC56 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7521927DA22FC00E8AC56 /* ErrorParser.swift */; };
 		FED7521C27DA23A000E8AC56 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7521B27DA23A000E8AC56 /* DataRequest.swift */; };
@@ -94,6 +99,11 @@
 		FE45B09527F09D4B00E9F875 /* GoodRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodRequestFactory.swift; sourceTree = "<group>"; };
 		FE45B09727F09E6D00E9F875 /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 		FE45B09927F0A01A00E9F875 /* GB_1640_GoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_GoodsTests.swift; sourceTree = "<group>"; };
+		FEA0C47828042A8E00565760 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		FEA0C47A28042BB600565760 /* AddToBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketRequestFactory.swift; sourceTree = "<group>"; };
+		FEA0C47C28042C4500565760 /* RemoveFromBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveFromBasketRequestFactory.swift; sourceTree = "<group>"; };
+		FEA0C47E28042CBD00565760 /* PayBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBasketRequestFactory.swift; sourceTree = "<group>"; };
+		FEA0C4802804345900565760 /* GB_1640_BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_BasketTests.swift; sourceTree = "<group>"; };
 		FED7521727DA22A100E8AC56 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		FED7521927DA22FC00E8AC56 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		FED7521B27DA23A000E8AC56 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
@@ -211,6 +221,7 @@
 				FE45B08D27F0908600E9F875 /* GB_1640_AuthTests.swift */,
 				FE45B09927F0A01A00E9F875 /* GB_1640_GoodsTests.swift */,
 				FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */,
+				FEA0C4802804345900565760 /* GB_1640_BasketTests.swift */,
 			);
 			path = GB_1640_ShopTests;
 			sourceTree = "<group>";
@@ -296,6 +307,16 @@
 			path = Environments;
 			sourceTree = "<group>";
 		};
+		FEA0C4772804267000565760 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				FEA0C47A28042BB600565760 /* AddToBasketRequestFactory.swift */,
+				FEA0C47C28042C4500565760 /* RemoveFromBasketRequestFactory.swift */,
+				FEA0C47E28042CBD00565760 /* PayBasketRequestFactory.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
 		FED7521627DA226800E8AC56 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +336,7 @@
 				FED7522C27DA2A9000E8AC56 /* Auth.swift */,
 				FE45B09727F09E6D00E9F875 /* Goods.swift */,
 				FEFD348827F7242E00BBCE2F /* Review.swift */,
+				FEA0C47828042A8E00565760 /* Basket.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -324,6 +346,7 @@
 			children = (
 				FED7522E27DA2CBE00E8AC56 /* RequestFactory.swift */,
 				FEFD347D27F71AAA00BBCE2F /* Auth */,
+				FEA0C4772804267000565760 /* Basket */,
 				FEFD347E27F71ACA00BBCE2F /* Goods */,
 				FEFD347F27F71AED00BBCE2F /* Review */,
 			);
@@ -607,8 +630,10 @@
 				FED7523527DA378A00E8AC56 /* LogOutRequestFactory.swift in Sources */,
 				FE45B09427F09D3500E9F875 /* GoodsCatalogRequestFactory.swift in Sources */,
 				FED7521C27DA23A000E8AC56 /* DataRequest.swift in Sources */,
+				FEA0C47B28042BB600565760 /* AddToBasketRequestFactory.swift in Sources */,
 				FED7523127DA34C600E8AC56 /* RegistrationRequestFactory.swift in Sources */,
 				FEFD348927F7242E00BBCE2F /* Review.swift in Sources */,
+				FEA0C47928042A8E00565760 /* Basket.swift in Sources */,
 				FEFD348F27F732A200BBCE2F /* GetReviewListByIdFactory.swift in Sources */,
 				FED7522B27DA2A2100E8AC56 /* AuthRequestFactory.swift in Sources */,
 				FED7523327DA371D00E8AC56 /* ResponseResult.swift in Sources */,
@@ -620,9 +645,11 @@
 				FE45B09827F09E6D00E9F875 /* Goods.swift in Sources */,
 				FEFD348527F723BB00BBCE2F /* ApproveReviewRequestFactory.swift in Sources */,
 				FED7522827DA29D700E8AC56 /* User.swift in Sources */,
+				FEA0C47D28042C4500565760 /* RemoveFromBasketRequestFactory.swift in Sources */,
 				FE399C3727D0C6E0002C9FA1 /* SceneDelegate.swift in Sources */,
 				FED7522127DA265500E8AC56 /* AbstractRequestFactory.swift in Sources */,
 				FEFD348D27F7320F00BBCE2F /* ReviewListResponseResult.swift in Sources */,
+				FEA0C47F28042CBD00565760 /* PayBasketRequestFactory.swift in Sources */,
 				FED7521A27DA22FC00E8AC56 /* ErrorParser.swift in Sources */,
 				FE45B09627F09D4B00E9F875 /* GoodRequestFactory.swift in Sources */,
 			);
@@ -634,6 +661,7 @@
 			files = (
 				FE45B09A27F0A01A00E9F875 /* GB_1640_GoodsTests.swift in Sources */,
 				FE399C4C27D0C6E0002C9FA1 /* GB_1640_ShopTests.swift in Sources */,
+				FEA0C4812804345900565760 /* GB_1640_BasketTests.swift in Sources */,
 				FE45B08E27F0908600E9F875 /* GB_1640_AuthTests.swift in Sources */,
 				FEFD348B27F728D700BBCE2F /* GB_1640_ReviewTests.swift in Sources */,
 			);
