@@ -25,8 +25,6 @@ class Basket: AbstractRequestFactory {
     }
 }
 
-// MARK: - Add goods to basket
-
 extension Basket {
     struct AddGood: RequestRouter {
         let baseUrl: URL
@@ -42,25 +40,7 @@ extension Basket {
             ]
         }
     }
-}
-
-extension Basket: AddToBasketRequestFactory {
-    func add(productId: Int,
-             quantity: Int,
-             completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
-        
-        let requestModel = AddGood(baseUrl: baseUrl,
-                               productId: productId,
-                               quantity: quantity)
-        request(request: requestModel,
-                completionHandler: completionHandler)
-        basket.updateValue(quantity, forKey: productId)
-    }
-}
-
-// MARK: - Remove from basket
-
-extension Basket {
+    
     struct Remove: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
@@ -73,23 +53,7 @@ extension Basket {
             ]
         }
     }
-}
-
-extension Basket: RemoveFromBasketRequestFactory {
-    func remove(productId: Int,
-                completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
-        
-        let requestModel = Remove(baseUrl: baseUrl,
-                                  productId: productId)
-        request(request: requestModel,
-                completionHandler: completionHandler)
-        basket[productId] = nil
-    }
-}
-
-// MARK: - Pay basket
-
-extension Basket {
+    
     struct PayBasket: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
@@ -101,7 +65,29 @@ extension Basket {
     }
 }
 
-extension Basket: PayBasketRequestFactory {
+extension Basket: BasketRequestFactory {
+    func add(productId: Int,
+             quantity: Int,
+             completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
+        
+        let requestModel = AddGood(baseUrl: baseUrl,
+                               productId: productId,
+                               quantity: quantity)
+        request(request: requestModel,
+                completionHandler: completionHandler)
+        basket.updateValue(quantity, forKey: productId)
+    }
+    
+    func remove(productId: Int,
+                completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
+        
+        let requestModel = Remove(baseUrl: baseUrl,
+                                  productId: productId)
+        request(request: requestModel,
+                completionHandler: completionHandler)
+        basket[productId] = nil
+    }
+    
     func pay(completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = PayBasket(baseUrl: baseUrl)

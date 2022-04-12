@@ -25,7 +25,7 @@ class GB_1640_GoodsTests: XCTestCase {
 
     func testGetGoodsCatalogRequest() throws {
         let expectation = expectation(description: "Have a catalog with 2 goods")
-        let request = requestFactory.makeGoodsCatalogRequestFactory()
+        let request = requestFactory.makeGoodsRequestFactory()
         var requestResult: [Good] = []
         
         request.getGoodsCatalog(pageNumber: 1,
@@ -44,7 +44,7 @@ class GB_1640_GoodsTests: XCTestCase {
     
     func testGetGoodByIDRequests() throws {
         let expectation = expectation(description: "Have a good")
-        let request = requestFactory.makeGoodRequestFactory()
+        let request = requestFactory.makeGoodsRequestFactory()
         var productName = ""
         
         request.getGoodByID(productId: 123) { response in

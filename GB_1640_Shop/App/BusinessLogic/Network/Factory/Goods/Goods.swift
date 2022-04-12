@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class Goods: AbstractRequestFactory {
+class Goods: AbstractRequestFactory, GoodsRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -41,12 +41,10 @@ extension Goods {
             ]
         }
     }
-}
-
-extension Goods: GoodsCatalogRequestFactory {
+    
     func getGoodsCatalog(pageNumber: Int,
                          categoryId: Int,
-                         completionHandler: @escaping (AFDataResponse<GoodsCatalog>) -> Void) {
+                         completionHandler: @escaping (AFDataResponse<GoodsList>) -> Void) {
         
         let requestModel = GetGoodsCatalog(baseUrl: baseUrl,
                                            pageNumber: pageNumber,
@@ -71,9 +69,7 @@ extension Goods {
             ]
         }
     }
-}
-
-extension Goods: GoodRequestFactory {
+    
     func getGoodByID(productId: Int,
                      completionHandler: @escaping (AFDataResponse<Good>) -> Void) {
         

@@ -1,5 +1,5 @@
 //
-//  GoodsCatalog.swift
+//  GoodsList.swift
 //  GB_1640_Shop
 //
 //  Created by Vitaliy Talalay on 27.03.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GoodsCatalog: Codable {
+struct GoodsList: Codable {
     let id = UUID()
     let result: Int?
     let pageNumber: Int?

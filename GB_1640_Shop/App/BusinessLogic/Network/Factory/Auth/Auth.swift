@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class Auth: AbstractRequestFactory {
+class Auth: AbstractRequestFactory, AuthRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -41,9 +41,7 @@ extension Auth {
             ]
         }
     }
-}
-
-extension Auth: AuthRequestFactory {
+    
     func login(username: String,
                password: String,
                completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
@@ -83,9 +81,7 @@ extension Auth {
             ]
         }
     }
-}
-
-extension Auth: RegistrationRequestFactory {
+    
     // swiftlint:disable function_parameter_count
     func registration(userID: Int,
                       username: String,
@@ -125,9 +121,7 @@ extension Auth {
             ]
         }
     }
-}
-
-extension Auth: LogOutRequestFactory {
+    
     func logOut(userID: Int,
                 completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
@@ -159,9 +153,7 @@ extension Auth {
             ]
         }
     }
-}
-
-extension Auth: ChangeUserDataRequestFactory {
+    
     func changeUserData(userID: Int,
                         username: String,
                         password: String,

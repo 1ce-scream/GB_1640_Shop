@@ -25,109 +25,32 @@ class RequestFactory {
     let sessionQueue = DispatchQueue.global(qos: .utility)
 }
 
-// MARK: - Auth Factories
-
 extension RequestFactory {
-    func makeAuthRequestFatory() -> AuthRequestFactory {
+    func makeAuthRequestFactory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser,
                     sessionManager: commonSession,
                     queue: sessionQueue)
     }
-
-    func makeRegistrationRequestFactory() -> RegistrationRequestFactory {
-        let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser,
-                    sessionManager: commonSession,
-                    queue: sessionQueue)
-    }
-
-    func makeLogOutRequestFactory() -> LogOutRequestFactory {
-        let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser,
-                    sessionManager: commonSession,
-                    queue: sessionQueue)
-    }
-
-    func makeChangeUserDataFactory() -> ChangeUserDataRequestFactory {
-        let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser,
-                    sessionManager: commonSession,
-                    queue: sessionQueue)
-    }
-}
-
-// MARK: - Goods Factories
-
-extension RequestFactory {
-    func makeGoodsCatalogRequestFactory() -> GoodsCatalogRequestFactory {
+    
+    func makeGoodsRequestFactory() -> GoodsRequestFactory {
         let errorParser = makeErrorParser()
         return Goods(errorParser: errorParser,
-                     sessionManager: commonSession,
-                     queue: sessionQueue)
+                    sessionManager: commonSession,
+                    queue: sessionQueue)
     }
     
-    func makeGoodRequestFactory() -> GoodRequestFactory {
-        let errorParser = makeErrorParser()
-        return Goods(errorParser: errorParser,
-                     sessionManager: commonSession,
-                     queue: sessionQueue)
-    }
-}
-
-// MARK: - Review Factories
-
-extension RequestFactory {
-    func makeAddReviewRequestFactory() -> AddReviewRequestFactory {
-        let errorParser = makeErrorParser()
-        return Review(errorParser: errorParser,
-                      sessionManager: commonSession,
-                      queue: sessionQueue)
-    }
-    
-    func makeApproveReviewRequestFactory() -> ApproveReviewRequestFactory {
-        let errorParser = makeErrorParser()
-        return Review(errorParser: errorParser,
-                      sessionManager: commonSession,
-                      queue: sessionQueue)
-    }
-    
-    func makeRemoveReviewRequestFactory() -> RemoveReviewRequestFactory {
-        let errorParser = makeErrorParser()
-        return Review(errorParser: errorParser,
-                      sessionManager: commonSession,
-                      queue: sessionQueue)
-    }
-    
-    func makeGetReviewListByIdFactory() -> GetReviewListByIdFactory {
-        let errorParser = makeErrorParser()
-        return Review(errorParser: errorParser,
-                      sessionManager: commonSession,
-                      queue: sessionQueue)
-    }
-}
-
-// MARK: - Basket Factories
-
-extension RequestFactory {
-    func makeAddToBasketRequestFactory() -> AddToBasketRequestFactory {
+    func makeBasketRequestFactory() -> BasketRequestFactory {
         let errorParser = makeErrorParser()
         return Basket(errorParser: errorParser,
-                      sessionManager: commonSession,
-                      queue: sessionQueue)
+                    sessionManager: commonSession,
+                    queue: sessionQueue)
     }
     
-    func makeRemoveFromBasketRequestFactory() -> RemoveFromBasketRequestFactory {
+    func makeReviewRequestFactory() -> ReviewRequestFactory {
         let errorParser = makeErrorParser()
-        return Basket(errorParser: errorParser,
-                      sessionManager: commonSession,
-                      queue: sessionQueue)
-    }
-    
-    func makePayBasketRequestFactory() -> PayBasketRequestFactory {
-        let errorParser = makeErrorParser()
-        return Basket(errorParser: errorParser,
-                      sessionManager: commonSession,
-                      queue: sessionQueue)
+        return Review(errorParser: errorParser,
+                    sessionManager: commonSession,
+                    queue: sessionQueue)
     }
 }

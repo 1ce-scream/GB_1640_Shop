@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Good: Codable, Hashable {
+struct Good: Codable {
     let id: Int?
     let result: Int?
     let productName: String

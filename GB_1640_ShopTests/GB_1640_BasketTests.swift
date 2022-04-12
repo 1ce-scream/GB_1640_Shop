@@ -23,7 +23,7 @@ class GB_1640_BasketTests: XCTestCase {
 
     func testAddToBasketRequest() throws {
         let expectation = expectation(description: "Good added to basket, server returned 1")
-        let request = requestFactory.makeAddToBasketRequestFactory()
+        let request = requestFactory.makeBasketRequestFactory()
         var requestResult: Int = 0
         
         request.add(productId: 123,
@@ -43,7 +43,7 @@ class GB_1640_BasketTests: XCTestCase {
     
     func testRemoveFromBasketRequest() throws {
         let expectation = expectation(description: "Good removed from basket, server returned 1")
-        let request = requestFactory.makeRemoveFromBasketRequestFactory()
+        let request = requestFactory.makeBasketRequestFactory()
         var requestResult: Int = 0
         
         request.remove(productId: 123) { response in
@@ -61,7 +61,7 @@ class GB_1640_BasketTests: XCTestCase {
     
     func testPayBasketRequest() throws {
         let expectation = expectation(description: "Server returned 1")
-        let request = requestFactory.makePayBasketRequestFactory()
+        let request = requestFactory.makeBasketRequestFactory()
         var requestResult: Int = 0
         
         request.pay() { response in

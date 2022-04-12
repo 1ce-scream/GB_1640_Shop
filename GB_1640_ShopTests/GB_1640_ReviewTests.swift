@@ -25,7 +25,7 @@ class GB_1640_ReviewTests: XCTestCase {
     
     func testAddReviewRequest() throws {
         let expectation = expectation(description: "Review added, server returned 1")
-        let request = requestFactory.makeAddReviewRequestFactory()
+        let request = requestFactory.makeReviewRequestFactory()
         var requestResult: Int = 0
         
         request.addReview(userId: 123,
@@ -44,7 +44,7 @@ class GB_1640_ReviewTests: XCTestCase {
     
     func testApproveReviewRequest() throws {
         let expectation = expectation(description: "Review approved, server returned 1")
-        let request = requestFactory.makeApproveReviewRequestFactory()
+        let request = requestFactory.makeReviewRequestFactory()
         var requestResult: Int = 0
         
         request.approveReview(commentId: 123) { response in
@@ -62,7 +62,7 @@ class GB_1640_ReviewTests: XCTestCase {
     
     func testRemoveReviewRequest() throws {
         let expectation = expectation(description: "Review removed, server returned 1")
-        let request = requestFactory.makeRemoveReviewRequestFactory()
+        let request = requestFactory.makeReviewRequestFactory()
         var requestResult: Int = 0
         
         request.removeReview(commentId: 123) { response in
@@ -80,7 +80,7 @@ class GB_1640_ReviewTests: XCTestCase {
     
     func testGetReviewListByIdRequest() throws {
         let expectation = expectation(description: "Review list received, amount of reviews more than 1")
-        let request = requestFactory.makeGetReviewListByIdFactory()
+        let request = requestFactory.makeReviewRequestFactory()
         var requestResult: Int = 0
         
         request.getReviewListById(productId: 123) { response in

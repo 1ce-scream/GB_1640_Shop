@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class Review: AbstractRequestFactory {
+class Review: AbstractRequestFactory, ReviewRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -43,7 +43,7 @@ extension Review {
     }
 }
 
-extension Review: AddReviewRequestFactory {
+extension Review {
     func addReview(userId: Int,
                    text: String,
                    completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
@@ -75,7 +75,7 @@ extension Review {
     }
 }
 
-extension Review: ApproveReviewRequestFactory {
+extension Review {
     func approveReview(commentId: Int,
                        completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
@@ -104,7 +104,7 @@ extension Review {
     }
 }
 
-extension Review: RemoveReviewRequestFactory {
+extension Review {
     func removeReview(commentId: Int,
                       completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
@@ -133,7 +133,7 @@ extension Review {
     }
 }
 
-extension Review: GetReviewListByIdFactory {
+extension Review {
     func getReviewListById(productId: Int,
                            completionHandler: @escaping (AFDataResponse<ReviewListResponseResult>) -> Void) {
         

@@ -25,7 +25,7 @@ class GB_1640_AuthTests: XCTestCase {
 
     func testLoginRequest() throws {
         let expectation = expectation(description: "Login complete, server returned 1")
-        let request = requestFactory.makeAuthRequestFatory()
+        let request = requestFactory.makeAuthRequestFactory()
         var requestResult = 0
         
         request.login(username: "Somebody",
@@ -44,7 +44,7 @@ class GB_1640_AuthTests: XCTestCase {
     
     func testLogoutRequest() throws {
         let expectation = expectation(description: "Logout complete, server returned 1")
-        let request = requestFactory.makeLogOutRequestFactory()
+        let request = requestFactory.makeAuthRequestFactory()
         var requestResult = 0
         
         request.logOut(userID: 1) { response in
@@ -63,7 +63,7 @@ class GB_1640_AuthTests: XCTestCase {
     
     func testRegistrationRequest() throws {
         let expectation = expectation(description: "Registration complete, server returned 1")
-        let request = requestFactory.makeRegistrationRequestFactory()
+        let request = requestFactory.makeAuthRequestFactory()
         var requestResult = 0
         
         request.registration(userID: 123,
@@ -87,7 +87,7 @@ class GB_1640_AuthTests: XCTestCase {
     
     func testChangeUserDataRequest() throws {
         let expectation = expectation(description: "User data was changed, server  returned 1")
-        let request = requestFactory.makeChangeUserDataFactory()
+        let request = requestFactory.makeAuthRequestFactory()
         var requestResult = 0
         
         request.changeUserData(userID: 123,

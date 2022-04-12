@@ -19,15 +19,12 @@
 		FE399C5827D0C6E0002C9FA1 /* GB_1640_ShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE399C5727D0C6E0002C9FA1 /* GB_1640_ShopUITestsLaunchTests.swift */; };
 		FE45B08E27F0908600E9F875 /* GB_1640_AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B08D27F0908600E9F875 /* GB_1640_AuthTests.swift */; };
 		FE45B09027F09BD800E9F875 /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B08F27F09BD800E9F875 /* Good.swift */; };
-		FE45B09227F09C6700E9F875 /* GoodsCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09127F09C6700E9F875 /* GoodsCatalog.swift */; };
-		FE45B09427F09D3500E9F875 /* GoodsCatalogRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09327F09D3500E9F875 /* GoodsCatalogRequestFactory.swift */; };
-		FE45B09627F09D4B00E9F875 /* GoodRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09527F09D4B00E9F875 /* GoodRequestFactory.swift */; };
+		FE45B09227F09C6700E9F875 /* GoodsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09127F09C6700E9F875 /* GoodsList.swift */; };
+		FE45B09627F09D4B00E9F875 /* GoodsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09527F09D4B00E9F875 /* GoodsRequestFactory.swift */; };
 		FE45B09827F09E6D00E9F875 /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09727F09E6D00E9F875 /* Goods.swift */; };
 		FE45B09A27F0A01A00E9F875 /* GB_1640_GoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09927F0A01A00E9F875 /* GB_1640_GoodsTests.swift */; };
 		FEA0C47928042A8E00565760 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47828042A8E00565760 /* Basket.swift */; };
-		FEA0C47B28042BB600565760 /* AddToBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47A28042BB600565760 /* AddToBasketRequestFactory.swift */; };
-		FEA0C47D28042C4500565760 /* RemoveFromBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47C28042C4500565760 /* RemoveFromBasketRequestFactory.swift */; };
-		FEA0C47F28042CBD00565760 /* PayBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47E28042CBD00565760 /* PayBasketRequestFactory.swift */; };
+		FEA0C47B28042BB600565760 /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47A28042BB600565760 /* BasketRequestFactory.swift */; };
 		FEA0C4812804345900565760 /* GB_1640_BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C4802804345900565760 /* GB_1640_BasketTests.swift */; };
 		FED7521827DA22A100E8AC56 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7521727DA22A100E8AC56 /* AbstractErrorParser.swift */; };
 		FED7521A27DA22FC00E8AC56 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7521927DA22FC00E8AC56 /* ErrorParser.swift */; };
@@ -39,19 +36,13 @@
 		FED7522B27DA2A2100E8AC56 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522A27DA2A2100E8AC56 /* AuthRequestFactory.swift */; };
 		FED7522D27DA2A9000E8AC56 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522C27DA2A9000E8AC56 /* Auth.swift */; };
 		FED7522F27DA2CBE00E8AC56 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522E27DA2CBE00E8AC56 /* RequestFactory.swift */; };
-		FED7523127DA34C600E8AC56 /* RegistrationRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7523027DA34C600E8AC56 /* RegistrationRequestFactory.swift */; };
 		FED7523327DA371D00E8AC56 /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7523227DA371D00E8AC56 /* ResponseResult.swift */; };
-		FED7523527DA378A00E8AC56 /* LogOutRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7523427DA378A00E8AC56 /* LogOutRequestFactory.swift */; };
-		FED7523727DA37B800E8AC56 /* ChangeUserDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7523627DA37B800E8AC56 /* ChangeUserDataRequestFactory.swift */; };
 		FED7523927DA420D00E8AC56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7523827DA420D00E8AC56 /* ViewController.swift */; };
 		FED7523B27DA428500E8AC56 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED7523A27DA428500E8AC56 /* MainView.storyboard */; };
-		FEFD348127F722D500BBCE2F /* AddReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348027F722D500BBCE2F /* AddReviewRequestFactory.swift */; };
-		FEFD348527F723BB00BBCE2F /* ApproveReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348427F723BB00BBCE2F /* ApproveReviewRequestFactory.swift */; };
-		FEFD348727F723F700BBCE2F /* RemoveReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348627F723F700BBCE2F /* RemoveReviewRequestFactory.swift */; };
+		FEFD348127F722D500BBCE2F /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348027F722D500BBCE2F /* ReviewRequestFactory.swift */; };
 		FEFD348927F7242E00BBCE2F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348827F7242E00BBCE2F /* Review.swift */; };
 		FEFD348B27F728D700BBCE2F /* GB_1640_ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */; };
 		FEFD348D27F7320F00BBCE2F /* ReviewListResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348C27F7320F00BBCE2F /* ReviewListResponseResult.swift */; };
-		FEFD348F27F732A200BBCE2F /* GetReviewListByIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348E27F732A200BBCE2F /* GetReviewListByIdFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,15 +85,12 @@
 		FE399C5727D0C6E0002C9FA1 /* GB_1640_ShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_ShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FE45B08D27F0908600E9F875 /* GB_1640_AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_AuthTests.swift; sourceTree = "<group>"; };
 		FE45B08F27F09BD800E9F875 /* Good.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Good.swift; sourceTree = "<group>"; };
-		FE45B09127F09C6700E9F875 /* GoodsCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCatalog.swift; sourceTree = "<group>"; };
-		FE45B09327F09D3500E9F875 /* GoodsCatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCatalogRequestFactory.swift; sourceTree = "<group>"; };
-		FE45B09527F09D4B00E9F875 /* GoodRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodRequestFactory.swift; sourceTree = "<group>"; };
+		FE45B09127F09C6700E9F875 /* GoodsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsList.swift; sourceTree = "<group>"; };
+		FE45B09527F09D4B00E9F875 /* GoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsRequestFactory.swift; sourceTree = "<group>"; };
 		FE45B09727F09E6D00E9F875 /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 		FE45B09927F0A01A00E9F875 /* GB_1640_GoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_GoodsTests.swift; sourceTree = "<group>"; };
 		FEA0C47828042A8E00565760 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
-		FEA0C47A28042BB600565760 /* AddToBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketRequestFactory.swift; sourceTree = "<group>"; };
-		FEA0C47C28042C4500565760 /* RemoveFromBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveFromBasketRequestFactory.swift; sourceTree = "<group>"; };
-		FEA0C47E28042CBD00565760 /* PayBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBasketRequestFactory.swift; sourceTree = "<group>"; };
+		FEA0C47A28042BB600565760 /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
 		FEA0C4802804345900565760 /* GB_1640_BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_BasketTests.swift; sourceTree = "<group>"; };
 		FED7521727DA22A100E8AC56 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		FED7521927DA22FC00E8AC56 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
@@ -113,19 +101,13 @@
 		FED7522A27DA2A2100E8AC56 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		FED7522C27DA2A9000E8AC56 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FED7522E27DA2CBE00E8AC56 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
-		FED7523027DA34C600E8AC56 /* RegistrationRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequestFactory.swift; sourceTree = "<group>"; };
 		FED7523227DA371D00E8AC56 /* ResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
-		FED7523427DA378A00E8AC56 /* LogOutRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutRequestFactory.swift; sourceTree = "<group>"; };
-		FED7523627DA37B800E8AC56 /* ChangeUserDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataRequestFactory.swift; sourceTree = "<group>"; };
 		FED7523827DA420D00E8AC56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FED7523A27DA428500E8AC56 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
-		FEFD348027F722D500BBCE2F /* AddReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewRequestFactory.swift; sourceTree = "<group>"; };
-		FEFD348427F723BB00BBCE2F /* ApproveReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveReviewRequestFactory.swift; sourceTree = "<group>"; };
-		FEFD348627F723F700BBCE2F /* RemoveReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewRequestFactory.swift; sourceTree = "<group>"; };
+		FEFD348027F722D500BBCE2F /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
 		FEFD348827F7242E00BBCE2F /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_ReviewTests.swift; sourceTree = "<group>"; };
 		FEFD348C27F7320F00BBCE2F /* ReviewListResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListResponseResult.swift; sourceTree = "<group>"; };
-		FEFD348E27F732A200BBCE2F /* GetReviewListByIdFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewListByIdFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,7 +244,7 @@
 				FED7522727DA29D700E8AC56 /* User.swift */,
 				FED7523227DA371D00E8AC56 /* ResponseResult.swift */,
 				FE45B08F27F09BD800E9F875 /* Good.swift */,
-				FE45B09127F09C6700E9F875 /* GoodsCatalog.swift */,
+				FE45B09127F09C6700E9F875 /* GoodsList.swift */,
 				FEFD348C27F7320F00BBCE2F /* ReviewListResponseResult.swift */,
 			);
 			path = Entity;
@@ -310,9 +292,8 @@
 		FEA0C4772804267000565760 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
-				FEA0C47A28042BB600565760 /* AddToBasketRequestFactory.swift */,
-				FEA0C47C28042C4500565760 /* RemoveFromBasketRequestFactory.swift */,
-				FEA0C47E28042CBD00565760 /* PayBasketRequestFactory.swift */,
+				FEA0C47828042A8E00565760 /* Basket.swift */,
+				FEA0C47A28042BB600565760 /* BasketRequestFactory.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -333,10 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				FED7522927DA2A1700E8AC56 /* Factory */,
-				FED7522C27DA2A9000E8AC56 /* Auth.swift */,
-				FE45B09727F09E6D00E9F875 /* Goods.swift */,
-				FEFD348827F7242E00BBCE2F /* Review.swift */,
-				FEA0C47828042A8E00565760 /* Basket.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -346,8 +323,8 @@
 			children = (
 				FED7522E27DA2CBE00E8AC56 /* RequestFactory.swift */,
 				FEFD347D27F71AAA00BBCE2F /* Auth */,
-				FEA0C4772804267000565760 /* Basket */,
 				FEFD347E27F71ACA00BBCE2F /* Goods */,
+				FEA0C4772804267000565760 /* Basket */,
 				FEFD347F27F71AED00BBCE2F /* Review */,
 			);
 			path = Factory;
@@ -365,10 +342,8 @@
 		FEFD347D27F71AAA00BBCE2F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				FED7522C27DA2A9000E8AC56 /* Auth.swift */,
 				FED7522A27DA2A2100E8AC56 /* AuthRequestFactory.swift */,
-				FED7523027DA34C600E8AC56 /* RegistrationRequestFactory.swift */,
-				FED7523427DA378A00E8AC56 /* LogOutRequestFactory.swift */,
-				FED7523627DA37B800E8AC56 /* ChangeUserDataRequestFactory.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -376,8 +351,8 @@
 		FEFD347E27F71ACA00BBCE2F /* Goods */ = {
 			isa = PBXGroup;
 			children = (
-				FE45B09327F09D3500E9F875 /* GoodsCatalogRequestFactory.swift */,
-				FE45B09527F09D4B00E9F875 /* GoodRequestFactory.swift */,
+				FE45B09727F09E6D00E9F875 /* Goods.swift */,
+				FE45B09527F09D4B00E9F875 /* GoodsRequestFactory.swift */,
 			);
 			path = Goods;
 			sourceTree = "<group>";
@@ -385,10 +360,8 @@
 		FEFD347F27F71AED00BBCE2F /* Review */ = {
 			isa = PBXGroup;
 			children = (
-				FEFD348027F722D500BBCE2F /* AddReviewRequestFactory.swift */,
-				FEFD348427F723BB00BBCE2F /* ApproveReviewRequestFactory.swift */,
-				FEFD348627F723F700BBCE2F /* RemoveReviewRequestFactory.swift */,
-				FEFD348E27F732A200BBCE2F /* GetReviewListByIdFactory.swift */,
+				FEFD348827F7242E00BBCE2F /* Review.swift */,
+				FEFD348027F722D500BBCE2F /* ReviewRequestFactory.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -621,37 +594,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEFD348727F723F700BBCE2F /* RemoveReviewRequestFactory.swift in Sources */,
 				FE45B09027F09BD800E9F875 /* Good.swift in Sources */,
 				FED7522F27DA2CBE00E8AC56 /* RequestFactory.swift in Sources */,
-				FE45B09227F09C6700E9F875 /* GoodsCatalog.swift in Sources */,
-				FED7523727DA37B800E8AC56 /* ChangeUserDataRequestFactory.swift in Sources */,
+				FE45B09227F09C6700E9F875 /* GoodsList.swift in Sources */,
 				FED7521827DA22A100E8AC56 /* AbstractErrorParser.swift in Sources */,
-				FED7523527DA378A00E8AC56 /* LogOutRequestFactory.swift in Sources */,
-				FE45B09427F09D3500E9F875 /* GoodsCatalogRequestFactory.swift in Sources */,
 				FED7521C27DA23A000E8AC56 /* DataRequest.swift in Sources */,
-				FEA0C47B28042BB600565760 /* AddToBasketRequestFactory.swift in Sources */,
-				FED7523127DA34C600E8AC56 /* RegistrationRequestFactory.swift in Sources */,
+				FEA0C47B28042BB600565760 /* BasketRequestFactory.swift in Sources */,
 				FEFD348927F7242E00BBCE2F /* Review.swift in Sources */,
 				FEA0C47928042A8E00565760 /* Basket.swift in Sources */,
-				FEFD348F27F732A200BBCE2F /* GetReviewListByIdFactory.swift in Sources */,
 				FED7522B27DA2A2100E8AC56 /* AuthRequestFactory.swift in Sources */,
 				FED7523327DA371D00E8AC56 /* ResponseResult.swift in Sources */,
 				FED7522327DA26D700E8AC56 /* RequestRouter.swift in Sources */,
 				FED7523927DA420D00E8AC56 /* ViewController.swift in Sources */,
 				FE399C3527D0C6E0002C9FA1 /* AppDelegate.swift in Sources */,
-				FEFD348127F722D500BBCE2F /* AddReviewRequestFactory.swift in Sources */,
+				FEFD348127F722D500BBCE2F /* ReviewRequestFactory.swift in Sources */,
 				FED7522D27DA2A9000E8AC56 /* Auth.swift in Sources */,
 				FE45B09827F09E6D00E9F875 /* Goods.swift in Sources */,
-				FEFD348527F723BB00BBCE2F /* ApproveReviewRequestFactory.swift in Sources */,
 				FED7522827DA29D700E8AC56 /* User.swift in Sources */,
-				FEA0C47D28042C4500565760 /* RemoveFromBasketRequestFactory.swift in Sources */,
 				FE399C3727D0C6E0002C9FA1 /* SceneDelegate.swift in Sources */,
 				FED7522127DA265500E8AC56 /* AbstractRequestFactory.swift in Sources */,
 				FEFD348D27F7320F00BBCE2F /* ReviewListResponseResult.swift in Sources */,
-				FEA0C47F28042CBD00565760 /* PayBasketRequestFactory.swift in Sources */,
 				FED7521A27DA22FC00E8AC56 /* ErrorParser.swift in Sources */,
-				FE45B09627F09D4B00E9F875 /* GoodRequestFactory.swift in Sources */,
+				FE45B09627F09D4B00E9F875 /* GoodsRequestFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
