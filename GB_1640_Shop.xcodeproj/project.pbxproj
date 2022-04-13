@@ -13,6 +13,7 @@
 		FE01348428059B96000DB8B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01348328059B96000DB8B6 /* LoginViewController.swift */; };
 		FE0134882806D44A000DB8B6 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0134872806D44A000DB8B6 /* UserDataViewController.swift */; };
 		FE01348A2806D8B3000DB8B6 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0134892806D8B3000DB8B6 /* AvatarImageView.swift */; };
+		FE01348C280731F3000DB8B6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01348B280731F3000DB8B6 /* RegistrationViewController.swift */; };
 		FE399C3527D0C6E0002C9FA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE399C3427D0C6E0002C9FA1 /* AppDelegate.swift */; };
 		FE399C3727D0C6E0002C9FA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE399C3627D0C6E0002C9FA1 /* SceneDelegate.swift */; };
 		FE399C3E27D0C6E0002C9FA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE399C3D27D0C6E0002C9FA1 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		FE01348328059B96000DB8B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FE0134872806D44A000DB8B6 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		FE0134892806D8B3000DB8B6 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		FE01348B280731F3000DB8B6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		FE399C3127D0C6DF002C9FA1 /* GB_1640_Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GB_1640_Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE399C3427D0C6E0002C9FA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE399C3627D0C6E0002C9FA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				FED7523A27DA428500E8AC56 /* MainView.storyboard */,
 				FE01348328059B96000DB8B6 /* LoginViewController.swift */,
 				FE0134872806D44A000DB8B6 /* UserDataViewController.swift */,
+				FE01348B280731F3000DB8B6 /* RegistrationViewController.swift */,
 				FE0134892806D8B3000DB8B6 /* AvatarImageView.swift */,
 			);
 			path = Flows;
@@ -606,6 +609,7 @@
 				FED7523327DA371D00E8AC56 /* ResponseResult.swift in Sources */,
 				FED7522327DA26D700E8AC56 /* RequestRouter.swift in Sources */,
 				FE399C3527D0C6E0002C9FA1 /* AppDelegate.swift in Sources */,
+				FE01348C280731F3000DB8B6 /* RegistrationViewController.swift in Sources */,
 				FEFD348127F722D500BBCE2F /* ReviewRequestFactory.swift in Sources */,
 				FED7522D27DA2A9000E8AC56 /* Auth.swift in Sources */,
 				FE45B09827F09E6D00E9F875 /* Goods.swift in Sources */,
