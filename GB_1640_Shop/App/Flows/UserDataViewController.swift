@@ -13,12 +13,10 @@ class UserDataViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userBioTextView: UITextView!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
-    @IBOutlet weak var userGenderLabel: UILabel!
     @IBOutlet weak var editInfoButton: UIButton!
-    @IBOutlet weak var userEmailTextField: UITextField!
-    @IBOutlet weak var userGenderTextField: UITextField!
+    @IBOutlet weak var emailTextView: UITextView!
+    @IBOutlet weak var genderTextView: UITextView!
     @IBOutlet weak var saveEditedDataButton: UIButton!
     
     @IBAction func editUserData(_ sender: Any) {
@@ -40,7 +38,7 @@ class UserDataViewController: UIViewController {
         userAvatarImageView.image = UIImage(named: "KyleBroflovski")
         setupLabelsView()
         setupUserBioTextView()
-        setupTextFieldsView()
+        setupTextViews()
         setupButtonsView()
     }
     
@@ -61,18 +59,27 @@ class UserDataViewController: UIViewController {
         
         emailLabel.text = "E-mail:"
         emailLabel.font = .systemFont(ofSize: 20, weight: .bold)
-        userEmailLabel.text = "some@some.com"
-        userEmailLabel.font = .systemFont(ofSize: 20, weight: .regular)
         
         genderLabel.text = "Gender:"
         genderLabel.font = .systemFont(ofSize: 20, weight: .bold)
-        userGenderLabel.text = "Male"
-        userGenderLabel.font = .systemFont(ofSize: 20, weight: .regular)
     }
     
-    private func setupTextFieldsView() {
-        userEmailTextField.isHidden = true
-        userGenderTextField.isHidden = true
+    private func setupTextViews() {
+        emailTextView.translatesAutoresizingMaskIntoConstraints = false
+        emailTextView.text = "some@some.com"
+        emailTextView.font = .systemFont(ofSize: 20, weight: .regular)
+        emailTextView.isEditable = false
+        emailTextView.isScrollEnabled = false
+        emailTextView.isSelectable = true
+        emailTextView.keyboardType = .emailAddress
+        emailTextView.dataDetectorTypes = .link
+        
+        genderTextView.translatesAutoresizingMaskIntoConstraints = false
+        genderTextView.text = "Male"
+        genderTextView.font = .systemFont(ofSize: 20, weight: .regular)
+        genderTextView.isEditable = false
+        genderTextView.isScrollEnabled = false
+        genderTextView.isSelectable = true
     }
     
     private func setupUserBioTextView() {
@@ -85,18 +92,11 @@ class UserDataViewController: UIViewController {
         userBioTextView.isEditable = false
         userBioTextView.isScrollEnabled = true
         userBioTextView.isSelectable = true
-        
     }
     
     private func toggleEditInfo() {
-        userEmailLabel.isHidden.toggle()
-        userEmailTextField.isHidden.toggle()
-        userEmailLabel.text = userEmailTextField.text
-        
-        userGenderLabel.isHidden.toggle()
-        userGenderTextField.isHidden.toggle()
-        userGenderLabel.text = userGenderTextField.text
-        
+        emailTextView.isEditable.toggle()
+        genderTextView.isEditable.toggle()
         userBioTextView.isEditable.toggle()
         
         editInfoButton.isHidden.toggle()
