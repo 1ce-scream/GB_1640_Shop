@@ -22,36 +22,17 @@ class UserDataViewController: UIViewController {
     @IBOutlet weak var saveEditedDataButton: UIButton!
     
     @IBAction func editUserData(_ sender: Any) {
-        userEmailLabel.isHidden = true
-        userEmailTextField.isHidden = false
-        userEmailLabel.text = userEmailLabel.text
-        
-        userGenderLabel.isHidden = true
-        userGenderTextField.isHidden = false
-        userGenderLabel.text = userEmailLabel.text
-        
-        editInfoButton.isHidden = true
-        saveEditedDataButton.isHidden = false
+        toggleEditInfo()
     }
     
     @IBAction func saveEditedData(_ sender: Any) {
-        userEmailTextField.isHidden = true
-        userEmailLabel.isHidden = false
-        userEmailLabel.text = userEmailTextField.text
-        
-        userGenderLabel.isHidden = false
-        userGenderTextField.isHidden = true
-        userGenderLabel.text = userEmailLabel.text
-        
-        editInfoButton.isHidden = false
-        saveEditedDataButton.isHidden = true
+        toggleEditInfo()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-//        setupEmailLabelAction()
-        // Do any additional setup after loading the view.
+
     }
     
     private func setupViews() {
@@ -101,10 +82,25 @@ class UserDataViewController: UIViewController {
         userBioTextView.textColor = .black
         userBioTextView.isUserInteractionEnabled = true
         userBioTextView.font = .italicSystemFont(ofSize: 14)
-        userBioTextView.isEditable = true
+        userBioTextView.isEditable = false
         userBioTextView.isScrollEnabled = true
         userBioTextView.isSelectable = true
         
+    }
+    
+    private func toggleEditInfo() {
+        userEmailLabel.isHidden.toggle()
+        userEmailTextField.isHidden.toggle()
+        userEmailLabel.text = userEmailTextField.text
+        
+        userGenderLabel.isHidden.toggle()
+        userGenderTextField.isHidden.toggle()
+        userGenderLabel.text = userGenderTextField.text
+        
+        userBioTextView.isEditable.toggle()
+        
+        editInfoButton.isHidden.toggle()
+        saveEditedDataButton.isHidden.toggle()
     }
     
 }
