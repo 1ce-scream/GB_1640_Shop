@@ -1,20 +1,21 @@
 //
-//  ViewController.swift
+//  UserDataViewController.swift
 //  GB_1640_Shop
 //
-//  Created by Vitaliy Talalay on 10.03.2022.
+//  Created by Vitaliy Talalay on 13.04.2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class UserDataViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+
         // Do any additional setup after loading the view.
     }
     
+
     /*
     // MARK: - Navigation
 
