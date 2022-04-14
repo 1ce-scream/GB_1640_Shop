@@ -29,6 +29,15 @@ class UserDataViewController: UIViewController {
     }
     
     private let viewModel = UserDataViewModel()
+    private let demoUser: User = User(id: 123,
+                                      login: "Somebody",
+                                      password: "Password",
+                                      name: "Name",
+                                      lastname: "Lastname",
+                                      biography: "Bio bio bio bio bio bio bio bio bio",
+                                      creditcard: "1234-1234-1234",
+                                      email: "some@some.com",
+                                      gender: "X")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +65,7 @@ class UserDataViewController: UIViewController {
     
     private func setupLabelsView() {
         userNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        userNameLabel.text = "Firstname Lastname"
+        userNameLabel.text = demoUser.name + demoUser.lastname
         userNameLabel.textColor = .systemBlue
         userNameLabel.font = .systemFont(ofSize: 25, weight: .bold)
         
@@ -69,7 +78,7 @@ class UserDataViewController: UIViewController {
     
     private func setupTextViews() {
         emailTextView.translatesAutoresizingMaskIntoConstraints = false
-        emailTextView.text = "some@some.com"
+        emailTextView.text = demoUser.email
         emailTextView.font = .systemFont(ofSize: 20, weight: .regular)
         emailTextView.isEditable = false
         emailTextView.isScrollEnabled = false
@@ -78,7 +87,7 @@ class UserDataViewController: UIViewController {
         emailTextView.dataDetectorTypes = .link
         
         genderTextView.translatesAutoresizingMaskIntoConstraints = false
-        genderTextView.text = "Male"
+        genderTextView.text = demoUser.gender
         genderTextView.font = .systemFont(ofSize: 20, weight: .regular)
         genderTextView.isEditable = false
         genderTextView.isScrollEnabled = false
@@ -87,7 +96,7 @@ class UserDataViewController: UIViewController {
     
     private func setupUserBioTextView() {
         userBioTextView.translatesAutoresizingMaskIntoConstraints = false
-        userBioTextView.text = "Biography Biography Biography Biography Biography Biography Biography Biography Biography Biography Biography Biography Biography Biography Biography Biography Biography "
+        userBioTextView.text = demoUser.biography
         userBioTextView.textAlignment = .center
         userBioTextView.textColor = .black
         userBioTextView.isUserInteractionEnabled = true
