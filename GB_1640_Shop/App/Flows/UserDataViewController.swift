@@ -25,7 +25,10 @@ class UserDataViewController: UIViewController {
     
     @IBAction func saveEditedData(_ sender: Any) {
         toggleEditInfo()
+        viewModel.sendChageUserDataRequest(email: emailTextView.text ?? "")
     }
+    
+    private let viewModel = UserDataViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registrationButton: UIButton!
     
+    private let viewModel = LoginViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -54,16 +56,59 @@ class LoginViewController: UIViewController {
     
     private func setupButtonsView() {
         loginButton.translatesAutoresizingMaskIntoConstraints = false
+        loginButton.isUserInteractionEnabled = true
         loginButton.setTitle("Войти", for: .normal)
         loginButton.setTitleColor(.systemBlue, for: .normal)
         loginButton.setTitleColor(.systemRed, for: .highlighted)
         loginButton.tintColor = .white
-//        loginButton.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        loginButton.addTarget(self,
+                              action: #selector(presentUserDataVC(_ :)),
+                              for: .touchUpInside)
         
         registrationButton.translatesAutoresizingMaskIntoConstraints = false
+        registrationButton.isUserInteractionEnabled = true
         registrationButton.setTitle("Регистрация", for: .normal)
         registrationButton.setTitleColor(.systemBackground, for: .normal)
         registrationButton.setTitleColor(.systemRed, for: .highlighted)
-//        registrationButton.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        registrationButton.addTarget(self,
+                                     action: #selector(presentRegistrationVC(_ :)),
+                                     for: .touchUpInside)
+    }
+    
+    private func showLoginError() {
+        let alert = UIAlertController(
+            title: "Ошибка",
+            message: "Логин или пароль не верны",
+            preferredStyle: .alert)
+        let action = UIAlertAction(
+            title: "OK",
+            style: .cancel)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func presentUserDataVC(_ sender: UIButton) {
+        let isDataCorrect = viewModel.checkUserData(login: loginTextField.text ?? "",
+                                                    password: passwordTextField.text ?? "")
+        guard isDataCorrect == true else {
+            showLoginError()
+            return
+        }
+        viewModel.sendLoginRequest(login: loginTextField.text ?? "",
+                                   password: passwordTextField.text ?? "")
+        
+        let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
+        let destinationController = storyboard
+            .instantiateViewController(withIdentifier: "UserDataVC") as! UserDataViewController
+        destinationController.modalPresentationStyle = .fullScreen
+        present(destinationController, animated: true, completion: nil)
+    }
+    
+    @objc func presentRegistrationVC(_ sender: UIButton) {
+        let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
+        let destinationController = storyboard
+            .instantiateViewController(withIdentifier: "RegistrationVC") as! RegistrationViewController
+        destinationController.modalPresentationStyle = .fullScreen
+        present(destinationController, animated: true, completion: nil)
     }
 }

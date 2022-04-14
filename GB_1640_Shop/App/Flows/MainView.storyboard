@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="piN-8U-Jl8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -106,7 +106,7 @@
         <!--Registration View Controller-->
         <scene sceneID="2h0-6D-e6S">
             <objects>
-                <viewController id="piN-8U-Jl8" customClass="RegistrationViewController" customModule="GB_1640_Shop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationVC" id="piN-8U-Jl8" customClass="RegistrationViewController" customModule="GB_1640_Shop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oft-Yk-pSd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,7 +267,20 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="biographyLabel" destination="H2R-tw-IU6" id="SEw-hS-8ka"/>
+                        <outlet property="biographyTextField" destination="LGR-1R-DB5" id="eAr-Ba-Upf"/>
+                        <outlet property="emailLabel" destination="cRj-zo-g6f" id="cNm-gQ-lPe"/>
+                        <outlet property="emailTextField" destination="oUf-ED-TzL" id="2tY-V8-taA"/>
+                        <outlet property="lastnameLabel" destination="CUA-Ae-Cmd" id="m9X-9i-O6E"/>
+                        <outlet property="lastnameTextField" destination="dlD-6W-7Cr" id="74b-pD-vrB"/>
+                        <outlet property="loginLabel" destination="jIA-SJ-wq4" id="xJ0-Ac-8Kd"/>
+                        <outlet property="loginTextField" destination="hYG-Tr-XHG" id="DDK-Sw-pCQ"/>
+                        <outlet property="nameLabel" destination="srd-nm-Ex3" id="8Ha-MX-5y4"/>
+                        <outlet property="nameTextField" destination="47b-6z-Ubj" id="9y6-N4-RIk"/>
+                        <outlet property="passwordLabel" destination="srd-nm-Ex3" id="vbv-xs-cbQ"/>
+                        <outlet property="passwordTextField" destination="8jB-PM-ht4" id="1EY-LZ-mIx"/>
                         <outlet property="registerLabel" destination="qWi-kW-p7q" id="7pv-2p-CQM"/>
+                        <outlet property="registrationButton" destination="kWI-4Z-QGg" id="TcZ-Oy-q5T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Txd-dv-kOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -277,7 +290,7 @@
         <!--User Data View Controller-->
         <scene sceneID="waq-7G-aV5">
             <objects>
-                <viewController id="O4O-HZ-VD4" customClass="UserDataViewController" customModule="GB_1640_Shop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDataVC" id="O4O-HZ-VD4" customClass="UserDataViewController" customModule="GB_1640_Shop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="skN-2A-G4X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
