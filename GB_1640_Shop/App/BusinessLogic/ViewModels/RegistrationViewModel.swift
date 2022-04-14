@@ -9,7 +9,7 @@ import UIKit
 
 class RegistrationViewModel {
     
-    private let requestFactory = RequestFactory()
+    private lazy var requestFactory = RequestFactory()
     
     func sendRegistrationRequest(login: String,
                                  password: String,

@@ -9,7 +9,7 @@ import Foundation
 
 class UserDataViewModel {
     
-    private let requestFactory = RequestFactory()
+    private lazy var requestFactory = RequestFactory()
     
     func sendChageUserDataRequest(email: String) {
         let request = requestFactory.makeAuthRequestFactory()

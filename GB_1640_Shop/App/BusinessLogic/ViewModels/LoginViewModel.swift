@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewModel {
     
-    private let requestFactory = RequestFactory()
+    private lazy var requestFactory = RequestFactory()
     
     func sendLoginRequest(login: String, password: String) {
         let request = requestFactory.makeAuthRequestFactory()
