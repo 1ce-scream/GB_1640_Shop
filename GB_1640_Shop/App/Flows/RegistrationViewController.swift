@@ -9,6 +9,7 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var registerLabel: UILabel!
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
@@ -27,6 +28,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registrationButton: UIButton!
     
     private let viewModel = RegistrationViewModel()
+    private let keyboardHelper = KeyboardHelper()
     
     private let mainLabelsFontSize: CGFloat = 30
     private let subLabelsFontSize: CGFloat = 20
@@ -34,7 +36,21 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        keyboardHelper.scrollView = scrollView
+        keyboardHelper.hideKeyboardGesture()
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        keyboardHelper.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        keyboardHelper.removeKeyboardObserver()
     }
     
     private func setupViews() {
