@@ -46,6 +46,7 @@
 		FED7522F27DA2CBE00E8AC56 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7522E27DA2CBE00E8AC56 /* RequestFactory.swift */; };
 		FED7523327DA371D00E8AC56 /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7523227DA371D00E8AC56 /* ResponseResult.swift */; };
 		FED7523B27DA428500E8AC56 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED7523A27DA428500E8AC56 /* MainView.storyboard */; };
+		FEF7F6322809A9600022F138 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7F6312809A9600022F138 /* KeyboardHelper.swift */; };
 		FEFD348127F722D500BBCE2F /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348027F722D500BBCE2F /* ReviewRequestFactory.swift */; };
 		FEFD348927F7242E00BBCE2F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348827F7242E00BBCE2F /* Review.swift */; };
 		FEFD348B27F728D700BBCE2F /* GB_1640_ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */; };
@@ -118,6 +119,7 @@
 		FED7522E27DA2CBE00E8AC56 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		FED7523227DA371D00E8AC56 /* ResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
 		FED7523A27DA428500E8AC56 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		FEF7F6312809A9600022F138 /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
 		FEFD348027F722D500BBCE2F /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
 		FEFD348827F7242E00BBCE2F /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_ReviewTests.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				FED7521627DA226800E8AC56 /* Network */,
+				FEF7F6312809A9600022F138 /* KeyboardHelper.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				FE45B09227F09C6700E9F875 /* GoodsList.swift in Sources */,
 				FE0134912808205B000DB8B6 /* NetworkModel.swift in Sources */,
 				FE01348428059B96000DB8B6 /* LoginViewController.swift in Sources */,
+				FEF7F6322809A9600022F138 /* KeyboardHelper.swift in Sources */,
 				FED7521827DA22A100E8AC56 /* AbstractErrorParser.swift in Sources */,
 				FE013497280836CD000DB8B6 /* UserDataViewModel.swift in Sources */,
 				FED7521C27DA23A000E8AC56 /* DataRequest.swift in Sources */,

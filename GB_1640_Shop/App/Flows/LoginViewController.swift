@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var brandNameLabel: UILabel!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -16,10 +17,26 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registrationButton: UIButton!
     
     private let viewModel = LoginViewModel()
+    private let keyboardHelper = KeyboardHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        keyboardHelper.scrollView = scrollView
+        keyboardHelper.hideKeyboardGesture()
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        keyboardHelper.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        keyboardHelper.removeKeyboardObserver()
     }
     
     private func setupViews() {

@@ -8,9 +8,10 @@
 import UIKit
 
 class UserDataViewController: UIViewController {
-
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userAvatarImageView: AvatarImage!
-    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userNameTextView: UITextView!
     @IBOutlet weak var userBioTextView: UITextView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
@@ -29,6 +30,7 @@ class UserDataViewController: UIViewController {
     }
     
     private let viewModel = UserDataViewModel()
+    private let keyboardHelper = KeyboardHelper()
     private let demoUser: User = User(id: 123,
                                       login: "Somebody",
                                       password: "Password",
@@ -41,15 +43,28 @@ class UserDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        keyboardHelper.scrollView = scrollView
+        keyboardHelper.hideKeyboardGesture()
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        keyboardHelper.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
 
+        keyboardHelper.removeKeyboardObserver()
     }
     
     private func setupViews() {
         view.backgroundColor = .systemBlue
         userAvatarImageView.image = UIImage(named: "KyleBroflovski")
         setupLabelsView()
-        setupUserBioTextView()
         setupTextViews()
         setupButtonsView()
     }
@@ -64,11 +79,6 @@ class UserDataViewController: UIViewController {
     }
     
     private func setupLabelsView() {
-        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        userNameLabel.text = demoUser.name + demoUser.lastname
-        userNameLabel.textColor = .systemBlue
-        userNameLabel.font = .systemFont(ofSize: 25, weight: .bold)
-        
         emailLabel.text = "E-mail:"
         emailLabel.font = .systemFont(ofSize: 20, weight: .bold)
         
@@ -77,6 +87,15 @@ class UserDataViewController: UIViewController {
     }
     
     private func setupTextViews() {
+        userNameTextView.translatesAutoresizingMaskIntoConstraints = false
+        userNameTextView.text = "\(demoUser.name) \(demoUser.lastname)"
+        userNameTextView.textAlignment = .center
+        userNameTextView.textColor = .systemBlue
+        userNameTextView.font = .systemFont(ofSize: 25, weight: .bold)
+        userNameTextView.isEditable = false
+        userNameTextView.isScrollEnabled = false
+        userNameTextView.isSelectable = true
+        
         emailTextView.translatesAutoresizingMaskIntoConstraints = false
         emailTextView.text = demoUser.email
         emailTextView.font = .systemFont(ofSize: 20, weight: .regular)
@@ -92,9 +111,7 @@ class UserDataViewController: UIViewController {
         genderTextView.isEditable = false
         genderTextView.isScrollEnabled = false
         genderTextView.isSelectable = true
-    }
-    
-    private func setupUserBioTextView() {
+        
         userBioTextView.translatesAutoresizingMaskIntoConstraints = false
         userBioTextView.text = demoUser.biography
         userBioTextView.textAlignment = .center
@@ -110,9 +127,9 @@ class UserDataViewController: UIViewController {
         emailTextView.isEditable.toggle()
         genderTextView.isEditable.toggle()
         userBioTextView.isEditable.toggle()
+        userNameTextView.isEditable.toggle()
         
         editInfoButton.isHidden.toggle()
         saveEditedDataButton.isHidden.toggle()
     }
-    
 }
