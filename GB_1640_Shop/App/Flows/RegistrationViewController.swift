@@ -119,8 +119,11 @@ class RegistrationViewController: UIViewController {
                                           biography: biographyTextField.text ?? "")
         
         let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
-        let destinationController = storyboard
-            .instantiateViewController(withIdentifier: "UserDataVC") as! UserDataViewController
+        
+        guard let destinationController = storyboard
+            .instantiateViewController(withIdentifier: "UserDataVC") as? UserDataViewController
+        else { return }
+        
         destinationController.modalPresentationStyle = .fullScreen
         present(destinationController, animated: true, completion: nil)
     }

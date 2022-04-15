@@ -115,16 +115,18 @@ class LoginViewController: UIViewController {
                                    password: passwordTextField.text ?? "")
         
         let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
-        let destinationController = storyboard
-            .instantiateViewController(withIdentifier: "UserDataVC") as! UserDataViewController
+        guard let destinationController = storyboard
+            .instantiateViewController(withIdentifier: "UserDataVC") as? UserDataViewController
+        else { return }
         destinationController.modalPresentationStyle = .fullScreen
         present(destinationController, animated: true, completion: nil)
     }
     
     @objc func presentRegistrationVC(_ sender: UIButton) {
         let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
-        let destinationController = storyboard
-            .instantiateViewController(withIdentifier: "RegistrationVC") as! RegistrationViewController
+        guard let destinationController = storyboard
+            .instantiateViewController(withIdentifier: "RegistrationVC") as? RegistrationViewController
+        else { return }
         destinationController.modalPresentationStyle = .fullScreen
         present(destinationController, animated: true, completion: nil)
     }
