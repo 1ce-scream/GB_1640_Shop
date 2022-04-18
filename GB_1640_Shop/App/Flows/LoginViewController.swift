@@ -78,9 +78,9 @@ class LoginViewController: UIViewController {
         loginButton.setTitleColor(.systemBlue, for: .normal)
         loginButton.setTitleColor(.systemRed, for: .highlighted)
         loginButton.tintColor = .white
-        loginButton.addTarget(self,
-                              action: #selector(presentUserDataVC(_ :)),
-                              for: .touchUpInside)
+//        loginButton.addTarget(self,
+//                              action: #selector(presentUserDataVC(_ :)),
+//                              for: .touchUpInside)
         
         registrationButton.translatesAutoresizingMaskIntoConstraints = false
         registrationButton.isUserInteractionEnabled = true
@@ -104,23 +104,23 @@ class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    @objc func presentUserDataVC(_ sender: UIButton) {
-        let isDataCorrect = viewModel.checkUserData(login: loginTextField.text ?? "",
-                                                    password: passwordTextField.text ?? "")
-        guard isDataCorrect == true else {
-            showLoginError()
-            return
-        }
-        viewModel.sendLoginRequest(login: loginTextField.text ?? "",
-                                   password: passwordTextField.text ?? "")
-        
-        let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
-        guard let destinationController = storyboard
-            .instantiateViewController(withIdentifier: "UserDataVC") as? UserDataViewController
-        else { return }
-        destinationController.modalPresentationStyle = .fullScreen
-        present(destinationController, animated: true, completion: nil)
-    }
+//    @objc func presentUserDataVC(_ sender: UIButton) {
+//        let isDataCorrect = viewModel.checkUserData(login: loginTextField.text ?? "",
+//                                                    password: passwordTextField.text ?? "")
+//        guard isDataCorrect == true else {
+//            showLoginError()
+//            return
+//        }
+//        viewModel.sendLoginRequest(login: loginTextField.text ?? "",
+//                                   password: passwordTextField.text ?? "")
+//
+//        let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
+//        guard let destinationController = storyboard
+//            .instantiateViewController(withIdentifier: "UserDataVC") as? UserDataViewController
+//        else { return }
+//        destinationController.modalPresentationStyle = .fullScreen
+//        present(destinationController, animated: true, completion: nil)
+//    }
     
     @objc func presentRegistrationVC(_ sender: UIButton) {
         let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
@@ -129,5 +129,20 @@ class LoginViewController: UIViewController {
         else { return }
         destinationController.modalPresentationStyle = .fullScreen
         present(destinationController, animated: true, completion: nil)
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String,
+                                     sender: Any?) -> Bool {
+        
+        let isDataCorrect = viewModel.checkUserData(login: loginTextField.text ?? "",
+                                                        password: passwordTextField.text ?? "")
+        guard isDataCorrect == true else {
+            showLoginError()
+            return false
+        }
+        
+        viewModel.sendLoginRequest(login: loginTextField.text ?? "",
+                                   password: passwordTextField.text ?? "")
+        return isDataCorrect
     }
 }

@@ -137,7 +137,7 @@ class RegistrationViewController: UIViewController {
         let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
         
         guard let destinationController = storyboard
-            .instantiateViewController(withIdentifier: "UserDataVC") as? UserDataViewController
+            .instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController
         else { return }
         
         destinationController.modalPresentationStyle = .fullScreen
