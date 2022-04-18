@@ -17,6 +17,7 @@ class GoodsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .systemBlue
         setContent()
         setupTableView()
         registerNib()
@@ -27,6 +28,7 @@ class GoodsListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.keyboardDismissMode = .onDrag
+        tableView.backgroundColor = .systemBlue
     }
     
     private func registerNib() {
@@ -72,10 +74,10 @@ extension GoodsListViewController: UITableViewDataSource {
     
 //    func tableView(_: UITableView,
 //                            estimatedHeightForRowAt _: IndexPath) -> CGFloat {
-//        
+//
 //        return 130
 //    }
-//    
+//
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        return 130
 //    }
