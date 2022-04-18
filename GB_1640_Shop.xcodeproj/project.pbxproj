@@ -197,6 +197,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		FE2DBF29280D99650012F945 /* GoodsView */ = {
+			isa = PBXGroup;
+			children = (
+				FE2DBF21280D5A5C0012F945 /* GoodsListViewController.swift */,
+				FE2DBF23280D5AE50012F945 /* GoodsListTableViewCell.swift */,
+				FE2DBF24280D5AE50012F945 /* GoodsListTableViewCell.xib */,
+			);
+			path = GoodsView;
+			sourceTree = "<group>";
+		};
 		FE399C2827D0C6DF002C9FA1 = {
 			isa = PBXGroup;
 			children = (
@@ -296,9 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				FED7523A27DA428500E8AC56 /* MainView.storyboard */,
-				FE2DBF21280D5A5C0012F945 /* GoodsListViewController.swift */,
-				FE2DBF23280D5AE50012F945 /* GoodsListTableViewCell.swift */,
-				FE2DBF24280D5AE50012F945 /* GoodsListTableViewCell.xib */,
+				FE2DBF29280D99650012F945 /* GoodsView */,
 				FE01348328059B96000DB8B6 /* LoginViewController.swift */,
 				FE0134872806D44A000DB8B6 /* UserDataViewController.swift */,
 				FE01348B280731F3000DB8B6 /* RegistrationViewController.swift */,

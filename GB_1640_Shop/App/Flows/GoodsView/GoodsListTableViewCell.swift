@@ -16,7 +16,7 @@ class GoodsListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupView()
     }
     
     override func prepareForReuse() {
@@ -33,6 +33,17 @@ class GoodsListTableViewCell: UITableViewCell {
         productPriceLabel.text = "\(product.productPrice)"
     }
     
+    private func setupView() {
+        productNameLabel.textColor = .systemBlue
+        productNameLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        
+        productDescriptionLabel.textColor = .systemBackground
+        productDescriptionLabel.font = .systemFont(ofSize: 17, weight: .regular)
+        productDescriptionLabel.numberOfLines = 0
+        
+        productPriceLabel.textColor = .systemBlue
+        productPriceLabel.font = .systemFont(ofSize: 17, weight: .regular)
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
