@@ -42,6 +42,20 @@ class GoodsListViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        guard let destinationVC = segue.destination
+                as? GoodsDetailViewController
+        else { return }
+        
+//        if let index = tableView.indexPathForSelectedRow {
+//            let key = firstLetters[index.section]
+//            let friendsForKey = friendsDict[key]
+//            guard let friend = friendsForKey?[index.row] else { return }
+//            friendCVC.userID = friend.id
+//        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -72,15 +86,6 @@ extension GoodsListViewController: UITableViewDataSource {
         return cell
     }
     
-//    func tableView(_: UITableView,
-//                            estimatedHeightForRowAt _: IndexPath) -> CGFloat {
-//
-//        return 130
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 130
-//    }
 }
 
 // MARK: - UITableViewDelegate
@@ -88,6 +93,8 @@ extension GoodsListViewController: UITableViewDataSource {
 extension GoodsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "listToDetailGoods", sender: self)
         
         defer {
             // Метод для снятия выделения с ячейки

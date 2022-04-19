@@ -38,6 +38,7 @@
 		FEA0C47928042A8E00565760 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47828042A8E00565760 /* Basket.swift */; };
 		FEA0C47B28042BB600565760 /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47A28042BB600565760 /* BasketRequestFactory.swift */; };
 		FEA0C4812804345900565760 /* GB_1640_BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C4802804345900565760 /* GB_1640_BasketTests.swift */; };
+		FEAB426C280ED85900C22D17 /* GoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB426B280ED85900C22D17 /* GoodsDetailViewController.swift */; };
 		FED7521827DA22A100E8AC56 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7521727DA22A100E8AC56 /* AbstractErrorParser.swift */; };
 		FED7521A27DA22FC00E8AC56 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7521927DA22FC00E8AC56 /* ErrorParser.swift */; };
 		FED7521C27DA23A000E8AC56 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7521B27DA23A000E8AC56 /* DataRequest.swift */; };
@@ -116,6 +117,7 @@
 		FEA0C47828042A8E00565760 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		FEA0C47A28042BB600565760 /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
 		FEA0C4802804345900565760 /* GB_1640_BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_BasketTests.swift; sourceTree = "<group>"; };
+		FEAB426B280ED85900C22D17 /* GoodsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsDetailViewController.swift; sourceTree = "<group>"; };
 		FED7521727DA22A100E8AC56 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		FED7521927DA22FC00E8AC56 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		FED7521B27DA23A000E8AC56 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				FE2DBF21280D5A5C0012F945 /* GoodsListViewController.swift */,
+				FEAB426B280ED85900C22D17 /* GoodsDetailViewController.swift */,
 				FE2DBF23280D5AE50012F945 /* GoodsListTableViewCell.swift */,
 				FE2DBF24280D5AE50012F945 /* GoodsListTableViewCell.xib */,
 			);
@@ -655,6 +658,7 @@
 				FEFD348927F7242E00BBCE2F /* Review.swift in Sources */,
 				FEA0C47928042A8E00565760 /* Basket.swift in Sources */,
 				FED7522B27DA2A2100E8AC56 /* AuthRequestFactory.swift in Sources */,
+				FEAB426C280ED85900C22D17 /* GoodsDetailViewController.swift in Sources */,
 				FED7523327DA371D00E8AC56 /* ResponseResult.swift in Sources */,
 				FED7522327DA26D700E8AC56 /* RequestRouter.swift in Sources */,
 				FE399C3527D0C6E0002C9FA1 /* AppDelegate.swift in Sources */,

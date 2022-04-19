@@ -510,7 +510,7 @@
             </objects>
             <point key="canvasLocation" x="1974" y="598"/>
         </scene>
-        <!--Товары-->
+        <!--Каталог товаров-->
         <scene sceneID="LLR-sB-w7L">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="1iU-Wp-HnH" customClass="GoodsListViewController" customModule="GB_1640_Shop" customModuleProvider="target" sceneMemberID="viewController">
@@ -529,6 +529,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="50G-9O-I9X" kind="show" identifier="listToDetailGoods" id="zDl-V6-9YM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -542,7 +545,7 @@
                             <constraint firstItem="7XG-TD-F1A" firstAttribute="trailing" secondItem="C2J-PA-fOD" secondAttribute="trailing" id="yxq-fv-Hez"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Товары" image="book.fill" catalog="system" id="cLP-5o-R1a"/>
+                    <navigationItem key="navigationItem" title="Каталог товаров" id="FsS-9L-3Rt"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="C2J-PA-fOD" id="eUP-VV-HV3"/>
@@ -550,7 +553,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9U-pb-KWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="-78"/>
+            <point key="canvasLocation" x="2884.057971014493" y="-78.348214285714278"/>
+        </scene>
+        <!--Обзор товара-->
+        <scene sceneID="Yzn-1p-9jh">
+            <objects>
+                <viewController id="50G-9O-I9X" customClass="GoodsDetailViewController" customModule="GB_1640_Shop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sRw-7k-F72">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dWH-ee-Y7p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Обзор товара" id="Hmd-Tf-cTq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssn-CZ-wJ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3750.7246376811595" y="-79.017857142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0WW-nK-GN3">
@@ -559,6 +578,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="36O-Jd-yeQ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tgP-N0-Va2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -575,13 +595,32 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="1iU-Wp-HnH" kind="relationship" relationship="viewControllers" id="VQf-Yw-Uit"/>
+                        <segue destination="inI-si-NqA" kind="relationship" relationship="viewControllers" id="VQf-Yw-Uit"/>
                         <segue destination="lSv-Ve-pPP" kind="relationship" relationship="viewControllers" id="KWt-Ma-OhK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjG-cl-ttS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="104"/>
+        </scene>
+        <!--Товары-->
+        <scene sceneID="Ser-1K-8Dt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="inI-si-NqA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Товары" image="book.fill" catalog="system" id="cLP-5o-R1a"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Cu-kM-KV0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1iU-Wp-HnH" kind="relationship" relationship="rootViewController" id="NCu-Dq-88M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJN-5e-cek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="-78.348214285714278"/>
         </scene>
     </scenes>
     <resources>
