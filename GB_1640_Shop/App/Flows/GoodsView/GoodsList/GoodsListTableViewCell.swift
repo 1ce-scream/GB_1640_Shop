@@ -9,6 +9,7 @@ import UIKit
 
 class GoodsListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var productIconImageView: AvatarImage!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
@@ -34,17 +35,24 @@ class GoodsListTableViewCell: UITableViewCell {
     }
     
     private func setupView() {
-        productNameLabel.textColor = .systemBlue
+        contentView.backgroundColor = .systemBlue
+        backView.backgroundColor = .clear
+        backView.layer.cornerRadius = 12
+        backView.layer.masksToBounds = true
+        backView.layer.borderWidth = 1
+        backView.layer.borderColor = UIColor.systemBackground.cgColor
+        
+        productNameLabel.textColor = .systemBackground
         productNameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         
         productDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        productDescriptionLabel.textColor = .black
+        productDescriptionLabel.textColor = .systemBackground
         productDescriptionLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .regular)
         productDescriptionLabel.numberOfLines = 0
         productDescriptionLabel.lineBreakMode = .byWordWrapping
         
-        productPriceLabel.textColor = .systemBlue
-        productPriceLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .regular)
+        productPriceLabel.textColor = .systemBackground
+        productPriceLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .semibold)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
