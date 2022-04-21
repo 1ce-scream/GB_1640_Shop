@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="415" height="118"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFv-Bc-LPt">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFv-Bc-LPt" customClass="CellBackground" customModule="GB_1640_Shop" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="415" height="118"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPf-hb-QoP">
@@ -26,7 +26,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="300" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T8w-s0-CA1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="300" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T8w-s0-CA1" customClass="StandartTextView" customModule="GB_1640_Shop" customModuleProvider="target">
                                 <rect key="frame" x="2" y="76" width="411" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>

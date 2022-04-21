@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="306" height="108"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAK-N7-TRd">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAK-N7-TRd" customClass="CellBackground" customModule="GB_1640_Shop" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="306" height="110"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-1j-dE6" customClass="AvatarBackgroundShadowView" customModule="GB_1640_Shop" customModuleProvider="target">

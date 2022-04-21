@@ -16,10 +16,11 @@ class ReviewFooterView: UITableViewHeaderFooterView {
         guard reviewTextField.text != "" else { return }
         viewModel.sendReview(userId: 123, text: reviewTextField.text ?? "")
         reviewTextField.text = ""
-        showAlert(title: "Отзыв", message: "Ваш отзыв отправлен на модерацию")
+        alert.showAlert(title: "Отлично!", message: "Ваш отзыв отправлен на модерацию")
     }
     
     private lazy var viewModel = GoodsDetailViewModel()
+    private lazy var alert = AlertsHelper(viewController: viewController)
     weak var viewController: UIViewController?
     
     // swiftlint:disable identifier_name
@@ -35,17 +36,5 @@ class ReviewFooterView: UITableViewHeaderFooterView {
         self.reviewTextField.font = .systemFont(
             ofSize: FontSizes.smallLabel.rawValue,
             weight: .regular)
-    }
-    
-    func showAlert(title: String, message: String) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert)
-        let action = UIAlertAction(
-            title: "OK",
-            style: .cancel)
-        alert.addAction(action)
-        viewController?.present(alert, animated: true, completion: nil)
     }
 }

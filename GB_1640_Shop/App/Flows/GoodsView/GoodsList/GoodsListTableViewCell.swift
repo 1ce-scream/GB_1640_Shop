@@ -9,7 +9,7 @@ import UIKit
 
 class GoodsListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var backView: CellBackground!
     @IBOutlet weak var productIconImageView: AvatarImage!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
@@ -37,10 +37,6 @@ class GoodsListTableViewCell: UITableViewCell {
     private func setupView() {
         contentView.backgroundColor = .systemBlue
         backView.backgroundColor = .clear
-        backView.layer.cornerRadius = 12
-        backView.layer.masksToBounds = true
-        backView.layer.borderWidth = 1
-        backView.layer.borderColor = UIColor.systemBackground.cgColor
         
         productNameLabel.textColor = .systemBackground
         productNameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)

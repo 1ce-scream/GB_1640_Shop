@@ -16,8 +16,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registrationButton: UIButton!
     
-    private let viewModel = LoginViewModel()
-    private let keyboardHelper = KeyboardHelper()
+    private lazy var viewModel = LoginViewModel()
+    private lazy var keyboardHelper = KeyboardHelper()
+    private lazy var alert = AlertsHelper(viewController: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,18 +90,6 @@ class LoginViewController: UIViewController {
                                      for: .touchUpInside)
     }
     
-    private func showLoginError() {
-        let alert = UIAlertController(
-            title: "Ошибка",
-            message: "Логин или пароль не верны",
-            preferredStyle: .alert)
-        let action = UIAlertAction(
-            title: "OK",
-            style: .cancel)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
-    
     @objc func presentRegistrationVC(_ sender: UIButton) {
         let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
         guard let destinationController = storyboard
@@ -116,7 +105,8 @@ class LoginViewController: UIViewController {
         let isDataCorrect = viewModel.checkUserData(login: loginTextField.text ?? "",
                                                         password: passwordTextField.text ?? "")
         guard isDataCorrect == true else {
-            showLoginError()
+            alert.showAlert(title: "Ошибка", message: "Логин или пароль не верны")
+            passwordTextField.text = ""
             return false
         }
         

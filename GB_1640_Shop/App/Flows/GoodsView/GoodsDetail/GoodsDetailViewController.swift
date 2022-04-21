@@ -11,7 +11,7 @@ class GoodsDetailViewController: UIViewController {
 
     @IBOutlet weak var productIconImageView: AvatarImage!
     @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var productDescriptionTextView: UITextView!
+    @IBOutlet weak var productDescriptionTextView: StandartTextView!
     @IBOutlet weak var reviewsTableView: UITableView!
     @IBOutlet weak var addToBasketButton: UIButton!
     
@@ -19,7 +19,7 @@ class GoodsDetailViewController: UIViewController {
         viewModel.addProductToBasket(productId: good?.id ?? 123)
     }
     
-    private let viewModel = GoodsDetailViewModel()
+    private lazy var viewModel = GoodsDetailViewModel()
     private var reviewList = [Reviews]()
     
     var good: Good?
@@ -59,14 +59,6 @@ class GoodsDetailViewController: UIViewController {
         productNameLabel.textAlignment = .center
         
         productDescriptionTextView.text = good?.productDescription
-        productDescriptionTextView.backgroundColor = .clear
-        productDescriptionTextView.textColor = .systemBackground
-        productDescriptionTextView.font = .systemFont(
-            ofSize: FontSizes.standartTextView.rawValue,
-            weight: .regular)
-        productDescriptionTextView.isSelectable = true
-        productDescriptionTextView.isEditable = false
-        productDescriptionTextView.isScrollEnabled = true
     }
     
     private func getReviewData(product: Good) {

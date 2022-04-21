@@ -29,8 +29,8 @@ class UserDataViewController: UIViewController {
         viewModel.sendChageUserDataRequest(email: emailTextView.text ?? "")
     }
     
-    private let viewModel = UserDataViewModel()
-    private let keyboardHelper = KeyboardHelper()
+    private lazy var viewModel = UserDataViewModel()
+    private lazy var keyboardHelper = KeyboardHelper()
     private let demoUser: User = User(id: 123,
                                       login: "Somebody",
                                       password: "Password",

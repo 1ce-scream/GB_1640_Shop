@@ -10,13 +10,14 @@ import UIKit
 class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var registerLabel: UILabel!
-    @IBOutlet weak var loginLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var lastnameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var biographyLabel: UILabel!
+    @IBOutlet weak var testScrollView: UIScrollView!
+    @IBOutlet weak var registerLabel: StandartLabel!
+    @IBOutlet weak var loginLabel: StandartLabel!
+    @IBOutlet weak var passwordLabel: StandartLabel!
+    @IBOutlet weak var nameLabel: StandartLabel!
+    @IBOutlet weak var lastnameLabel: StandartLabel!
+    @IBOutlet weak var emailLabel: StandartLabel!
+    @IBOutlet weak var biographyLabel: StandartLabel!
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
@@ -27,13 +28,13 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var registrationButton: UIButton!
     
-    private let viewModel = RegistrationViewModel()
-    private let keyboardHelper = KeyboardHelper()
+    private lazy var viewModel = RegistrationViewModel()
+    private lazy var keyboardHelper = KeyboardHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        keyboardHelper.scrollView = scrollView
+        keyboardHelper.scrollView = testScrollView
         keyboardHelper.hideKeyboardGesture()
         setupViews()
     }
@@ -58,40 +59,20 @@ class RegistrationViewController: UIViewController {
     }
     
     private func setupLablesView() {
-        registerLabel.translatesAutoresizingMaskIntoConstraints = false
         registerLabel.text = "Регистрация"
-        registerLabel.font = .systemFont(ofSize: FontSizes.bigLabel.rawValue, weight: .bold)
         registerLabel.textColor = .white
         
-        loginLabel.translatesAutoresizingMaskIntoConstraints = false
         loginLabel.text = "Логин"
-        loginLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
-        loginLabel.textColor = .systemBlue
         
-        passwordLabel.translatesAutoresizingMaskIntoConstraints = false
         passwordLabel.text = "Пароль"
-        passwordLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
-        passwordLabel.textColor = .systemBlue
         
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.text = "Имя"
-        nameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
-        nameLabel.textColor = .systemBlue
         
-        lastnameLabel.translatesAutoresizingMaskIntoConstraints = false
         lastnameLabel.text = "Фамилия"
-        lastnameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
-        lastnameLabel.textColor = .systemBlue
         
-        emailLabel.translatesAutoresizingMaskIntoConstraints = false
         emailLabel.text = "E-Mail"
-        emailLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
-        emailLabel.textColor = .systemBlue
         
-        biographyLabel.translatesAutoresizingMaskIntoConstraints = false
         biographyLabel.text = "Биография"
-        biographyLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
-        biographyLabel.textColor = .systemBlue
     }
     
     private func setupTextFieldsView() {

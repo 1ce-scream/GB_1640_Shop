@@ -11,7 +11,7 @@ class GoodsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private let viewModel = GoodsListViewModel()
+    private lazy var viewModel = GoodsListViewModel()
     private var goodsList = [Good]()
     
     override func viewDidLoad() {
