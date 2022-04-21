@@ -122,6 +122,8 @@ extension GoodsDetailViewController: UITableViewDataSource {
             withIdentifier: "ReviewFooterView") as? ReviewFooterView
         else { return nil }
         
+        footer.viewController = self
+        
         return footer
     }
     
