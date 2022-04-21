@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
     private func setupLabelsView() {
         brandNameLabel.translatesAutoresizingMaskIntoConstraints = false
         brandNameLabel.text = "GBShop"
-        brandNameLabel.font = .systemFont(ofSize: 40)
+        brandNameLabel.font = .systemFont(ofSize: FontSizes.mainLabel.rawValue)
         brandNameLabel.textAlignment = .center
         brandNameLabel.textColor = .systemBackground
     }
@@ -57,14 +57,14 @@ class LoginViewController: UIViewController {
     private func setupTextFieldsView() {
         loginTextField.translatesAutoresizingMaskIntoConstraints = false
         loginTextField.borderStyle = .roundedRect
-        loginTextField.font = .systemFont(ofSize: 18)
+        loginTextField.font = .systemFont(ofSize: FontSizes.standartTextFields.rawValue)
         loginTextField.autocapitalizationType = .none
         loginTextField.backgroundColor = .systemBackground
         loginTextField.placeholder = "Логин"
         
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.borderStyle = .roundedRect
-        passwordTextField.font = .systemFont(ofSize: 18)
+        passwordTextField.font = .systemFont(ofSize: FontSizes.standartTextFields.rawValue)
         passwordTextField.autocapitalizationType = .none
         passwordTextField.backgroundColor = .systemBackground
         passwordTextField.isSecureTextEntry = true

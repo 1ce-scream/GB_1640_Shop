@@ -49,12 +49,9 @@ class GoodsListViewController: UIViewController {
                 as? GoodsDetailViewController
         else { return }
         
-//        if let index = tableView.indexPathForSelectedRow {
-//            let key = firstLetters[index.section]
-//            let friendsForKey = friendsDict[key]
-//            guard let friend = friendsForKey?[index.row] else { return }
-//            friendCVC.userID = friend.id
-//        }
+        if let index = tableView.indexPathForSelectedRow {
+            destinationVC.good = goodsList[index.row]
+        }
     }
 }
 

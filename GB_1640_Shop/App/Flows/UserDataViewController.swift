@@ -80,10 +80,10 @@ class UserDataViewController: UIViewController {
     
     private func setupLabelsView() {
         emailLabel.text = "E-mail:"
-        emailLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        emailLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         
         genderLabel.text = "Gender:"
-        genderLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        genderLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
     }
     
     private func setupTextViews() {
@@ -91,14 +91,14 @@ class UserDataViewController: UIViewController {
         userNameTextView.text = "\(demoUser.name) \(demoUser.lastname)"
         userNameTextView.textAlignment = .center
         userNameTextView.textColor = .systemBlue
-        userNameTextView.font = .systemFont(ofSize: 25, weight: .bold)
+        userNameTextView.font = .systemFont(ofSize: FontSizes.bigTextView.rawValue, weight: .bold)
         userNameTextView.isEditable = false
         userNameTextView.isScrollEnabled = false
         userNameTextView.isSelectable = true
         
         emailTextView.translatesAutoresizingMaskIntoConstraints = false
         emailTextView.text = demoUser.email
-        emailTextView.font = .systemFont(ofSize: 20, weight: .regular)
+        emailTextView.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .regular)
         emailTextView.isEditable = false
         emailTextView.isScrollEnabled = false
         emailTextView.isSelectable = true
@@ -107,7 +107,7 @@ class UserDataViewController: UIViewController {
         
         genderTextView.translatesAutoresizingMaskIntoConstraints = false
         genderTextView.text = demoUser.gender
-        genderTextView.font = .systemFont(ofSize: 20, weight: .regular)
+        genderTextView.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .regular)
         genderTextView.isEditable = false
         genderTextView.isScrollEnabled = false
         genderTextView.isSelectable = true
@@ -117,7 +117,7 @@ class UserDataViewController: UIViewController {
         userBioTextView.textAlignment = .center
         userBioTextView.textColor = .black
         userBioTextView.isUserInteractionEnabled = true
-        userBioTextView.font = .italicSystemFont(ofSize: 14)
+        userBioTextView.font = .italicSystemFont(ofSize: FontSizes.standartTextView.rawValue)
         userBioTextView.isEditable = false
         userBioTextView.isScrollEnabled = true
         userBioTextView.isSelectable = true

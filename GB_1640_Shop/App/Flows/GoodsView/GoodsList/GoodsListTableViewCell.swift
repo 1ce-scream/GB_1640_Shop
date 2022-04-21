@@ -35,14 +35,16 @@ class GoodsListTableViewCell: UITableViewCell {
     
     private func setupView() {
         productNameLabel.textColor = .systemBlue
-        productNameLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        productNameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         
-        productDescriptionLabel.textColor = .systemBackground
-        productDescriptionLabel.font = .systemFont(ofSize: 17, weight: .regular)
+        productDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        productDescriptionLabel.textColor = .black
+        productDescriptionLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .regular)
         productDescriptionLabel.numberOfLines = 0
+        productDescriptionLabel.lineBreakMode = .byWordWrapping
         
         productPriceLabel.textColor = .systemBlue
-        productPriceLabel.font = .systemFont(ofSize: 17, weight: .regular)
+        productPriceLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .regular)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

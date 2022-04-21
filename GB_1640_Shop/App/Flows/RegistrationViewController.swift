@@ -30,9 +30,6 @@ class RegistrationViewController: UIViewController {
     private let viewModel = RegistrationViewModel()
     private let keyboardHelper = KeyboardHelper()
     
-    private let mainLabelsFontSize: CGFloat = 30
-    private let subLabelsFontSize: CGFloat = 20
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,37 +60,37 @@ class RegistrationViewController: UIViewController {
     private func setupLablesView() {
         registerLabel.translatesAutoresizingMaskIntoConstraints = false
         registerLabel.text = "Регистрация"
-        registerLabel.font = .systemFont(ofSize: mainLabelsFontSize, weight: .bold)
+        registerLabel.font = .systemFont(ofSize: FontSizes.bigLabel.rawValue, weight: .bold)
         registerLabel.textColor = .white
         
         loginLabel.translatesAutoresizingMaskIntoConstraints = false
         loginLabel.text = "Логин"
-        loginLabel.font = .systemFont(ofSize: subLabelsFontSize, weight: .bold)
+        loginLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         loginLabel.textColor = .systemBlue
         
         passwordLabel.translatesAutoresizingMaskIntoConstraints = false
         passwordLabel.text = "Пароль"
-        passwordLabel.font = .systemFont(ofSize: subLabelsFontSize, weight: .bold)
+        passwordLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         passwordLabel.textColor = .systemBlue
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.text = "Имя"
-        nameLabel.font = .systemFont(ofSize: subLabelsFontSize, weight: .bold)
+        nameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         nameLabel.textColor = .systemBlue
         
         lastnameLabel.translatesAutoresizingMaskIntoConstraints = false
         lastnameLabel.text = "Фамилия"
-        lastnameLabel.font = .systemFont(ofSize: subLabelsFontSize, weight: .bold)
+        lastnameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         lastnameLabel.textColor = .systemBlue
         
         emailLabel.translatesAutoresizingMaskIntoConstraints = false
         emailLabel.text = "E-Mail"
-        emailLabel.font = .systemFont(ofSize: subLabelsFontSize, weight: .bold)
+        emailLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         emailLabel.textColor = .systemBlue
         
         biographyLabel.translatesAutoresizingMaskIntoConstraints = false
         biographyLabel.text = "Биография"
-        biographyLabel.font = .systemFont(ofSize: subLabelsFontSize, weight: .bold)
+        biographyLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         biographyLabel.textColor = .systemBlue
     }
     

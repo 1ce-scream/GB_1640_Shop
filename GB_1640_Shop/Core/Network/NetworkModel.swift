@@ -8,8 +8,8 @@
 import Foundation
 import Alamofire
 
-protocol NetworkModel {
-    associatedtype T
-    associatedtype U
-    func send(_: T, completion: @escaping (AFDataResponse<U>) -> Void)
-}
+// protocol NetworkModel {
+//    associatedtype T
+//    associatedtype U
+//    func send(_: T, completion: @escaping (AFDataResponse<U>) -> Void)
+// }

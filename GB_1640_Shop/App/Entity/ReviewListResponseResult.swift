@@ -9,7 +9,7 @@ import Foundation
 
 struct ReviewListResponseResult: Codable {
     let result: Int
-    let reviewList: [String]?
+    let reviewList: [Reviews]?
     let errorMessage: String?
     
     enum CodingKeys: String, CodingKey {
