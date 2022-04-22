@@ -11,10 +11,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var brandNameLabel: UILabel!
-    @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var registrationButton: UIButton!
+    @IBOutlet weak var loginTextField: StandartTextField!
+    @IBOutlet weak var passwordTextField: StandartTextField!
+    @IBOutlet weak var loginButton: StandartButton!
+    @IBOutlet weak var registrationButton: StandartButton!
     
     private lazy var viewModel = LoginViewModel()
     private lazy var keyboardHelper = KeyboardHelper()
@@ -56,35 +56,20 @@ class LoginViewController: UIViewController {
     }
     
     private func setupTextFieldsView() {
-        loginTextField.translatesAutoresizingMaskIntoConstraints = false
-        loginTextField.borderStyle = .roundedRect
-        loginTextField.font = .systemFont(ofSize: FontSizes.standartTextFields.rawValue)
-        loginTextField.autocapitalizationType = .none
-        loginTextField.backgroundColor = .systemBackground
         loginTextField.placeholder = "Логин"
+        loginTextField.autocapitalizationType = .words
         
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.borderStyle = .roundedRect
-        passwordTextField.font = .systemFont(ofSize: FontSizes.standartTextFields.rawValue)
-        passwordTextField.autocapitalizationType = .none
-        passwordTextField.backgroundColor = .systemBackground
-        passwordTextField.isSecureTextEntry = true
         passwordTextField.placeholder = "Пароль"
+        passwordTextField.isSecureTextEntry = true
     }
     
     private func setupButtonsView() {
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.isUserInteractionEnabled = true
         loginButton.setTitle("Войти", for: .normal)
-        loginButton.setTitleColor(.systemBlue, for: .normal)
-        loginButton.setTitleColor(.systemRed, for: .highlighted)
-        loginButton.tintColor = .white
+        loginButton.tintColor = .systemGreen
 
-        registrationButton.translatesAutoresizingMaskIntoConstraints = false
-        registrationButton.isUserInteractionEnabled = true
+
         registrationButton.setTitle("Регистрация", for: .normal)
-        registrationButton.setTitleColor(.systemBackground, for: .normal)
-        registrationButton.setTitleColor(.systemRed, for: .highlighted)
+        registrationButton.tintColor = .systemTeal
         registrationButton.addTarget(self,
                                      action: #selector(presentRegistrationVC(_ :)),
                                      for: .touchUpInside)

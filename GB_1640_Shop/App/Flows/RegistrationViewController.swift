@@ -19,12 +19,12 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var emailLabel: StandartLabel!
     @IBOutlet weak var biographyLabel: StandartLabel!
     
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var lastnameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var biographyTextField: UITextField!
+    @IBOutlet weak var passwordTextField: StandartTextField!
+    @IBOutlet weak var loginTextField: StandartTextField!
+    @IBOutlet weak var nameTextField: StandartTextField!
+    @IBOutlet weak var lastnameTextField: StandartTextField!
+    @IBOutlet weak var emailTextField: StandartTextField!
+    @IBOutlet weak var biographyTextField: StandartTextField!
     
     @IBOutlet weak var registrationButton: UIButton!
     
@@ -76,24 +76,14 @@ class RegistrationViewController: UIViewController {
     }
     
     private func setupTextFieldsView() {
-        loginTextField.translatesAutoresizingMaskIntoConstraints = false
-        loginTextField.autocapitalizationType = .none
         
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.autocapitalizationType = .none
         passwordTextField.isSecureTextEntry = true
         
-        nameTextField.translatesAutoresizingMaskIntoConstraints = false
         nameTextField.autocapitalizationType = .words
         nameTextField.isSecureTextEntry = false
         
-        lastnameTextField.translatesAutoresizingMaskIntoConstraints = false
         lastnameTextField.autocapitalizationType = .words
         
-        emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        emailTextField.autocapitalizationType = .none
-        
-        biographyTextField.translatesAutoresizingMaskIntoConstraints = false
         biographyTextField.autocapitalizationType = .sentences
     }
     

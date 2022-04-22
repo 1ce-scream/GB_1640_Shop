@@ -38,7 +38,6 @@ class GoodsDetailViewController: UIViewController {
         reviewsTableView.delegate = self
         reviewsTableView.keyboardDismissMode = .onDrag
         reviewsTableView.backgroundColor = .systemBlue
-        reviewsTableView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func registerNib() {

@@ -12,12 +12,12 @@ class UserDataViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userAvatarImageView: AvatarImage!
     @IBOutlet weak var userNameTextView: UITextView!
-    @IBOutlet weak var userBioTextView: UITextView!
+    @IBOutlet weak var userBioTextView: StandartTextView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var editInfoButton: UIButton!
-    @IBOutlet weak var emailTextView: UITextView!
-    @IBOutlet weak var genderTextView: UITextView!
+    @IBOutlet weak var emailTextView: SubTextView!
+    @IBOutlet weak var genderTextView: SubTextView!
     @IBOutlet weak var saveEditedDataButton: UIButton!
     
     @IBAction func editUserData(_ sender: Any) {
@@ -87,7 +87,6 @@ class UserDataViewController: UIViewController {
     }
     
     private func setupTextViews() {
-        userNameTextView.translatesAutoresizingMaskIntoConstraints = false
         userNameTextView.text = "\(demoUser.name) \(demoUser.lastname)"
         userNameTextView.textAlignment = .center
         userNameTextView.textColor = .systemBlue
@@ -96,31 +95,15 @@ class UserDataViewController: UIViewController {
         userNameTextView.isScrollEnabled = false
         userNameTextView.isSelectable = true
         
-        emailTextView.translatesAutoresizingMaskIntoConstraints = false
         emailTextView.text = demoUser.email
-        emailTextView.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .regular)
-        emailTextView.isEditable = false
-        emailTextView.isScrollEnabled = false
-        emailTextView.isSelectable = true
         emailTextView.keyboardType = .emailAddress
         emailTextView.dataDetectorTypes = .link
         
-        genderTextView.translatesAutoresizingMaskIntoConstraints = false
         genderTextView.text = demoUser.gender
-        genderTextView.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .regular)
-        genderTextView.isEditable = false
-        genderTextView.isScrollEnabled = false
-        genderTextView.isSelectable = true
         
-        userBioTextView.translatesAutoresizingMaskIntoConstraints = false
         userBioTextView.text = demoUser.biography
         userBioTextView.textAlignment = .center
         userBioTextView.textColor = .black
-        userBioTextView.isUserInteractionEnabled = true
-        userBioTextView.font = .italicSystemFont(ofSize: FontSizes.standartTextView.rawValue)
-        userBioTextView.isEditable = false
-        userBioTextView.isScrollEnabled = true
-        userBioTextView.isSelectable = true
     }
     
     private func toggleEditInfo() {

@@ -37,7 +37,7 @@ class GoodsListViewController: UIViewController {
     }
     
     private func setContent() {
-        viewModel.sendGoodsListRequest() { productList in
+        viewModel.sendGoodsListRequest(completion: ) { productList in
             self.goodsList = productList
             self.tableView.reloadData()
         }

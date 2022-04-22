@@ -31,7 +31,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r9v-n5-1yu" userLabel="TextFieldStack">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="76"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eph-x9-uY6">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eph-x9-uY6" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="150" id="hz2-0r-6Ip"/>
@@ -39,7 +39,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-rQ-Ogg">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-rQ-Ogg" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="42" width="150" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -54,7 +54,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-6a-uia" userLabel="ButtonsStack">
                                                 <rect key="frame" x="41.5" y="94" width="67" height="82"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7H-0E-i8Z">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7H-0E-i8Z" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
@@ -62,7 +62,7 @@
                                                             <segue destination="Gsa-zj-OZm" kind="show" identifier="loginToTabbarSegue" id="Ivd-yr-VdU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAJ-VT-Njm">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAJ-VT-Njm" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="51" width="67" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
@@ -159,7 +159,7 @@
                                                                         <color key="textColor" systemColor="systemBlueColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYG-Tr-XHG">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYG-Tr-XHG" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
                                                                         <rect key="frame" x="50" y="29" width="200" height="34"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="200" id="nbD-ky-AKZ"/>
@@ -178,7 +178,7 @@
                                                                         <color key="textColor" systemColor="systemBlueColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jB-PM-ht4">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jB-PM-ht4" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
                                                                         <rect key="frame" x="50" y="29" width="200" height="34"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="200" id="Nhg-8B-T5n"/>
@@ -197,7 +197,7 @@
                                                                         <color key="textColor" systemColor="systemBlueColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47b-6z-Ubj">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47b-6z-Ubj" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
                                                                         <rect key="frame" x="50" y="29" width="200" height="34"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="200" id="i0a-vJ-x4m"/>
@@ -216,7 +216,7 @@
                                                                         <color key="textColor" systemColor="systemBlueColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlD-6W-7Cr">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlD-6W-7Cr" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
                                                                         <rect key="frame" x="50" y="29" width="200" height="34"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="200" id="Xkf-wA-FhI"/>
@@ -235,7 +235,7 @@
                                                                         <color key="textColor" systemColor="systemBlueColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUf-ED-TzL">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUf-ED-TzL" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
                                                                         <rect key="frame" x="50" y="29" width="200" height="34"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="200" id="djl-2o-5B6"/>
@@ -254,7 +254,7 @@
                                                                         <color key="textColor" systemColor="systemBlueColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGR-1R-DB5">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGR-1R-DB5" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="29" width="300" height="100"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="300" id="KFa-2y-Z14"/>
@@ -393,7 +393,7 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-yw-5l9">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-yw-5l9" customClass="StandartTextView" customModule="GB_1640_Shop" customModuleProvider="target">
                                                 <rect key="frame" x="37" y="121" width="340" height="120"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -417,7 +417,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tdz-TO-wvu">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tdz-TO-wvu" customClass="SubTextView" customModule="GB_1640_Shop" customModuleProvider="target">
                                                                 <rect key="frame" x="51.5" y="0.0" width="342.5" height="40"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
@@ -438,7 +438,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeW-zY-HjL">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeW-zY-HjL" customClass="SubTextView" customModule="GB_1640_Shop" customModuleProvider="target">
                                                                 <rect key="frame" x="51.5" y="0.0" width="342.5" height="40"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>

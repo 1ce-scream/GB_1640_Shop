@@ -10,9 +10,14 @@ import UIKit
 class StandartLabel: UILabel {
     
     override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
         self.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         self.textColor = .systemBlue
-        self.translatesAutoresizingMaskIntoConstraints = false
+        
+//        productDescriptionLabel.textColor = .systemBackground
+//        productDescriptionLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .regular)
+//        productDescriptionLabel.numberOfLines = 0
+//        productDescriptionLabel.lineBreakMode = .byWordWrapping
     }
 }
 
@@ -62,22 +67,51 @@ class CellBackground: UIView {
 class StandartTextView: UITextView {
     
     override func awakeFromNib() {
+        self.isUserInteractionEnabled = true
         self.isEditable = false
         self.isSelectable = true
         self.isScrollEnabled = true
         self.backgroundColor = .clear
         self.textColor = .systemBackground
         self.font = .systemFont(ofSize: FontSizes.standartTextView.rawValue, weight: .regular)
-        
-//        userNameTextView.translatesAutoresizingMaskIntoConstraints = false
-//        userNameTextView.text = "\(demoUser.name) \(demoUser.lastname)"
-//        userNameTextView.textAlignment = .center
-//        userNameTextView.textColor = .systemBlue
-//        userNameTextView.font = .systemFont(ofSize: FontSizes.bigTextView.rawValue, weight: .bold)
-//        userNameTextView.isScrollEnabled = false
     }
 }
 
-class StandratTextField: UITextField {
+class SubTextView: UITextView {
     
+    override func awakeFromNib() {
+        self.isUserInteractionEnabled = true
+        self.isEditable = false
+        self.isSelectable = true
+        self.isScrollEnabled = false
+        self.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .regular)
+    }
+}
+
+class StandartTextField: UITextField {
+    
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.borderStyle = .roundedRect
+        self.font = .systemFont(ofSize: FontSizes.standartTextFields.rawValue)
+        self.backgroundColor = .systemBackground
+        self.textColor = .systemBlue
+        self.autocapitalizationType = .none
+    }
+    
+//    passwordTextField.isSecureTextEntry = true
+}
+
+class StandartButton: UIButton {
+
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.isUserInteractionEnabled = true
+        self.setTitleColor(.systemBackground, for: .normal)
+        self.setTitleColor(.systemRed, for: .highlighted)
+    }
+    
+//    override func updateConfiguration() {
+//        
+//    }
 }
