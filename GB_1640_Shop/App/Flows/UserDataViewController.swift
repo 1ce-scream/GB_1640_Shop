@@ -11,14 +11,16 @@ class UserDataViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userAvatarImageView: AvatarImage!
-    @IBOutlet weak var userNameTextView: UITextView!
-    @IBOutlet weak var userBioTextView: StandartTextView!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
-    @IBOutlet weak var editInfoButton: UIButton!
+    @IBOutlet weak var userNameTextView: StandartTextView!
+    @IBOutlet weak var userBioTextView: SubTextView!
+    @IBOutlet weak var emailLabel: StandartLabel!
+    @IBOutlet weak var genderLabel: StandartLabel!
+    @IBOutlet weak var editInfoButton: SubButton!
     @IBOutlet weak var emailTextView: SubTextView!
     @IBOutlet weak var genderTextView: SubTextView!
-    @IBOutlet weak var saveEditedDataButton: UIButton!
+    @IBOutlet weak var saveEditedDataButton: SubButton!
+    @IBOutlet weak var creditCardLabel: StandartLabel!
+    @IBOutlet weak var creditCardTextView: SubTextView!
     
     @IBAction func editUserData(_ sender: Any) {
         toggleEditInfo()
@@ -27,10 +29,12 @@ class UserDataViewController: UIViewController {
     @IBAction func saveEditedData(_ sender: Any) {
         toggleEditInfo()
         viewModel.sendChageUserDataRequest(email: emailTextView.text ?? "")
+        alert.showAlert(title: "Успех", message: "Ваши данные успешно изменены!")
     }
     
     private lazy var viewModel = UserDataViewModel()
     private lazy var keyboardHelper = KeyboardHelper()
+    private lazy var alert = AlertsHelper(viewController: self)
     private let demoUser: User = User(id: 123,
                                       login: "Somebody",
                                       password: "Password",
@@ -75,25 +79,23 @@ class UserDataViewController: UIViewController {
         
         saveEditedDataButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
         saveEditedDataButton.setTitle("Сохранить", for: .normal)
+        saveEditedDataButton.backgroundColor = .systemGreen
         saveEditedDataButton.isHidden = true
+        
     }
     
     private func setupLabelsView() {
         emailLabel.text = "E-mail:"
-        emailLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         
         genderLabel.text = "Gender:"
-        genderLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
+        
+        creditCardLabel.text = "Card:"
     }
     
     private func setupTextViews() {
         userNameTextView.text = "\(demoUser.name) \(demoUser.lastname)"
         userNameTextView.textAlignment = .center
-        userNameTextView.textColor = .systemBlue
         userNameTextView.font = .systemFont(ofSize: FontSizes.bigTextView.rawValue, weight: .bold)
-        userNameTextView.isEditable = false
-        userNameTextView.isScrollEnabled = false
-        userNameTextView.isSelectable = true
         
         emailTextView.text = demoUser.email
         emailTextView.keyboardType = .emailAddress
@@ -103,7 +105,8 @@ class UserDataViewController: UIViewController {
         
         userBioTextView.text = demoUser.biography
         userBioTextView.textAlignment = .center
-        userBioTextView.textColor = .black
+        
+        creditCardTextView.text = demoUser.creditcard
     }
     
     private func toggleEditInfo() {
@@ -111,6 +114,7 @@ class UserDataViewController: UIViewController {
         genderTextView.isEditable.toggle()
         userBioTextView.isEditable.toggle()
         userNameTextView.isEditable.toggle()
+        creditCardTextView.isEditable.toggle()
         
         editInfoButton.isHidden.toggle()
         saveEditedDataButton.isHidden.toggle()

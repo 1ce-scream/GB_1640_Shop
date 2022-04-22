@@ -10,7 +10,6 @@ import UIKit
 class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var testScrollView: UIScrollView!
     @IBOutlet weak var registerLabel: StandartLabel!
     @IBOutlet weak var loginLabel: StandartLabel!
     @IBOutlet weak var passwordLabel: StandartLabel!
@@ -34,7 +33,7 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        keyboardHelper.scrollView = testScrollView
+        keyboardHelper.scrollView = scrollView
         keyboardHelper.hideKeyboardGesture()
         setupViews()
     }
@@ -60,7 +59,6 @@ class RegistrationViewController: UIViewController {
     
     private func setupLablesView() {
         registerLabel.text = "Регистрация"
-        registerLabel.textColor = .white
         
         loginLabel.text = "Логин"
         
@@ -88,9 +86,8 @@ class RegistrationViewController: UIViewController {
     }
     
     private func setupButtonsView() {
-        registrationButton.isUserInteractionEnabled = true
         registrationButton.setTitle("Зарегистрироваться", for: .normal)
-        registrationButton.setTitleColor(.systemRed, for: .highlighted)
+        registrationButton.tintColor = .systemGreen
         registrationButton.addTarget(self,
                                      action: #selector(presentUserDataVC(_ :)),
                                      for: .touchUpInside)

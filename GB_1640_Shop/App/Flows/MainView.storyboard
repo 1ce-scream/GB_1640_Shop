@@ -118,194 +118,148 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obs-fH-d0y">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWi-kW-p7q">
-                                        <rect key="frame" x="112.5" y="20" width="189.5" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWi-kW-p7q">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcS-Av-Y9i">
-                                        <rect key="frame" x="10" y="10" width="394" height="798"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-cd-lFX">
-                                        <rect key="frame" x="0.0" y="86" width="414" height="724"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWI-4Z-QGg" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                        <rect key="frame" x="125" y="590" width="164" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Зарегистрироваться"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uN5-cV-C6T">
+                                        <rect key="frame" x="57" y="76" width="300" height="494"/>
                                         <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adr-X1-C1q">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ynL-Pb-Fk5" userLabel="LoginStack">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="63"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1I-PF-eIg">
-                                                        <rect key="frame" x="20" y="20" width="0.0" height="0.0"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-SJ-wq4" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="120" y="0.0" width="60" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWI-4Z-QGg">
-                                                        <rect key="frame" x="125" y="564" width="164" height="31"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Зарегистрироваться"/>
-                                                    </button>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uN5-cV-C6T">
-                                                        <rect key="frame" x="57" y="0.0" width="300" height="544"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ynL-Pb-Fk5" userLabel="LoginStack">
-                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="63"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-SJ-wq4">
-                                                                        <rect key="frame" x="120" y="0.0" width="60" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <color key="textColor" systemColor="systemBlueColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYG-Tr-XHG" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="200" id="nbD-ky-AKZ"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Eyl-DT-bpM" userLabel="PasswordStack">
-                                                                <rect key="frame" x="0.0" y="83" width="300" height="63"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4o2-nn-yCv">
-                                                                        <rect key="frame" x="113.5" y="0.0" width="73.5" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <color key="textColor" systemColor="systemBlueColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jB-PM-ht4" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="200" id="Nhg-8B-T5n"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tfi-LO-cud" userLabel="NameStack">
-                                                                <rect key="frame" x="0.0" y="166" width="300" height="63"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srd-nm-Ex3">
-                                                                        <rect key="frame" x="129" y="0.0" width="42" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <color key="textColor" systemColor="systemBlueColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47b-6z-Ubj" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="200" id="i0a-vJ-x4m"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OuZ-Hq-5x1" userLabel="LastnameStack">
-                                                                <rect key="frame" x="0.0" y="249" width="300" height="63"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUA-Ae-Cmd">
-                                                                        <rect key="frame" x="104" y="0.0" width="92" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <color key="textColor" systemColor="systemBlueColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlD-6W-7Cr" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="200" id="Xkf-wA-FhI"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fcR-7l-JMl" userLabel="EmailStack">
-                                                                <rect key="frame" x="0.0" y="332" width="300" height="63"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRj-zo-g6f">
-                                                                        <rect key="frame" x="120" y="0.0" width="60.5" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <color key="textColor" systemColor="systemBlueColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUf-ED-TzL" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="200" id="djl-2o-5B6"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EbF-fg-Prx" userLabel="BioStack">
-                                                                <rect key="frame" x="0.0" y="415" width="300" height="129"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Биография" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2R-tw-IU6">
-                                                                        <rect key="frame" x="95.5" y="0.0" width="109.5" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <color key="textColor" systemColor="systemBlueColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGR-1R-DB5" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="29" width="300" height="100"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="300" id="KFa-2y-Z14"/>
-                                                                            <constraint firstAttribute="height" constant="100" id="gQD-Yr-Jk0"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYG-Tr-XHG" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="nbD-ky-AKZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="uN5-cV-C6T" firstAttribute="centerX" secondItem="adr-X1-C1q" secondAttribute="centerX" id="1eo-00-fcG"/>
-                                                    <constraint firstItem="kWI-4Z-QGg" firstAttribute="top" secondItem="uN5-cV-C6T" secondAttribute="bottom" constant="20" id="1nI-Xp-wgP"/>
-                                                    <constraint firstAttribute="bottom" secondItem="kWI-4Z-QGg" secondAttribute="bottom" constant="20" id="7gg-PA-nxk"/>
-                                                    <constraint firstItem="M1I-PF-eIg" firstAttribute="top" secondItem="adr-X1-C1q" secondAttribute="top" constant="20" id="ENE-mg-Dwj"/>
-                                                    <constraint firstItem="M1I-PF-eIg" firstAttribute="leading" secondItem="adr-X1-C1q" secondAttribute="leading" constant="20" id="Jy0-PY-2tG"/>
-                                                    <constraint firstItem="uN5-cV-C6T" firstAttribute="top" secondItem="M1I-PF-eIg" secondAttribute="bottom" constant="-20" id="N7i-Wi-gYo"/>
-                                                    <constraint firstItem="kWI-4Z-QGg" firstAttribute="centerX" secondItem="adr-X1-C1q" secondAttribute="centerX" id="Pvq-tQ-j9j"/>
-                                                    <constraint firstAttribute="trailing" secondItem="M1I-PF-eIg" secondAttribute="trailing" constant="20" id="YJI-bc-h2Y"/>
-                                                </constraints>
-                                                <viewLayoutGuide key="contentLayoutGuide" id="Hdu-uk-TZ5"/>
-                                                <viewLayoutGuide key="frameLayoutGuide" id="Q9C-JZ-Iqs"/>
-                                            </scrollView>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Eyl-DT-bpM" userLabel="PasswordStack">
+                                                <rect key="frame" x="0.0" y="73" width="300" height="63"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4o2-nn-yCv" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="113.5" y="0.0" width="73.5" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jB-PM-ht4" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="Nhg-8B-T5n"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tfi-LO-cud" userLabel="NameStack">
+                                                <rect key="frame" x="0.0" y="146" width="300" height="63"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srd-nm-Ex3" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="129" y="0.0" width="42" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47b-6z-Ubj" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="i0a-vJ-x4m"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OuZ-Hq-5x1" userLabel="LastnameStack">
+                                                <rect key="frame" x="0.0" y="219" width="300" height="63"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUA-Ae-Cmd" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="104" y="0.0" width="92" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlD-6W-7Cr" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="Xkf-wA-FhI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fcR-7l-JMl" userLabel="EmailStack">
+                                                <rect key="frame" x="0.0" y="292" width="300" height="63"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRj-zo-g6f" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="120" y="0.0" width="60.5" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUf-ED-TzL" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="29" width="200" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="djl-2o-5B6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EbF-fg-Prx" userLabel="BioStack">
+                                                <rect key="frame" x="0.0" y="365" width="300" height="129"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Биография" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2R-tw-IU6" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="95.5" y="0.0" width="109.5" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGR-1R-DB5" customClass="StandartTextField" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="29" width="300" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="KFa-2y-Z14"/>
+                                                            <constraint firstAttribute="height" constant="100" id="gQD-Yr-Jk0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="adr-X1-C1q" secondAttribute="bottom" id="6As-RF-TJq"/>
-                                            <constraint firstItem="adr-X1-C1q" firstAttribute="top" secondItem="MUK-cd-lFX" secondAttribute="top" id="EJ5-Uy-20I"/>
-                                            <constraint firstAttribute="trailing" secondItem="adr-X1-C1q" secondAttribute="trailing" id="fV3-vw-HkD"/>
-                                            <constraint firstItem="adr-X1-C1q" firstAttribute="leading" secondItem="MUK-cd-lFX" secondAttribute="leading" id="las-cg-cI0"/>
-                                        </constraints>
-                                    </view>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qWi-kW-p7q" firstAttribute="top" secondItem="vRI-4d-JUG" secondAttribute="top" constant="20" id="2ut-bL-yg3"/>
-                                    <constraint firstAttribute="trailing" secondItem="BcS-Av-Y9i" secondAttribute="trailing" constant="10" id="E3u-kV-f5r"/>
+                                    <constraint firstItem="kWI-4Z-QGg" firstAttribute="top" secondItem="uN5-cV-C6T" secondAttribute="bottom" constant="20" id="3rW-Vm-XjN"/>
+                                    <constraint firstItem="qWi-kW-p7q" firstAttribute="leading" secondItem="obs-fH-d0y" secondAttribute="leading" id="4Oa-xA-onm"/>
+                                    <constraint firstAttribute="bottom" secondItem="kWI-4Z-QGg" secondAttribute="bottom" constant="20" id="4tL-6H-bla"/>
+                                    <constraint firstAttribute="trailing" secondItem="qWi-kW-p7q" secondAttribute="trailing" id="6db-J6-w7h"/>
                                     <constraint firstItem="qWi-kW-p7q" firstAttribute="top" secondItem="obs-fH-d0y" secondAttribute="top" constant="20" id="GEo-OP-BOh"/>
-                                    <constraint firstItem="MUK-cd-lFX" firstAttribute="leading" secondItem="vRI-4d-JUG" secondAttribute="leading" id="HeS-zH-4Jt"/>
-                                    <constraint firstItem="MUK-cd-lFX" firstAttribute="trailing" secondItem="vRI-4d-JUG" secondAttribute="trailing" id="SqC-by-AVm"/>
-                                    <constraint firstAttribute="bottom" secondItem="MUK-cd-lFX" secondAttribute="bottom" constant="8" id="TVy-aI-oNa"/>
-                                    <constraint firstItem="vRI-4d-JUG" firstAttribute="bottom" secondItem="MUK-cd-lFX" secondAttribute="bottom" constant="8" id="VhI-1g-leC"/>
-                                    <constraint firstItem="MUK-cd-lFX" firstAttribute="leading" secondItem="obs-fH-d0y" secondAttribute="leading" id="b4d-eB-1yd"/>
-                                    <constraint firstAttribute="trailing" secondItem="MUK-cd-lFX" secondAttribute="trailing" id="cOI-6B-ZHf"/>
-                                    <constraint firstItem="qWi-kW-p7q" firstAttribute="centerX" secondItem="obs-fH-d0y" secondAttribute="centerX" id="cPP-WJ-WIa"/>
-                                    <constraint firstAttribute="bottom" secondItem="BcS-Av-Y9i" secondAttribute="bottom" constant="10" id="eS6-p4-hLW"/>
-                                    <constraint firstItem="BcS-Av-Y9i" firstAttribute="leading" secondItem="obs-fH-d0y" secondAttribute="leading" constant="10" id="jvW-Ns-UuF"/>
-                                    <constraint firstItem="MUK-cd-lFX" firstAttribute="top" secondItem="qWi-kW-p7q" secondAttribute="bottom" constant="30" id="l1j-Oh-EIl"/>
-                                    <constraint firstItem="BcS-Av-Y9i" firstAttribute="top" secondItem="obs-fH-d0y" secondAttribute="top" constant="10" id="yjy-kC-BGv"/>
+                                    <constraint firstItem="kWI-4Z-QGg" firstAttribute="centerX" secondItem="obs-fH-d0y" secondAttribute="centerX" id="Idd-d6-Ulf"/>
+                                    <constraint firstItem="qWi-kW-p7q" firstAttribute="centerX" secondItem="obs-fH-d0y" secondAttribute="centerX" id="gCh-D4-y3v"/>
+                                    <constraint firstItem="uN5-cV-C6T" firstAttribute="centerX" secondItem="obs-fH-d0y" secondAttribute="centerX" id="uho-BM-JWQ"/>
+                                    <constraint firstItem="uN5-cV-C6T" firstAttribute="top" secondItem="qWi-kW-p7q" secondAttribute="bottom" constant="20" id="zE5-JI-EOQ"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="YpJ-pL-Eah"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="vRI-4d-JUG"/>
@@ -336,7 +290,6 @@
                         <outlet property="registerLabel" destination="qWi-kW-p7q" id="7pv-2p-CQM"/>
                         <outlet property="registrationButton" destination="kWI-4Z-QGg" id="TcZ-Oy-q5T"/>
                         <outlet property="scrollView" destination="obs-fH-d0y" id="1b6-R9-r3p"/>
-                        <outlet property="testScrollView" destination="adr-X1-C1q" id="IUv-zz-aUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Txd-dv-kOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -355,153 +308,162 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoN-p1-b9z">
-                                        <rect key="frame" x="20" y="10" width="374" height="744"/>
+                                        <rect key="frame" x="20" y="10" width="374" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxg-Mj-DNt">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="714"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdv-ff-hB2" customClass="AvatarBackgroundShadowView" customModule="GB_1640_Shop" customModuleProvider="target">
+                                        <rect key="frame" x="147" y="10" width="120" height="120"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdv-ff-hB2" customClass="AvatarBackgroundShadowView" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                <rect key="frame" x="147" y="-60" width="120" height="120"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicorn.png" translatesAutoresizingMaskIntoConstraints="NO" id="sbI-sP-UaW" customClass="AvatarImage" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="120" id="eXs-GO-Dvv"/>
-                                                            <constraint firstAttribute="height" constant="120" id="xWz-SZ-xUX"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicorn.png" translatesAutoresizingMaskIntoConstraints="NO" id="sbI-sP-UaW" customClass="AvatarImage" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="R22-UL-8ON"/>
-                                                    <constraint firstAttribute="width" constant="120" id="TUb-J7-A4X"/>
-                                                    <constraint firstItem="sbI-sP-UaW" firstAttribute="centerY" secondItem="Xdv-ff-hB2" secondAttribute="centerY" id="c2r-1a-JN3"/>
-                                                    <constraint firstItem="sbI-sP-UaW" firstAttribute="centerX" secondItem="Xdv-ff-hB2" secondAttribute="centerX" id="cek-fY-6Gb"/>
+                                                    <constraint firstAttribute="width" constant="120" id="eXs-GO-Dvv"/>
+                                                    <constraint firstAttribute="height" constant="120" id="xWz-SZ-xUX"/>
                                                 </constraints>
-                                            </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Name Lastname" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bbB-FA-3Hp">
-                                                <rect key="frame" x="37" y="61" width="340" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="BUQ-eY-uIJ"/>
-                                                    <constraint firstAttribute="width" constant="340" id="aXW-nN-4IB"/>
-                                                </constraints>
-                                                <color key="textColor" systemColor="systemBlueColor"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-yw-5l9" customClass="StandartTextView" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                <rect key="frame" x="37" y="121" width="340" height="120"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="340" id="CRb-gw-jbF"/>
-                                                    <constraint firstAttribute="height" constant="120" id="Mzq-Ra-gNs"/>
-                                                </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="NHg-iX-xzj">
-                                                <rect key="frame" x="10" y="246" width="394" height="114"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="left" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zl0-cg-iGC" userLabel="EmailStack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="40"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEo-oN-VNd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="40"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tdz-TO-wvu" customClass="SubTextView" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                                <rect key="frame" x="51.5" y="0.0" width="342.5" height="40"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="QpE-Xl-fco"/>
-                                                                </constraints>
-                                                                <color key="textColor" systemColor="labelColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                            </textView>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="left" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="czv-PN-h4M" userLabel="GenderStack">
-                                                        <rect key="frame" x="0.0" y="74" width="394" height="40"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cG5-Wr-A7l">
-                                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="40"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeW-zY-HjL" customClass="SubTextView" customModule="GB_1640_Shop" customModuleProvider="target">
-                                                                <rect key="frame" x="51.5" y="0.0" width="342.5" height="40"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="cew-Ww-EeQ"/>
-                                                                </constraints>
-                                                                <color key="textColor" systemColor="labelColor"/>
-                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                            </textView>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuK-d5-BIz">
-                                                <rect key="frame" x="173.5" y="380" width="67" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                <connections>
-                                                    <action selector="editUserData:" destination="lSv-Ve-pPP" eventType="touchUpInside" id="BYT-Ri-3uX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-BT-XYh">
-                                                <rect key="frame" x="173.5" y="380" width="67" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                <connections>
-                                                    <action selector="saveEditedData:" destination="lSv-Ve-pPP" eventType="touchUpInside" id="X21-Eb-UOy"/>
-                                                </connections>
-                                            </button>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="NHg-iX-xzj" firstAttribute="leading" secondItem="fxg-Mj-DNt" secondAttribute="leading" constant="10" id="0Pq-ew-xwI"/>
-                                            <constraint firstItem="Atq-yw-5l9" firstAttribute="centerX" secondItem="fxg-Mj-DNt" secondAttribute="centerX" id="2oH-Lw-aI8"/>
-                                            <constraint firstItem="pD8-BT-XYh" firstAttribute="top" secondItem="NHg-iX-xzj" secondAttribute="bottom" constant="20" id="5sO-3E-duM"/>
-                                            <constraint firstItem="NHg-iX-xzj" firstAttribute="top" secondItem="Atq-yw-5l9" secondAttribute="bottom" constant="5" id="JrP-On-XPB"/>
-                                            <constraint firstItem="bbB-FA-3Hp" firstAttribute="top" secondItem="Xdv-ff-hB2" secondAttribute="bottom" constant="1" id="P2o-OW-BzO"/>
-                                            <constraint firstItem="bbB-FA-3Hp" firstAttribute="centerX" secondItem="fxg-Mj-DNt" secondAttribute="centerX" id="XgX-SF-eAv"/>
-                                            <constraint firstAttribute="trailing" secondItem="NHg-iX-xzj" secondAttribute="trailing" constant="10" id="csL-Lv-vy7"/>
-                                            <constraint firstItem="NHg-iX-xzj" firstAttribute="centerX" secondItem="fxg-Mj-DNt" secondAttribute="centerX" id="kO6-gV-PTN"/>
-                                            <constraint firstItem="Xdv-ff-hB2" firstAttribute="centerX" secondItem="fxg-Mj-DNt" secondAttribute="centerX" id="m8a-aB-2qS"/>
-                                            <constraint firstItem="pD8-BT-XYh" firstAttribute="centerX" secondItem="fxg-Mj-DNt" secondAttribute="centerX" id="pkG-EA-Zpd"/>
-                                            <constraint firstItem="Atq-yw-5l9" firstAttribute="top" secondItem="bbB-FA-3Hp" secondAttribute="bottom" constant="20" id="tbQ-eT-Y1M"/>
-                                            <constraint firstItem="yuK-d5-BIz" firstAttribute="centerX" secondItem="fxg-Mj-DNt" secondAttribute="centerX" id="u0E-6H-iAM"/>
-                                            <constraint firstItem="Xdv-ff-hB2" firstAttribute="top" secondItem="fxg-Mj-DNt" secondAttribute="top" constant="-60" id="un9-2b-jg0"/>
-                                            <constraint firstItem="yuK-d5-BIz" firstAttribute="top" secondItem="NHg-iX-xzj" secondAttribute="bottom" constant="20" id="zoW-wd-L6Q"/>
+                                            <constraint firstAttribute="height" constant="120" id="R22-UL-8ON"/>
+                                            <constraint firstAttribute="width" constant="120" id="TUb-J7-A4X"/>
+                                            <constraint firstItem="sbI-sP-UaW" firstAttribute="centerY" secondItem="Xdv-ff-hB2" secondAttribute="centerY" id="c2r-1a-JN3"/>
+                                            <constraint firstItem="sbI-sP-UaW" firstAttribute="centerX" secondItem="Xdv-ff-hB2" secondAttribute="centerX" id="cek-fY-6Gb"/>
                                         </constraints>
                                     </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Name Lastname" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bbB-FA-3Hp" customClass="StandartTextView" customModule="GB_1640_Shop" customModuleProvider="target">
+                                        <rect key="frame" x="37" y="140" width="340" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BUQ-eY-uIJ"/>
+                                            <constraint firstAttribute="width" constant="340" id="aXW-nN-4IB"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-yw-5l9" customClass="SubTextView" customModule="GB_1640_Shop" customModuleProvider="target">
+                                        <rect key="frame" x="37" y="190" width="340" height="120"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="CRb-gw-jbF"/>
+                                            <constraint firstAttribute="height" constant="120" id="Mzq-Ra-gNs"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NHg-iX-xzj">
+                                        <rect key="frame" x="4" y="320" width="406" height="160"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="left" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zl0-cg-iGC" userLabel="EmailStack">
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEo-oN-VNd" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tdz-TO-wvu" customClass="SubTextView" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="51.5" y="0.0" width="354.5" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="QpE-Xl-fco"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="left" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="czv-PN-h4M" userLabel="GenderStack">
+                                                <rect key="frame" x="0.0" y="60" width="406" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cG5-Wr-A7l" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeW-zY-HjL" customClass="SubTextView" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="51.5" y="0.0" width="354.5" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="cew-Ww-EeQ"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="left" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-wP-MC6" userLabel="GenderStack">
+                                                <rect key="frame" x="0.0" y="120" width="406" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBC-bE-aTM" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="en1-gd-tCz" customClass="SubTextView" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                        <rect key="frame" x="51.5" y="0.0" width="354.5" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="QJM-q5-5kE"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="cG5-Wr-A7l" firstAttribute="width" secondItem="LEo-oN-VNd" secondAttribute="width" id="2Ld-zQ-Kro"/>
+                                            <constraint firstItem="oBC-bE-aTM" firstAttribute="width" secondItem="LEo-oN-VNd" secondAttribute="width" id="JBq-J8-wmD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-BT-XYh" customClass="SubButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                        <rect key="frame" x="173.5" y="500" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="saveEditedData:" destination="lSv-Ve-pPP" eventType="touchUpInside" id="X21-Eb-UOy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuK-d5-BIz" customClass="SubButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                        <rect key="frame" x="173.5" y="500" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="editUserData:" destination="lSv-Ve-pPP" eventType="touchUpInside" id="BYT-Ri-3uX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="fxg-Mj-DNt" firstAttribute="bottom" secondItem="1Jx-Ni-sBd" secondAttribute="bottom" id="5WT-Tw-j9s"/>
-                                    <constraint firstItem="H3W-AO-xUD" firstAttribute="bottom" secondItem="fxg-Mj-DNt" secondAttribute="bottom" id="6ye-fW-rJ4"/>
-                                    <constraint firstAttribute="bottom" secondItem="fxg-Mj-DNt" secondAttribute="bottom" id="EYJ-d4-EuC"/>
-                                    <constraint firstItem="fxg-Mj-DNt" firstAttribute="top" secondItem="H3W-AO-xUD" secondAttribute="top" constant="60" id="S9l-B4-PHM"/>
-                                    <constraint firstItem="H3W-AO-xUD" firstAttribute="trailing" secondItem="fxg-Mj-DNt" secondAttribute="trailing" id="ax4-yz-ViZ"/>
-                                    <constraint firstItem="fxg-Mj-DNt" firstAttribute="leading" secondItem="Sc3-fU-zr0" secondAttribute="leading" id="e7p-WF-AI1"/>
-                                    <constraint firstItem="fxg-Mj-DNt" firstAttribute="leading" secondItem="H3W-AO-xUD" secondAttribute="leading" id="fY8-cw-pxG"/>
-                                    <constraint firstItem="fxg-Mj-DNt" firstAttribute="top" secondItem="Sc3-fU-zr0" secondAttribute="top" constant="60" id="jE2-gZ-kTa"/>
+                                    <constraint firstItem="NHg-iX-xzj" firstAttribute="leading" secondItem="Sc3-fU-zr0" secondAttribute="leading" constant="4" id="0c7-cP-1C7"/>
+                                    <constraint firstItem="bbB-FA-3Hp" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="B2C-Iz-9Nr"/>
+                                    <constraint firstItem="Atq-yw-5l9" firstAttribute="top" secondItem="bbB-FA-3Hp" secondAttribute="bottom" constant="10" id="It2-iu-E5x"/>
+                                    <constraint firstAttribute="bottom" secondItem="pD8-BT-XYh" secondAttribute="bottom" constant="20" id="KvJ-9D-o2I"/>
+                                    <constraint firstItem="bbB-FA-3Hp" firstAttribute="top" secondItem="Xdv-ff-hB2" secondAttribute="bottom" constant="10" id="KyA-xG-vtB"/>
+                                    <constraint firstItem="pD8-BT-XYh" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="LGT-YX-n2z"/>
+                                    <constraint firstAttribute="trailing" secondItem="NHg-iX-xzj" secondAttribute="trailing" constant="4" id="ObW-zy-rer"/>
+                                    <constraint firstItem="Atq-yw-5l9" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="PKr-B2-cEn"/>
+                                    <constraint firstItem="Xdv-ff-hB2" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="QW0-Jm-G8i"/>
+                                    <constraint firstAttribute="bottom" secondItem="yuK-d5-BIz" secondAttribute="bottom" constant="20" id="RQq-rj-GFS"/>
+                                    <constraint firstItem="yuK-d5-BIz" firstAttribute="top" secondItem="NHg-iX-xzj" secondAttribute="bottom" constant="20" id="ScH-5S-qlr"/>
+                                    <constraint firstItem="NHg-iX-xzj" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="U3d-q6-9XS"/>
+                                    <constraint firstItem="yuK-d5-BIz" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="aQZ-Xv-Tyh"/>
+                                    <constraint firstItem="pD8-BT-XYh" firstAttribute="top" secondItem="NHg-iX-xzj" secondAttribute="bottom" constant="20" id="clG-at-xxI"/>
+                                    <constraint firstItem="Xdv-ff-hB2" firstAttribute="top" secondItem="JoN-p1-b9z" secondAttribute="bottom" id="fp3-kp-Ggt"/>
                                     <constraint firstItem="JoN-p1-b9z" firstAttribute="top" secondItem="Sc3-fU-zr0" secondAttribute="top" constant="10" id="lnA-7M-51Z"/>
                                     <constraint firstAttribute="trailing" secondItem="JoN-p1-b9z" secondAttribute="trailing" constant="20" id="nuW-24-fJN"/>
                                     <constraint firstItem="JoN-p1-b9z" firstAttribute="leading" secondItem="Sc3-fU-zr0" secondAttribute="leading" constant="20" id="t8J-yc-w4p"/>
-                                    <constraint firstAttribute="trailing" secondItem="fxg-Mj-DNt" secondAttribute="trailing" id="wFz-yN-fk7"/>
-                                    <constraint firstAttribute="bottom" secondItem="JoN-p1-b9z" secondAttribute="bottom" constant="20" id="zLj-74-MYh"/>
+                                    <constraint firstItem="NHg-iX-xzj" firstAttribute="top" secondItem="Atq-yw-5l9" secondAttribute="bottom" constant="10" id="vDZ-fy-dZK"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="1Jx-Ni-sBd"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="H3W-AO-xUD"/>
@@ -519,6 +481,8 @@
                     <tabBarItem key="tabBarItem" title="О пользователе" image="person.fill" catalog="system" id="HFT-gu-5vy"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="creditCardLabel" destination="oBC-bE-aTM" id="k73-NI-pwv"/>
+                        <outlet property="creditCardTextView" destination="en1-gd-tCz" id="d2p-y1-xER"/>
                         <outlet property="editInfoButton" destination="yuK-d5-BIz" id="maa-NP-TNq"/>
                         <outlet property="emailLabel" destination="LEo-oN-VNd" id="MRE-06-aF2"/>
                         <outlet property="emailTextView" destination="tdz-TO-wvu" id="fps-ci-Apm"/>
@@ -533,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lN-G7-jcl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="598"/>
+            <point key="canvasLocation" x="1974" y="605"/>
         </scene>
         <!--Каталог товаров-->
         <scene sceneID="LLR-sB-w7L">

@@ -12,12 +12,7 @@ class StandartLabel: UILabel {
     override func awakeFromNib() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
-        self.textColor = .systemBlue
-        
-//        productDescriptionLabel.textColor = .systemBackground
-//        productDescriptionLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .regular)
-//        productDescriptionLabel.numberOfLines = 0
-//        productDescriptionLabel.lineBreakMode = .byWordWrapping
+        self.textColor = .systemBackground
     }
 }
 
@@ -85,6 +80,10 @@ class SubTextView: UITextView {
         self.isSelectable = true
         self.isScrollEnabled = false
         self.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .regular)
+        self.layer.cornerRadius = 12
+        self.layer.masksToBounds = true
+        self.layer.borderColor = UIColor.systemBackground.cgColor
+        self.layer.borderWidth = 1
     }
 }
 
@@ -98,8 +97,6 @@ class StandartTextField: UITextField {
         self.textColor = .systemBlue
         self.autocapitalizationType = .none
     }
-    
-//    passwordTextField.isSecureTextEntry = true
 }
 
 class StandartButton: UIButton {
@@ -114,4 +111,18 @@ class StandartButton: UIButton {
 //    override func updateConfiguration() {
 //        
 //    }
+}
+
+class SubButton: UIButton {
+
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.isUserInteractionEnabled = true
+        self.setTitleColor(.systemBackground, for: .normal)
+        self.setTitleColor(.systemRed, for: .highlighted)
+        self.tintColor = .systemBackground
+        self.backgroundColor = .systemTeal
+        self.layer.cornerRadius = 5
+        self.layer.masksToBounds = true
+    }
 }
