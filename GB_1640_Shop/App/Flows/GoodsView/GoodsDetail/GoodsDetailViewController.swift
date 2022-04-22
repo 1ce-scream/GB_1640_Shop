@@ -18,19 +18,22 @@ class GoodsDetailViewController: UIViewController {
     
     @IBAction func tapAddToBasketButton(_ sender: Any) {
         viewModel.addProductToBasket(productId: good?.id ?? 123)
+        alert.showAlert(title: "Корзина", message: "Товар добавлен в корзину")
     }
     
     private lazy var viewModel = GoodsDetailViewModel()
     private lazy var keyboardHelper = KeyboardHelper()
+    private lazy var alert = AlertsHelper(viewController: self)
     private var reviewList = [Reviews]()
     
     var good: Good?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         keyboardHelper.scrollView = scrollView
         keyboardHelper.hideKeyboardGesture()
+        setupScrollView()
         setupTableView()
         registerNib()
         setupView()
@@ -47,6 +50,11 @@ class GoodsDetailViewController: UIViewController {
         super.viewWillDisappear(animated)
 
         keyboardHelper.removeKeyboardObserver()
+    }
+    
+    private func setupScrollView() {
+        scrollView.delaysContentTouches = true
+        scrollView.canCancelContentTouches = false
     }
     
     private func setupTableView() {
@@ -79,6 +87,7 @@ class GoodsDetailViewController: UIViewController {
     private func getReviewData(product: Good) {
         viewModel.sendGoodsListRequest(productId: product.id ?? 123) { response in
             self.reviewList = response
+            self.reviewList.append(Reviews(author: "Somebody", text: "A lot of text A lot of text A lot of text A lot of text"))
             self.reviewsTableView.reloadData()
         }
     }
