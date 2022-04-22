@@ -14,12 +14,14 @@ class GoodsDetailViewController: UIViewController {
     @IBOutlet weak var productDescriptionTextView: StandartTextView!
     @IBOutlet weak var reviewsTableView: UITableView!
     @IBOutlet weak var addToBasketButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func tapAddToBasketButton(_ sender: Any) {
         viewModel.addProductToBasket(productId: good?.id ?? 123)
     }
     
     private lazy var viewModel = GoodsDetailViewModel()
+    private lazy var keyboardHelper = KeyboardHelper()
     private var reviewList = [Reviews]()
     
     var good: Good?
@@ -27,12 +29,26 @@ class GoodsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        keyboardHelper.scrollView = scrollView
+        keyboardHelper.hideKeyboardGesture()
         setupTableView()
         registerNib()
         setupView()
         getReviewData(product: good!)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        keyboardHelper.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        keyboardHelper.removeKeyboardObserver()
+    }
+    
     private func setupTableView() {
         reviewsTableView.dataSource = self
         reviewsTableView.delegate = self
@@ -134,8 +150,6 @@ extension GoodsDetailViewController: UITableViewDataSource {
 extension GoodsDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        
-//        performSegue(withIdentifier: "listToDetailGoods", sender: self)
         
         defer {
             // Метод для снятия выделения с ячейки
