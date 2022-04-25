@@ -100,6 +100,22 @@ class GB_1640_ShopUITestsAfterLogin: XCTestCase {
         XCTAssertTrue(payAlert.exists)
     }
     
+    func testUserData() throws {
+        login()
+        
+        let tabBar = app.tabBars.matching(identifier: "mainTabBar")
+        tabBar.buttons.element(boundBy: 2).tap()
+        
+        let editButton = app.buttons["editInfoButton"]
+        XCTAssertTrue(editButton.exists)
+        editButton.tap()
+        let saveButton = app.buttons["saveInfoButton"]
+        XCTAssertTrue(saveButton.exists)
+        saveButton.tap()
+        let alert = app.alerts["Успех"]
+        XCTAssertTrue(alert.exists)
+    }
+    
     private func login() {
         let loginTextField = scrollViewsQuery.textFields["loginTF"]
         loginTextField.tap()

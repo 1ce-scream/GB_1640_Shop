@@ -76,11 +76,13 @@ class UserDataViewController: UIViewController {
     private func setupButtonsView() {
         editInfoButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
         editInfoButton.setTitle("Редактировать", for: .normal)
+        editInfoButton.accessibilityIdentifier = "editInfoButton"
         
         saveEditedDataButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
         saveEditedDataButton.setTitle("Сохранить", for: .normal)
         saveEditedDataButton.backgroundColor = .systemGreen
         saveEditedDataButton.isHidden = true
+        saveEditedDataButton.accessibilityIdentifier = "saveInfoButton"
         
     }
     
