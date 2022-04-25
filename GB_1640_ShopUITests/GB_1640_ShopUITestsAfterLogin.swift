@@ -43,6 +43,24 @@ class GB_1640_ShopUITestsAfterLogin: XCTestCase {
         XCTAssertEqual(productNameLabelInCell, productNameLabelInDetailView)
     }
 
+    func testTabBar() throws {
+        login()
+        
+        let tabBar = app.tabBars.matching(identifier: "mainTabBar")
+        tabBar.buttons.element(boundBy: 1).tap()
+        
+        let navBarBasket = app.navigationBars["navBarBasket"].staticTexts["Корзина"]
+        XCTAssertTrue(navBarBasket.exists)
+        
+        tabBar.buttons.element(boundBy: 2).tap()
+        let userNameTV = scrollViewsQuery.textViews["userNameTV"]
+        XCTAssertTrue(userNameTV.exists)
+        
+        tabBar.buttons.element(boundBy: 0).tap()
+        let navBarCatalog = app.navigationBars["navBarCatalog"].staticTexts["Каталог товаров"]
+        XCTAssertTrue(navBarCatalog.exists)
+    }
+    
     private func login() {
         let loginTextField = scrollViewsQuery.textFields["loginTF"]
         loginTextField.tap()

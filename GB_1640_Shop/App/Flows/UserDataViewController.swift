@@ -96,6 +96,7 @@ class UserDataViewController: UIViewController {
         userNameTextView.text = "\(demoUser.name) \(demoUser.lastname)"
         userNameTextView.textAlignment = .center
         userNameTextView.font = .systemFont(ofSize: FontSizes.bigTextView.rawValue, weight: .bold)
+        userNameTextView.accessibilityIdentifier = "userNameTV"
         
         emailTextView.text = demoUser.email
         emailTextView.keyboardType = .emailAddress
