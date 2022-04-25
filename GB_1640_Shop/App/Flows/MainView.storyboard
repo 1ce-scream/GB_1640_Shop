@@ -536,6 +536,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Каталог товаров" largeTitleDisplayMode="always" id="FsS-9L-3Rt">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="aOR-X2-aPN"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="GoodsCatalog"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -777,6 +780,7 @@
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" systemColor="systemBackgroundColor"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="navBarCatalog"/>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

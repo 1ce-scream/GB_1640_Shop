@@ -53,25 +53,30 @@ class LoginViewController: UIViewController {
         brandNameLabel.font = .systemFont(ofSize: FontSizes.mainLabel.rawValue)
         brandNameLabel.textAlignment = .center
         brandNameLabel.textColor = .systemBackground
+        brandNameLabel.accessibilityIdentifier = "brandNameLabel"
     }
     
     private func setupTextFieldsView() {
         loginTextField.placeholder = "Логин"
         loginTextField.autocapitalizationType = .words
+        loginTextField.accessibilityIdentifier = "loginTF"
         
         passwordTextField.placeholder = "Пароль"
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.accessibilityIdentifier = "passwordTF"
     }
     
     private func setupButtonsView() {
         loginButton.setTitle("Войти", for: .normal)
         loginButton.tintColor = .systemGreen
+        loginButton.accessibilityIdentifier = "loginButton"
 
         registrationButton.setTitle("Регистрация", for: .normal)
         registrationButton.tintColor = .systemTeal
         registrationButton.addTarget(self,
                                      action: #selector(presentRegistrationVC(_ :)),
                                      for: .touchUpInside)
+        registrationButton.accessibilityIdentifier = "registrationButton"
     }
     
     @objc func presentRegistrationVC(_ sender: UIButton) {

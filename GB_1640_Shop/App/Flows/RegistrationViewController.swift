@@ -79,6 +79,7 @@ class RegistrationViewController: UIViewController {
         
         nameTextField.autocapitalizationType = .words
         nameTextField.isSecureTextEntry = false
+        nameTextField.accessibilityIdentifier = "nameTF"
         
         lastnameTextField.autocapitalizationType = .words
         
