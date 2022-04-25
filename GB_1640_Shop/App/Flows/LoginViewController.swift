@@ -67,7 +67,6 @@ class LoginViewController: UIViewController {
         loginButton.setTitle("Войти", for: .normal)
         loginButton.tintColor = .systemGreen
 
-
         registrationButton.setTitle("Регистрация", for: .normal)
         registrationButton.tintColor = .systemTeal
         registrationButton.addTarget(self,

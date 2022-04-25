@@ -60,7 +60,7 @@
                 <outlet property="backView" destination="WDQ-ap-rh9" id="guf-n8-7NW"/>
                 <outlet property="reviewTextField" destination="q69-Ri-LTf" id="1aI-qG-jZU"/>
             </connections>
-            <point key="canvasLocation" x="139" y="120"/>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
         </view>
     </objects>
     <resources>

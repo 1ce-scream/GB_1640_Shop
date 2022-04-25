@@ -17,6 +17,10 @@ class GoodsDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func tapAddToBasketButton(_ sender: Any) {
+        guard let currentGood = good else { return }
+       
+        BasketSingleton.shared.basket.append(currentGood)
+        
         viewModel.addProductToBasket(productId: good?.id ?? 123)
         alert.showAlert(title: "Корзина", message: "Товар добавлен в корзину")
     }
@@ -69,7 +73,7 @@ class GoodsDetailViewController: UIViewController {
         reviewsTableView.register(nibProduct, forCellReuseIdentifier: "ReviewsCell")
         
         reviewsTableView.register(ReviewFooterView.nib,
-                           forHeaderFooterViewReuseIdentifier: "ReviewFooterView"
+                                  forHeaderFooterViewReuseIdentifier: "ReviewFooterView"
         )
     }
     
@@ -87,7 +91,8 @@ class GoodsDetailViewController: UIViewController {
     private func getReviewData(product: Good) {
         viewModel.sendGoodsListRequest(productId: product.id ?? 123) { response in
             self.reviewList = response
-            self.reviewList.append(Reviews(author: "Somebody", text: "A lot of text A lot of text A lot of text A lot of text"))
+            self.reviewList.append(Reviews(author: "Somebody",
+                                           text: "A lot of text A lot of text A lot of text A lot of text"))
             self.reviewsTableView.reloadData()
         }
     }

@@ -16,6 +16,15 @@ class StandartLabel: UILabel {
     }
 }
 
+class SmallLabel: UILabel {
+
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .bold)
+        self.textColor = .systemBackground
+    }
+}
+
 class AvatarImage: UIImageView {
     private var borderColor: UIColor = .white
     private var borderWidth: CGFloat = 0.8

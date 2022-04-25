@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="BasketFooterView" id="iN0-l3-epB" customClass="BasketFooterView" customModule="GB_1640_Shop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="109"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjH-XM-qg7">
+                    <rect key="frame" x="0.0" y="0.0" width="422" height="109"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsR-hD-Cs7" customClass="SmallLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                            <rect key="frame" x="4" y="4" width="414" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOg-8l-bzf" customClass="SmallLabel" customModule="GB_1640_Shop" customModuleProvider="target">
+                            <rect key="frame" x="4" y="29" width="414" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6U-XC-abF" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                            <rect key="frame" x="8" y="60" width="406" height="39"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Оплатить">
+                                <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstItem="QOg-8l-bzf" firstAttribute="top" secondItem="OsR-hD-Cs7" secondAttribute="bottom" constant="4" id="4GD-RV-l35"/>
+                        <constraint firstAttribute="trailing" secondItem="OsR-hD-Cs7" secondAttribute="trailing" constant="4" id="8yY-hZ-JeR"/>
+                        <constraint firstAttribute="trailing" secondItem="QOg-8l-bzf" secondAttribute="trailing" constant="4" id="AW4-dh-ft9"/>
+                        <constraint firstItem="OsR-hD-Cs7" firstAttribute="leading" secondItem="cjH-XM-qg7" secondAttribute="leading" constant="4" id="Bz1-jh-Ukc"/>
+                        <constraint firstAttribute="bottom" secondItem="I6U-XC-abF" secondAttribute="bottom" constant="10" id="Cxx-fk-L0r"/>
+                        <constraint firstItem="I6U-XC-abF" firstAttribute="top" secondItem="QOg-8l-bzf" secondAttribute="bottom" constant="10" id="Nvl-YG-HbV"/>
+                        <constraint firstItem="OsR-hD-Cs7" firstAttribute="top" secondItem="cjH-XM-qg7" secondAttribute="top" constant="4" id="Te9-sT-8KR"/>
+                        <constraint firstAttribute="trailing" secondItem="I6U-XC-abF" secondAttribute="trailing" constant="8" id="VhP-bg-cFn"/>
+                        <constraint firstItem="QOg-8l-bzf" firstAttribute="leading" secondItem="cjH-XM-qg7" secondAttribute="leading" constant="4" id="lIR-zh-NcZ"/>
+                        <constraint firstItem="I6U-XC-abF" firstAttribute="leading" secondItem="cjH-XM-qg7" secondAttribute="leading" constant="8" id="x51-Yw-eYJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cjH-XM-qg7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2WV-jC-VGN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cjH-XM-qg7" secondAttribute="trailing" id="GqU-qE-Mbt"/>
+                <constraint firstItem="cjH-XM-qg7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mBX-4K-g8g"/>
+                <constraint firstAttribute="bottom" secondItem="cjH-XM-qg7" secondAttribute="bottom" id="sku-if-sQZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backView" destination="cjH-XM-qg7" id="CF8-oK-UCP"/>
+                <outlet property="payButton" destination="I6U-XC-abF" id="FTT-4I-PN9"/>
+                <outlet property="productsAmountLabel" destination="OsR-hD-Cs7" id="QOw-gx-mpg"/>
+                <outlet property="productsPriceLabel" destination="QOg-8l-bzf" id="gYF-Ki-2Xc"/>
+            </connections>
+            <point key="canvasLocation" x="26.086956521739133" y="59.933035714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

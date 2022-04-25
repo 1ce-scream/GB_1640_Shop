@@ -23,7 +23,7 @@ class GoodsListViewController: UIViewController {
         registerNib()
         
     }
-
+    
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
