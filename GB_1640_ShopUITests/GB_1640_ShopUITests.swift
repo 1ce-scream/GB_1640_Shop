@@ -56,7 +56,7 @@ class GB_1640_ShopUITests: XCTestCase {
         XCTAssertTrue(result.exists)
     }
     
-    func testRegistration() throws {
+    func testRegistrationButtonTap() throws {
         let registrationButton = scrollViewsQuery.buttons["registrationButton"]
         registrationButton.tap()
         
@@ -65,6 +65,36 @@ class GB_1640_ShopUITests: XCTestCase {
         XCTAssertTrue(result.exists)
     }
 
+    func testRegistrationScreen() throws {
+        let registrationButton = scrollViewsQuery.buttons["registrationButton"]
+        registrationButton.tap()
+        
+        let loginTextField = scrollViewsQuery.textFields["loginTF"]
+        loginTextField.tap()
+        loginTextField.typeText("Login")
+        
+        let passwordTextField = scrollViewsQuery.secureTextFields["passwordTF"]
+        passwordTextField.tap()
+        passwordTextField.typeText("Pass")
+        
+        let nameTextField = scrollViewsQuery.textFields["nameTF"]
+        nameTextField.tap()
+        nameTextField.typeText("Name")
+        
+        let lastnameTextField = scrollViewsQuery.textFields["lastnameTF"]
+        lastnameTextField.tap()
+        lastnameTextField.typeText("Lastname")
+        
+        let emailTextField = scrollViewsQuery.textFields["emailTF"]
+        emailTextField.tap()
+        emailTextField.typeText("some@some.com")
+        
+        let regButton = scrollViewsQuery.buttons["regButton"]
+        regButton.tap()
+        
+        XCTAssertTrue(registrationButton.exists)
+    }
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.

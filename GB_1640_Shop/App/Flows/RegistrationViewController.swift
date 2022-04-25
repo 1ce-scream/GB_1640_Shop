@@ -76,14 +76,21 @@ class RegistrationViewController: UIViewController {
     private func setupTextFieldsView() {
         
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.accessibilityIdentifier = "passwordTF"
         
         nameTextField.autocapitalizationType = .words
         nameTextField.isSecureTextEntry = false
         nameTextField.accessibilityIdentifier = "nameTF"
         
         lastnameTextField.autocapitalizationType = .words
+        lastnameTextField.accessibilityIdentifier = "lastnameTF"
         
         biographyTextField.autocapitalizationType = .sentences
+        biographyTextField.accessibilityIdentifier = "bioTF"
+        
+        loginTextField.accessibilityIdentifier = "loginTF"
+        
+        emailTextField.accessibilityIdentifier = "emailTF"
     }
     
     private func setupButtonsView() {
@@ -92,6 +99,7 @@ class RegistrationViewController: UIViewController {
         registrationButton.addTarget(self,
                                      action: #selector(presentUserDataVC(_ :)),
                                      for: .touchUpInside)
+        registrationButton.accessibilityIdentifier = "regButton"
     }
     
     @objc func presentUserDataVC(_ sender: UIButton) {
