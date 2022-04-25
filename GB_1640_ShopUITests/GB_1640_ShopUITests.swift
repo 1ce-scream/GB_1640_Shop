@@ -60,7 +60,6 @@ class GB_1640_ShopUITests: XCTestCase {
         let registrationButton = scrollViewsQuery.buttons["registrationButton"]
         registrationButton.tap()
         
-//        let result = scrollViewsQuery.staticTexts.element(matching: .any, identifier: "registration").label
         let result = scrollViewsQuery.textFields["nameTF"]
         XCTAssertTrue(result.exists)
     }
