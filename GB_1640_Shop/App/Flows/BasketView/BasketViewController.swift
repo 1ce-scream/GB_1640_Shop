@@ -10,6 +10,7 @@ import UIKit
 class BasketViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var cleanBasketButton: UIBarButtonItem!
     @IBAction func tapCleanBasketButton(_ sender: Any) {
         BasketSingleton.shared.basket.removeAll()
         self.goodsList.removeAll()
@@ -39,6 +40,7 @@ class BasketViewController: UIViewController {
         tableView.delegate = self
         tableView.keyboardDismissMode = .onDrag
         tableView.backgroundColor = .systemBlue
+        tableView.accessibilityIdentifier = "basketTable"
     }
     
     private func registerNib() {
@@ -78,6 +80,7 @@ extension BasketViewController: UITableViewDataSource {
         else { return UITableViewCell() }
         
         cell.configure(product: goodsList[indexPath.row])
+        cell.accessibilityIdentifier = "basketCell_\(indexPath.row)"
         
         return cell
     }
@@ -110,6 +113,8 @@ extension BasketViewController: UITableViewDataSource {
         footer.payButton.addTarget(self,
                                    action: #selector(tapPayButton(_ :)),
                                    for: .touchUpInside)
+        footer.accessibilityIdentifier = "basketFooter"
+//        footer.payButton.accessibilityIdentifier = "payButton"
         
         return footer
     }

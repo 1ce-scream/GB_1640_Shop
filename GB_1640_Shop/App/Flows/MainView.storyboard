@@ -761,6 +761,7 @@
                     </navigationItem>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="cleanBasketButton" destination="phz-op-NXq" id="qKi-Pu-wVi"/>
                         <outlet property="tableView" destination="SyD-rL-N8h" id="L7D-ie-4Y8"/>
                     </connections>
                 </viewController>

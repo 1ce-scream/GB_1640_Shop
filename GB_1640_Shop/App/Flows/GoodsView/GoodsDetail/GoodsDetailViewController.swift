@@ -42,6 +42,7 @@ class GoodsDetailViewController: UIViewController {
         registerNib()
         setupView()
         getReviewData(product: good!)
+        addToBasketButton.accessibilityIdentifier = "addToBasket"
     }
 
     override func viewWillAppear(_ animated: Bool) {
