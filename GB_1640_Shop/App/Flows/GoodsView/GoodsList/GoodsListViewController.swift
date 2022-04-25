@@ -29,6 +29,7 @@ class GoodsListViewController: UIViewController {
         tableView.delegate = self
         tableView.keyboardDismissMode = .onDrag
         tableView.backgroundColor = .systemBlue
+        tableView.accessibilityIdentifier = "goodsListTable"
     }
     
     private func registerNib() {
@@ -79,6 +80,7 @@ extension GoodsListViewController: UITableViewDataSource {
         else { return UITableViewCell() }
         
         cell.configure(product: goodsList[indexPath.row])
+        cell.accessibilityIdentifier = "goodsCell_\(indexPath.row)"
         
         return cell
     }

@@ -84,6 +84,7 @@ class GoodsDetailViewController: UIViewController {
         productNameLabel.font = .systemFont(ofSize: FontSizes.bigLabel.rawValue, weight: .semibold)
         productNameLabel.textColor = .systemBackground
         productNameLabel.textAlignment = .center
+        productNameLabel.accessibilityIdentifier = "productName"
         
         productDescriptionTextView.text = good?.productDescription
     }

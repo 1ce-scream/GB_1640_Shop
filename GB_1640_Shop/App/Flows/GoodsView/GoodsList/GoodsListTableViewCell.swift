@@ -55,6 +55,7 @@ class GoodsListTableViewCell: UITableViewCell {
         
         productNameLabel.textColor = .systemBackground
         productNameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
+        productNameLabel.accessibilityIdentifier = "productNameLabel"
         
         productDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         productDescriptionLabel.textColor = .systemBackground
