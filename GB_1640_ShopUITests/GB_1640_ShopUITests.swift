@@ -56,17 +56,12 @@ class GB_1640_ShopUITests: XCTestCase {
         XCTAssertTrue(result.exists)
     }
     
-    func testRegistrationButtonTap() throws {
+    func testRegistration() throws {
         let registrationButton = scrollViewsQuery.buttons["registrationButton"]
         registrationButton.tap()
         
         let result = scrollViewsQuery.textFields["nameTF"]
         XCTAssertTrue(result.exists)
-    }
-
-    func testRegistrationScreen() throws {
-        let registrationButton = scrollViewsQuery.buttons["registrationButton"]
-        registrationButton.tap()
         
         let loginTextField = scrollViewsQuery.textFields["loginTF"]
         loginTextField.tap()
@@ -92,14 +87,5 @@ class GB_1640_ShopUITests: XCTestCase {
         regButton.tap()
         
         XCTAssertTrue(registrationButton.exists)
-    }
-    
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
     }
 }
