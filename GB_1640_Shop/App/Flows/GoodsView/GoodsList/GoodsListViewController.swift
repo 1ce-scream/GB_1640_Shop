@@ -21,6 +21,7 @@ class GoodsListViewController: UIViewController {
         setContent()
         setupTableView()
         registerNib()
+        setupRefreshControl()
         
     }
     
@@ -40,8 +41,17 @@ class GoodsListViewController: UIViewController {
     private func setContent() {
         viewModel.sendGoodsListRequest(completion: ) { productList in
             self.goodsList = productList
+            self.tableView.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         }
+    }
+    
+    private func setupRefreshControl() {
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self,
+                                            action: #selector(callPullToRefresh),
+                                            for: .valueChanged)
+        tableView.refreshControl?.tintColor = .systemBackground
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,6 +63,10 @@ class GoodsListViewController: UIViewController {
         if let index = tableView.indexPathForSelectedRow {
             destinationVC.good = goodsList[index.row]
         }
+    }
+    
+    @objc func callPullToRefresh() {
+        setContent()
     }
 }
 
