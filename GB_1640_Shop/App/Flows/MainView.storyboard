@@ -71,10 +71,17 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-Zj-G79" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                        <rect key="frame" x="152.5" y="456.5" width="109" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Crash Button"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="klp-YY-LTC" secondAttribute="bottom" constant="20" id="CcD-Ve-KPC"/>
+                                    <constraint firstItem="lF7-Zj-G79" firstAttribute="top" secondItem="klp-YY-LTC" secondAttribute="bottom" constant="60" id="Jdl-J3-FUf"/>
                                     <constraint firstItem="z2B-ie-xBI" firstAttribute="centerX" secondItem="hc3-7g-3z1" secondAttribute="centerX" id="Yld-fm-0mV"/>
+                                    <constraint firstItem="lF7-Zj-G79" firstAttribute="centerX" secondItem="hc3-7g-3z1" secondAttribute="centerX" id="Zlp-eq-3F9"/>
                                     <constraint firstItem="z2B-ie-xBI" firstAttribute="leading" secondItem="hc3-7g-3z1" secondAttribute="leading" constant="20" id="cOI-Kq-CxO"/>
                                     <constraint firstAttribute="trailing" secondItem="z2B-ie-xBI" secondAttribute="trailing" constant="20" id="e1U-t8-LT2"/>
                                     <constraint firstItem="z2B-ie-xBI" firstAttribute="top" secondItem="hc3-7g-3z1" secondAttribute="top" constant="100" id="ju1-fa-jSO"/>
@@ -96,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="brandNameLabel" destination="z2B-ie-xBI" id="I2o-Kn-d98"/>
+                        <outlet property="crashButton" destination="lF7-Zj-G79" id="G2X-Ka-WTI"/>
                         <outlet property="loginButton" destination="O7H-0E-i8Z" id="PAs-s7-ave"/>
                         <outlet property="loginTextField" destination="eph-x9-uY6" id="4YR-Gf-IMZ"/>
                         <outlet property="passwordTextField" destination="kaX-rQ-Ogg" id="5sv-Sv-YJN"/>

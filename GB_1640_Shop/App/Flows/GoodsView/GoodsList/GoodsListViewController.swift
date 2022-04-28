@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GoodsListViewController: UIViewController {
 
@@ -23,6 +24,7 @@ class GoodsListViewController: UIViewController {
         registerNib()
         setupRefreshControl()
         
+        Crashlytics.setLog(log: .goodsList)
     }
     
     private func setupTableView() {

@@ -44,6 +44,7 @@
 		FE45B09627F09D4B00E9F875 /* GoodsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09527F09D4B00E9F875 /* GoodsRequestFactory.swift */; };
 		FE45B09827F09E6D00E9F875 /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09727F09E6D00E9F875 /* Goods.swift */; };
 		FE45B09A27F0A01A00E9F875 /* GB_1640_GoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45B09927F0A01A00E9F875 /* GB_1640_GoodsTests.swift */; };
+		FE582931281AC5D300670F7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE582930281AC5D300670F7E /* GoogleService-Info.plist */; };
 		FE7CB0702811B540006FC92A /* ReviewFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7CB06F2811B540006FC92A /* ReviewFooterView.xib */; };
 		FEA0C47928042A8E00565760 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47828042A8E00565760 /* Basket.swift */; };
 		FEA0C47B28042BB600565760 /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA0C47A28042BB600565760 /* BasketRequestFactory.swift */; };
@@ -67,6 +68,8 @@
 		FED7523327DA371D00E8AC56 /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7523227DA371D00E8AC56 /* ResponseResult.swift */; };
 		FED7523B27DA428500E8AC56 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED7523A27DA428500E8AC56 /* MainView.storyboard */; };
 		FEF7F6322809A9600022F138 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7F6312809A9600022F138 /* KeyboardHelper.swift */; };
+		FEF8947B281ADCE900F93E96 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FEF8947A281ADCE900F93E96 /* FirebaseCrashlytics */; };
+		FEF8947D281AE1E100F93E96 /* CrashlyticLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF8947C281AE1E100F93E96 /* CrashlyticLogs.swift */; };
 		FEFD348127F722D500BBCE2F /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348027F722D500BBCE2F /* ReviewRequestFactory.swift */; };
 		FEFD348927F7242E00BBCE2F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348827F7242E00BBCE2F /* Review.swift */; };
 		FEFD348B27F728D700BBCE2F /* GB_1640_ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */; };
@@ -138,6 +141,7 @@
 		FE45B09527F09D4B00E9F875 /* GoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsRequestFactory.swift; sourceTree = "<group>"; };
 		FE45B09727F09E6D00E9F875 /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 		FE45B09927F0A01A00E9F875 /* GB_1640_GoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_GoodsTests.swift; sourceTree = "<group>"; };
+		FE582930281AC5D300670F7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE7CB06F2811B540006FC92A /* ReviewFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewFooterView.xib; sourceTree = "<group>"; };
 		FEA0C47828042A8E00565760 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		FEA0C47A28042BB600565760 /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 		FED7523227DA371D00E8AC56 /* ResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
 		FED7523A27DA428500E8AC56 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		FEF7F6312809A9600022F138 /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		FEF8947C281AE1E100F93E96 /* CrashlyticLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticLogs.swift; sourceTree = "<group>"; };
 		FEFD348027F722D500BBCE2F /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
 		FEFD348827F7242E00BBCE2F /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FEFD348A27F728D700BBCE2F /* GB_1640_ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_1640_ReviewTests.swift; sourceTree = "<group>"; };
@@ -171,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF8947B281ADCE900F93E96 /* FirebaseCrashlytics in Frameworks */,
 				FED7521F27DA241400E8AC56 /* Alamofire in Frameworks */,
 				E969D8CD0C385DC9EAD753EF /* Pods_GB_1640_Shop.framework in Frameworks */,
 			);
@@ -265,6 +271,7 @@
 		FE399C3327D0C6E0002C9FA1 /* GB_1640_Shop */ = {
 			isa = PBXGroup;
 			children = (
+				FE582930281AC5D300670F7E /* GoogleService-Info.plist */,
 				FE399C6427D0CAC7002C9FA1 /* App */,
 				FE399C6927D0CB31002C9FA1 /* Core */,
 				FE399C6A27D0CB4F002C9FA1 /* Resources */,
@@ -328,6 +335,7 @@
 				FEFD348C27F7320F00BBCE2F /* ReviewListResponseResult.swift */,
 				FEAB42712811636B00C22D17 /* Reviews.swift */,
 				FE2C11BE28118271008EB888 /* FontSizes.swift */,
+				FEF8947C281AE1E100F93E96 /* CrashlyticLogs.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -502,6 +510,7 @@
 				FE399C2E27D0C6DF002C9FA1 /* Frameworks */,
 				FE399C2F27D0C6DF002C9FA1 /* Resources */,
 				FEFD347C27F6FA0A00BBCE2F /* Lint */,
+				FE582939281ACB2300670F7E /* Crashlitycs */,
 			);
 			buildRules = (
 			);
@@ -510,6 +519,7 @@
 			name = GB_1640_Shop;
 			packageProductDependencies = (
 				FED7521E27DA241400E8AC56 /* Alamofire */,
+				FEF8947A281ADCE900F93E96 /* FirebaseCrashlytics */,
 			);
 			productName = GB_1640_Shop;
 			productReference = FE399C3127D0C6DF002C9FA1 /* GB_1640_Shop.app */;
@@ -587,6 +597,7 @@
 			mainGroup = FE399C2827D0C6DF002C9FA1;
 			packageReferences = (
 				FED7521D27DA241400E8AC56 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FEF89479281ADCE900F93E96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = FE399C3227D0C6DF002C9FA1 /* Products */;
 			projectDirPath = "";
@@ -605,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE399C4127D0C6E0002C9FA1 /* LaunchScreen.storyboard in Resources */,
+				FE582931281AC5D300670F7E /* GoogleService-Info.plist in Resources */,
 				FE7CB0702811B540006FC92A /* ReviewFooterView.xib in Resources */,
 				FEAB42782811655D00C22D17 /* ReviewsTableViewCell.xib in Resources */,
 				FED7523B27DA428500E8AC56 /* MainView.storyboard in Resources */,
@@ -697,6 +709,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FE582939281ACB2300670F7E /* Crashlitycs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlitycs;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
 		FEFD347C27F6FA0A00BBCE2F /* Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -756,6 +788,7 @@
 				FE44BB27281683EA00E3DCBA /* BasketViewController.swift in Sources */,
 				FED7522D27DA2A9000E8AC56 /* Auth.swift in Sources */,
 				FEAB426E280EE30700C22D17 /* NavigationController+Ext.swift in Sources */,
+				FEF8947D281AE1E100F93E96 /* CrashlyticLogs.swift in Sources */,
 				FE44BB342816988700E3DCBA /* BasketFooterView.swift in Sources */,
 				FE45B09827F09E6D00E9F875 /* Goods.swift in Sources */,
 				FED7522827DA29D700E8AC56 /* User.swift in Sources */,
@@ -943,6 +976,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Q3N89R8Y92;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GB_1640_Shop/Environments/Info.plist;
@@ -1125,6 +1159,14 @@
 				minimumVersion = 5.5.0;
 			};
 		};
+		FEF89479281ADCE900F93E96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1132,6 +1174,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FED7521D27DA241400E8AC56 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		FEF8947A281ADCE900F93E96 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEF89479281ADCE900F93E96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

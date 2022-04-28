@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GoodsDetailViewController: UIViewController {
 
@@ -23,6 +24,8 @@ class GoodsDetailViewController: UIViewController {
         
         viewModel.addProductToBasket(productId: good?.id ?? 123)
         alert.showAlert(title: "Корзина", message: "Товар добавлен в корзину")
+        
+        Crashlytics.setLog(log: .addToBasket)
     }
     
     private lazy var viewModel = GoodsDetailViewModel()
@@ -43,6 +46,8 @@ class GoodsDetailViewController: UIViewController {
         setupView()
         getReviewData(product: good!)
         addToBasketButton.accessibilityIdentifier = "addToBasket"
+        
+        Crashlytics.setLog(log: .goodsDetail)
     }
 
     override func viewWillAppear(_ animated: Bool) {

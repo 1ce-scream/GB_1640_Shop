@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationViewController: UIViewController {
 
@@ -113,6 +114,8 @@ class RegistrationViewController: UIViewController {
         guard let destinationController = storyboard
             .instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController
         else { return }
+        
+        Crashlytics.setLog(log: .registration)
         
         destinationController.modalPresentationStyle = .fullScreen
         present(destinationController, animated: true, completion: nil)

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BasketViewController: UIViewController {
 
@@ -15,6 +16,8 @@ class BasketViewController: UIViewController {
         BasketSingleton.shared.basket.removeAll()
         self.goodsList.removeAll()
         self.tableView.reloadData()
+        
+        Crashlytics.setLog(log: .removeFromBasket)
     }
     
     private lazy var viewModel = BasketViewModel()
@@ -96,6 +99,8 @@ extension BasketViewController: UITableViewDataSource {
             BasketSingleton.shared.basket.remove(at: indexPath.row)
             self.goodsList.remove(at: indexPath.row)
             self.tableView.reloadData()
+            
+            Crashlytics.setLog(log: .removeFromBasket)
         }
     }
     
@@ -130,6 +135,8 @@ extension BasketViewController: UITableViewDataSource {
         self.goodsList.removeAll()
         self.tableView.reloadData()
         alert.showAlert(title: "Stub", message: "Stub")
+        
+        Crashlytics.setLog(log: .payBasket)
     }
 }
 

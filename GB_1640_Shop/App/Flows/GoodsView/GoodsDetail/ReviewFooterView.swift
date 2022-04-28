@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ReviewFooterView: UITableViewHeaderFooterView {
 
@@ -17,6 +18,8 @@ class ReviewFooterView: UITableViewHeaderFooterView {
         viewModel.sendReview(userId: 123, text: reviewTextField.text ?? "")
         reviewTextField.text = ""
         alert.showAlert(title: "Отлично!", message: "Ваш отзыв отправлен на модерацию")
+        
+        Crashlytics.setLog(log: .sendReview)
     }
     
     private lazy var viewModel = GoodsDetailViewModel()
