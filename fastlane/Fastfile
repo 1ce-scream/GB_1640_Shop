@@ -1,0 +1,61 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Test and Build Automation, Git Check, Pod Check"
+  lane :automation_lane do
+    # add actions here: https://docs.fastlane.tools/actions
+
+    #ensure_git_status_clean
+
+    # clear data
+    clear_derived_data 
+    xcclean(
+      scheme: "GB_1640_Shop",
+      workspace: "GB_1640_Shop.xcworkspace" 
+    )
+
+    # update a dependencies
+    cocoapods( 
+      use_bundle_exec: false
+    )
+
+    # run tests
+    run_tests(
+      scheme: "GB_1640_Shop",
+      workspace: "GB_1640_Shop.xcworkspace",
+      clean: false
+    )
+
+    # build project
+    gym(
+      scheme: "GB_1640_Shop", 
+      configuration: "Debug", 
+      export_method: "development", 
+      include_symbols: true, 
+      include_bitcode: true, 
+      silent: false
+    )
+
+  end
+
+  desc "Increment build number"
+  lane :project do 
+    increment_build_number
+  end
+
+end
