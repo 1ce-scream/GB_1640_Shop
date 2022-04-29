@@ -38,6 +38,7 @@ platform :ios do
     run_tests(
       scheme: "GB_1640_Shop",
       workspace: "GB_1640_Shop.xcworkspace",
+      devices: ["iPhone 13 mini"],
       clean: false
     )
 
