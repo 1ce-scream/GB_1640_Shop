@@ -31,24 +31,21 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = "login"
-        let login: String
-        let password: String
+        let user: User
         
         var parameters: Parameters? {
             return [
-                "username": login,
-                "password": password
+                "username": user.login,
+                "password": user.password
             ]
         }
     }
     
-    func login(username: String,
-               password: String,
+    func login(user: User,
                completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = Login(baseUrl: baseUrl,
-                                 login: username,
-                                 password: password)
+                                 user: user)
         
         request(request: requestModel,
                 completionHandler: completionHandler)
@@ -62,44 +59,25 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = "register"
-        let userID: Int
-        let login: String
-        let password: String
-        let email: String
-        let gender: String
-        let creditCard: String
-        let biography: String
+        let user: User
         
         var parameters: Parameters? {
-            return ["id_user": userID,
-                    "username": login,
-                    "password": password,
-                    "email": email,
-                    "gender": gender,
-                    "credit_card": creditCard,
-                    "bio": biography
+            return ["id_user": user.id,
+                    "username": user.login,
+                    "password": user.password,
+                    "email": user.email,
+                    "gender": user.gender,
+                    "credit_card": user.creditcard,
+                    "bio": user.biography
             ]
         }
     }
     
-    // swiftlint:disable function_parameter_count
-    func registration(userID: Int,
-                      username: String,
-                      password: String,
-                      email: String,
-                      gender: String,
-                      creditCard: String,
-                      biography: String,
+    func registration(user: User,
                       completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = Registration(baseUrl: baseUrl,
-                                        userID: userID,
-                                        login: username,
-                                        password: password,
-                                        email: email,
-                                        gender: gender,
-                                        creditCard: creditCard,
-                                        biography: biography)
+                                        user: user)
         
         self.request(request: requestModel,
                      completionHandler: completionHandler)
@@ -113,20 +91,20 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = "logout"
-        let userID: Int
+        let user: User
         
         var parameters: Parameters? {
             return [
-                "userID": userID
+                "userID": user.id
             ]
         }
     }
     
-    func logOut(userID: Int,
+    func logOut(user: User,
                 completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = LogOut(baseUrl: baseUrl,
-                                  userID: userID)
+                                  user: user)
         
         request(request: requestModel,
                 completionHandler: completionHandler)
@@ -140,31 +118,22 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = "changeUserData"
-        let userID: Int
-        let username: String
-        let password: String
-        let email: String
+        let user: User
         
         var parameters: Parameters? {
-            return ["userID": userID,
-                    "userName": username,
-                    "password": password,
-                    "email": email
+            return ["userID": user.id,
+                    "userName": user.login,
+                    "password": user.password,
+                    "email": user.email
             ]
         }
     }
     
-    func changeUserData(userID: Int,
-                        username: String,
-                        password: String,
-                        email: String,
+    func changeUserData(user: User,
                         completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void) {
         
         let requestModel = ChangeUserData(baseUrl: baseUrl,
-                                          userID: userID,
-                                          username: username,
-                                          password: password,
-                                          email: email)
+                                          user: user)
         
         self.request(request: requestModel,
                      completionHandler: completionHandler)

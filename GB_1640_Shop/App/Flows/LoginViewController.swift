@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registrationButton: StandartButton!
     @IBOutlet weak var crashButton: StandartButton!
     
+    private lazy var user = User(login: loginTextField.text ?? "",
+                                 password: passwordTextField.text ?? "")
     private lazy var viewModel = LoginViewModel()
     private lazy var keyboardHelper = KeyboardHelper()
     private lazy var alert = AlertsHelper(viewController: self)
@@ -93,14 +95,14 @@ class LoginViewController: UIViewController {
     
     @IBAction func crashButtonTapped(_ sender: AnyObject) {
         let numbers = [0]
-        let _ = numbers[1]
+        _ = numbers[1]
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String,
                                      sender: Any?) -> Bool {
         
         let isDataCorrect = viewModel.checkUserData(login: loginTextField.text ?? "",
-                                                        password: passwordTextField.text ?? "")
+                                                    password: passwordTextField.text ?? "")
         guard isDataCorrect == true else {
             alert.showAlert(title: "Ошибка", message: "Логин или пароль не верны")
             passwordTextField.text = ""
@@ -108,8 +110,7 @@ class LoginViewController: UIViewController {
             return false
         }
         
-        viewModel.sendLoginRequest(login: loginTextField.text ?? "",
-                                   password: passwordTextField.text ?? "")
+        viewModel.sendLoginRequest(user: user)
         Crashlytics.setLog(log: .authSuccess)
         return isDataCorrect
     }

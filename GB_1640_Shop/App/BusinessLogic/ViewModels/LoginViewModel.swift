@@ -11,10 +11,9 @@ class LoginViewModel {
     
     private lazy var requestFactory = RequestFactory()
     
-    func sendLoginRequest(login: String, password: String) {
+    func sendLoginRequest(user: User) {
         let request = requestFactory.makeAuthRequestFactory()
-        request.login(username: login,
-                      password: password) { response in
+        request.login(user: user) { response in
             DispatchQueue.main.async {
                 switch response.result {
                 case .success(let login):

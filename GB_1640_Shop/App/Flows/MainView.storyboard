@@ -451,25 +451,35 @@
                                             <action selector="editUserData:" destination="lSv-Ve-pPP" eventType="touchUpInside" id="BYT-Ri-3uX"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-Ie-lBi" customClass="SubButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="581" width="398" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Выход"/>
+                                        <connections>
+                                            <action selector="exitToLogin:" destination="lSv-Ve-pPP" eventType="touchUpInside" id="nsN-2C-Aag"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="NHg-iX-xzj" firstAttribute="leading" secondItem="Sc3-fU-zr0" secondAttribute="leading" constant="4" id="0c7-cP-1C7"/>
+                                    <constraint firstItem="2cc-Ie-lBi" firstAttribute="top" secondItem="pD8-BT-XYh" secondAttribute="bottom" constant="50" id="9mz-cW-Hru"/>
                                     <constraint firstItem="bbB-FA-3Hp" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="B2C-Iz-9Nr"/>
+                                    <constraint firstItem="2cc-Ie-lBi" firstAttribute="leading" secondItem="Sc3-fU-zr0" secondAttribute="leading" constant="8" id="CWi-GD-b4p"/>
                                     <constraint firstItem="Atq-yw-5l9" firstAttribute="top" secondItem="bbB-FA-3Hp" secondAttribute="bottom" constant="10" id="It2-iu-E5x"/>
-                                    <constraint firstAttribute="bottom" secondItem="pD8-BT-XYh" secondAttribute="bottom" constant="20" id="KvJ-9D-o2I"/>
                                     <constraint firstItem="bbB-FA-3Hp" firstAttribute="top" secondItem="Xdv-ff-hB2" secondAttribute="bottom" constant="10" id="KyA-xG-vtB"/>
                                     <constraint firstItem="pD8-BT-XYh" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="LGT-YX-n2z"/>
                                     <constraint firstAttribute="trailing" secondItem="NHg-iX-xzj" secondAttribute="trailing" constant="4" id="ObW-zy-rer"/>
                                     <constraint firstItem="Atq-yw-5l9" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="PKr-B2-cEn"/>
                                     <constraint firstItem="Xdv-ff-hB2" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="QW0-Jm-G8i"/>
-                                    <constraint firstAttribute="bottom" secondItem="yuK-d5-BIz" secondAttribute="bottom" constant="20" id="RQq-rj-GFS"/>
                                     <constraint firstItem="yuK-d5-BIz" firstAttribute="top" secondItem="NHg-iX-xzj" secondAttribute="bottom" constant="20" id="ScH-5S-qlr"/>
                                     <constraint firstItem="NHg-iX-xzj" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="U3d-q6-9XS"/>
                                     <constraint firstItem="yuK-d5-BIz" firstAttribute="centerX" secondItem="Sc3-fU-zr0" secondAttribute="centerX" id="aQZ-Xv-Tyh"/>
                                     <constraint firstItem="pD8-BT-XYh" firstAttribute="top" secondItem="NHg-iX-xzj" secondAttribute="bottom" constant="20" id="clG-at-xxI"/>
                                     <constraint firstItem="Xdv-ff-hB2" firstAttribute="top" secondItem="JoN-p1-b9z" secondAttribute="bottom" id="fp3-kp-Ggt"/>
+                                    <constraint firstAttribute="trailing" secondItem="2cc-Ie-lBi" secondAttribute="trailing" constant="8" id="jKW-8W-4G0"/>
                                     <constraint firstItem="JoN-p1-b9z" firstAttribute="top" secondItem="Sc3-fU-zr0" secondAttribute="top" constant="10" id="lnA-7M-51Z"/>
                                     <constraint firstAttribute="trailing" secondItem="JoN-p1-b9z" secondAttribute="trailing" constant="20" id="nuW-24-fJN"/>
+                                    <constraint firstAttribute="bottom" secondItem="2cc-Ie-lBi" secondAttribute="bottom" constant="20" id="sqa-u1-6qs"/>
                                     <constraint firstItem="JoN-p1-b9z" firstAttribute="leading" secondItem="Sc3-fU-zr0" secondAttribute="leading" constant="20" id="t8J-yc-w4p"/>
                                     <constraint firstItem="NHg-iX-xzj" firstAttribute="top" secondItem="Atq-yw-5l9" secondAttribute="bottom" constant="10" id="vDZ-fy-dZK"/>
                                 </constraints>
@@ -494,6 +504,7 @@
                         <outlet property="editInfoButton" destination="yuK-d5-BIz" id="maa-NP-TNq"/>
                         <outlet property="emailLabel" destination="LEo-oN-VNd" id="MRE-06-aF2"/>
                         <outlet property="emailTextView" destination="tdz-TO-wvu" id="fps-ci-Apm"/>
+                        <outlet property="exitButton" destination="2cc-Ie-lBi" id="Taf-ca-oNQ"/>
                         <outlet property="genderLabel" destination="cG5-Wr-A7l" id="fSa-15-TA8"/>
                         <outlet property="genderTextView" destination="xeW-zY-HjL" id="2aN-r9-NyK"/>
                         <outlet property="saveEditedDataButton" destination="pD8-BT-XYh" id="Ima-Vg-eJ3"/>

@@ -12,15 +12,16 @@ class GB_1640_AuthTests: XCTestCase {
     
     let timeout: TimeInterval = 5
     var requestFactory: RequestFactory!
+    var user: User!
 
     override func setUpWithError() throws {
         requestFactory = RequestFactory()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        user = User(id: 1)
     }
 
     override func tearDownWithError() throws {
         requestFactory = nil
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        user = nil
     }
 
     func testLoginRequest() throws {
@@ -28,8 +29,7 @@ class GB_1640_AuthTests: XCTestCase {
         let request = requestFactory.makeAuthRequestFactory()
         var requestResult = 0
         
-        request.login(username: "Somebody",
-                      password: "Password") { response in
+        request.login(user: self.user) { response in
             switch response.result {
             case .success(let result):
                 requestResult = result.result
@@ -47,7 +47,7 @@ class GB_1640_AuthTests: XCTestCase {
         let request = requestFactory.makeAuthRequestFactory()
         var requestResult = 0
         
-        request.logOut(userID: 1) { response in
+        request.logOut(user: self.user) { response in
             switch response.result {
             case .success(let result):
                 requestResult = result.result
@@ -66,13 +66,7 @@ class GB_1640_AuthTests: XCTestCase {
         let request = requestFactory.makeAuthRequestFactory()
         var requestResult = 0
         
-        request.registration(userID: 123,
-                             username: "Somebody",
-                             password: "mypassword",
-                             email: "email",
-                             gender: "m",
-                             creditCard: "1234-5678-9876",
-                             biography: "Smth") { response in
+        request.registration(user: self.user) { response in
             switch response.result {
             case .success(let result):
                 requestResult = result.result
@@ -90,10 +84,7 @@ class GB_1640_AuthTests: XCTestCase {
         let request = requestFactory.makeAuthRequestFactory()
         var requestResult = 0
         
-        request.changeUserData(userID: 123,
-                               username: "Somebody2",
-                               password: "mypassword2",
-                               email: "email2") { response in
+        request.changeUserData(user: self.user) { response in
             switch response.result {
             case .success(let result):
                 requestResult = result.result

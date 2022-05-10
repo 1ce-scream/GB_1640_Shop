@@ -21,6 +21,7 @@ class UserDataViewController: UIViewController {
     @IBOutlet weak var saveEditedDataButton: SubButton!
     @IBOutlet weak var creditCardLabel: StandartLabel!
     @IBOutlet weak var creditCardTextView: SubTextView!
+    @IBOutlet weak var exitButton: SubButton!
     
     @IBAction func editUserData(_ sender: Any) {
         toggleEditInfo()
@@ -28,22 +29,26 @@ class UserDataViewController: UIViewController {
     
     @IBAction func saveEditedData(_ sender: Any) {
         toggleEditInfo()
-        viewModel.sendChageUserDataRequest(email: emailTextView.text ?? "")
+        user.email = emailTextView.text ?? ""
+        viewModel.sendChageUserDataRequest(user: user)
         alert.showAlert(title: "Успех", message: "Ваши данные успешно изменены!")
     }
     
+    @IBAction func exitToLogin(_ sender: Any) {
+        viewModel.sendLogoutRequest(user: user)
+        
+        let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
+        guard let destinationController = storyboard
+            .instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController
+        else { return }
+        destinationController.modalPresentationStyle = .fullScreen
+        present(destinationController, animated: true, completion: nil)
+    }
+    
+    private lazy var user = User(id: 1)
     private lazy var viewModel = UserDataViewModel()
     private lazy var keyboardHelper = KeyboardHelper()
     private lazy var alert = AlertsHelper(viewController: self)
-    private let demoUser: User = User(id: 123,
-                                      login: "Somebody",
-                                      password: "Password",
-                                      name: "Name",
-                                      lastname: "Lastname",
-                                      biography: "Bio bio bio bio bio bio bio bio bio",
-                                      creditcard: "1234-1234-1234",
-                                      email: "some@some.com",
-                                      gender: "X")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +89,10 @@ class UserDataViewController: UIViewController {
         saveEditedDataButton.isHidden = true
         saveEditedDataButton.accessibilityIdentifier = "saveInfoButton"
         
+        exitButton.setTitle("Выход", for: .normal)
+        exitButton.setTitleColor(.systemBackground, for: .highlighted)
+        exitButton.backgroundColor = .systemRed
+        
     }
     
     private func setupLabelsView() {
@@ -95,21 +104,21 @@ class UserDataViewController: UIViewController {
     }
     
     private func setupTextViews() {
-        userNameTextView.text = "\(demoUser.name) \(demoUser.lastname)"
+        userNameTextView.text = "\(user.name) \(user.lastname)"
         userNameTextView.textAlignment = .center
         userNameTextView.font = .systemFont(ofSize: FontSizes.bigTextView.rawValue, weight: .bold)
         userNameTextView.accessibilityIdentifier = "userNameTV"
         
-        emailTextView.text = demoUser.email
+        emailTextView.text = user.email
         emailTextView.keyboardType = .emailAddress
         emailTextView.dataDetectorTypes = .link
         
-        genderTextView.text = demoUser.gender
+        genderTextView.text = user.gender
         
-        userBioTextView.text = demoUser.biography
+        userBioTextView.text = user.biography
         userBioTextView.textAlignment = .center
         
-        creditCardTextView.text = demoUser.creditcard
+        creditCardTextView.text = user.creditcard
     }
     
     private func toggleEditInfo() {

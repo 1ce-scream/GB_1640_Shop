@@ -28,6 +28,13 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var registrationButton: UIButton!
     
+    private lazy var user = User(login: loginTextField.text ?? "",
+                                 password: passwordTextField.text ?? "",
+                                 name: nameTextField.text ?? "",
+                                 lastname: lastnameTextField.text ?? "",
+                                 biography: biographyTextField.text ?? "",
+                                 email: emailTextField.text ?? "")
+    
     private lazy var viewModel = RegistrationViewModel()
     private lazy var keyboardHelper = KeyboardHelper()
     
@@ -104,10 +111,7 @@ class RegistrationViewController: UIViewController {
     }
     
     @objc func presentUserDataVC(_ sender: UIButton) {
-        viewModel.sendRegistrationRequest(login: loginTextField.text ?? "",
-                                          password: passwordTextField.text ?? "",
-                                          email: emailTextField.text ?? "",
-                                          biography: biographyTextField.text ?? "")
+        viewModel.sendRegistrationRequest(user: user)
         
         let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)
         

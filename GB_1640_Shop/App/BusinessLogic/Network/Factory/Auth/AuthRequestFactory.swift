@@ -9,26 +9,15 @@ import Foundation
 import Alamofire
 
 protocol AuthRequestFactory {
-    func login(username: String,
-               password: String,
+    func login(user: User,
                completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void)
     
-    // swiftlint:disable function_parameter_count
-    func registration(userID: Int,
-                      username: String,
-                      password: String,
-                      email: String,
-                      gender: String,
-                      creditCard: String,
-                      biography: String,
+    func registration(user: User,
                       completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void)
     
-    func logOut(userID: Int,
+    func logOut(user: User,
                 completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void)
     
-    func changeUserData(userID: Int,
-                        username: String,
-                        password: String,
-                        email: String,
+    func changeUserData(user: User,
                         completionHandler: @escaping (AFDataResponse<ResponseResult>) -> Void)
 }
