@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - Labels
+
 class StandartLabel: UILabel {
     
     override func awakeFromNib() {
@@ -25,6 +27,8 @@ class SmallLabel: UILabel {
     }
 }
 
+// MARK: - Images
+
 class AvatarImage: UIImageView {
     private var borderColor: UIColor = .white
     private var borderWidth: CGFloat = 0.8
@@ -37,6 +41,8 @@ class AvatarImage: UIImageView {
         self.backgroundColor = .systemBackground
     }
 }
+
+// MARK: - Background views
 
 class AvatarBackgroundShadowView: UIView {
     // Цвет тени
@@ -68,6 +74,8 @@ class CellBackground: UIView {
     }
 }
 
+// MARK: - TextViews
+
 class StandartTextView: UITextView {
     
     override func awakeFromNib() {
@@ -96,6 +104,8 @@ class SubTextView: UITextView {
     }
 }
 
+// MARK: - TextFields
+
 class StandartTextField: UITextField {
     
     override func awakeFromNib() {
@@ -108,6 +118,8 @@ class StandartTextField: UITextField {
     }
 }
 
+// MARK: - Buttons
+
 class StandartButton: UIButton {
 
     override func awakeFromNib() {
@@ -115,23 +127,38 @@ class StandartButton: UIButton {
         self.isUserInteractionEnabled = true
         self.setTitleColor(.systemBackground, for: .normal)
         self.setTitleColor(.systemRed, for: .highlighted)
+        self.layer.masksToBounds = true
     }
     
-//    override func updateConfiguration() {
-//        
-//    }
+    override func updateConfiguration() {
+        self.configuration?.cornerStyle = .capsule
+    }
 }
 
-class SubButton: UIButton {
+// MARK: - Cells
 
-    override func awakeFromNib() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.isUserInteractionEnabled = true
-        self.setTitleColor(.systemBackground, for: .normal)
-        self.setTitleColor(.systemRed, for: .highlighted)
-        self.tintColor = .systemBackground
-        self.backgroundColor = .systemTeal
-        self.layer.cornerRadius = 5
-        self.layer.masksToBounds = true
+class CustomCell: UITableViewCell {
+    
+    private let widthMultiplier: CGFloat = 0.95
+    private let heightMultiplier: CGFloat = 0.95
+    
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame = newFrame
+            let newWidth = frame.width * widthMultiplier
+            let widthSpace = (frame.width - newWidth) / 2
+            frame.size.width = newWidth
+            frame.origin.x += widthSpace
+            
+            let newHeight = frame.height * heightMultiplier
+            let heightSpace = (frame.height - newHeight) / 2
+            frame.size.height = newHeight
+            frame.origin.y += heightSpace
+            
+            super.frame = frame
+        }
     }
 }

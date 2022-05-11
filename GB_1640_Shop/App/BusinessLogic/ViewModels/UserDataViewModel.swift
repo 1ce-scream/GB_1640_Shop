@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserDataViewModel {
+final class UserDataViewModel {
     
     private lazy var requestFactory = RequestFactory()
     

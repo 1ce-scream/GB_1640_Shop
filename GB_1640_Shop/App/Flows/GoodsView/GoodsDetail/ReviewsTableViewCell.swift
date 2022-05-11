@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReviewsTableViewCell: UITableViewCell {
+class ReviewsTableViewCell: CustomCell {
 
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var backView: CellBackground!

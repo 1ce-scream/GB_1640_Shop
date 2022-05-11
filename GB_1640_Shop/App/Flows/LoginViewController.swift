@@ -72,15 +72,17 @@ class LoginViewController: UIViewController {
     
     private func setupButtonsView() {
         loginButton.setTitle("Войти", for: .normal)
-        loginButton.tintColor = .systemGreen
+        loginButton.tintColor = ButtonColors.standartButton.value
         loginButton.accessibilityIdentifier = "loginButton"
 
         registrationButton.setTitle("Регистрация", for: .normal)
-        registrationButton.tintColor = .systemTeal
+        registrationButton.tintColor = ButtonColors.subButton.value
         registrationButton.addTarget(self,
                                      action: #selector(presentRegistrationVC(_ :)),
                                      for: .touchUpInside)
         registrationButton.accessibilityIdentifier = "registrationButton"
+        
+        crashButton.tintColor = ButtonColors.exitButton.value
         crashButton.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationViewModel {
+final class RegistrationViewModel {
     
     private lazy var requestFactory = RequestFactory()
 

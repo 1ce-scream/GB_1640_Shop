@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class GoodsDetailViewModel {
+final class GoodsDetailViewModel {
     
     private lazy var requestFactory = RequestFactory()
     

@@ -15,13 +15,13 @@ class UserDataViewController: UIViewController {
     @IBOutlet weak var userBioTextView: SubTextView!
     @IBOutlet weak var emailLabel: StandartLabel!
     @IBOutlet weak var genderLabel: StandartLabel!
-    @IBOutlet weak var editInfoButton: SubButton!
+    @IBOutlet weak var editInfoButton: StandartButton!
     @IBOutlet weak var emailTextView: SubTextView!
     @IBOutlet weak var genderTextView: SubTextView!
-    @IBOutlet weak var saveEditedDataButton: SubButton!
+    @IBOutlet weak var saveEditedDataButton: StandartButton!
     @IBOutlet weak var creditCardLabel: StandartLabel!
     @IBOutlet weak var creditCardTextView: SubTextView!
-    @IBOutlet weak var exitButton: SubButton!
+    @IBOutlet weak var exitButton: StandartButton!
     
     @IBAction func editUserData(_ sender: Any) {
         toggleEditInfo()
@@ -81,17 +81,18 @@ class UserDataViewController: UIViewController {
     private func setupButtonsView() {
         editInfoButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
         editInfoButton.setTitle("Редактировать", for: .normal)
+        editInfoButton.tintColor = ButtonColors.subButton.value
         editInfoButton.accessibilityIdentifier = "editInfoButton"
         
         saveEditedDataButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
         saveEditedDataButton.setTitle("Сохранить", for: .normal)
-        saveEditedDataButton.backgroundColor = .systemGreen
+        saveEditedDataButton.tintColor = ButtonColors.standartButton.value
         saveEditedDataButton.isHidden = true
         saveEditedDataButton.accessibilityIdentifier = "saveInfoButton"
         
         exitButton.setTitle("Выход", for: .normal)
         exitButton.setTitleColor(.systemBackground, for: .highlighted)
-        exitButton.backgroundColor = .systemRed
+        exitButton.tintColor = ButtonColors.exitButton.value
         
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GoodsListTableViewCell: UITableViewCell {
+class GoodsListTableViewCell: CustomCell {
 
     @IBOutlet weak var backView: CellBackground!
     @IBOutlet weak var productIconImageView: AvatarImage!
@@ -24,21 +24,6 @@ class GoodsListTableViewCell: UITableViewCell {
         productNameLabel.text = nil
         productDescriptionLabel.text = nil
         productPriceLabel.text = nil
-    }
-    
-    override var frame: CGRect {
-        get {
-            return super.frame
-        }
-        set (newFrame) {
-            var frame = newFrame
-            let newWidth = frame.width * 0.95
-            let space = (frame.width - newWidth) / 2
-            frame.size.width = newWidth
-            frame.origin.x += space
-            
-            super.frame = frame
-        }
     }
     
     func configure(product: Good) {

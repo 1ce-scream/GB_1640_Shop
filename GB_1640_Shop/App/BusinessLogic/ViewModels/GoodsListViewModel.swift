@@ -8,11 +8,11 @@
 import Foundation
 import Alamofire
 
-class GoodsListViewModel {
+final class GoodsListViewModel {
     
     private lazy var requestFactory = RequestFactory()
     
-    func sendGoodsListRequest(completion :@escaping ([Good]) -> Void) {
+    func sendGoodsListRequest(completion: @escaping ([Good]) -> Void) {
         let request = requestFactory.makeGoodsRequestFactory()
         var requestResult: [Good] = []
         

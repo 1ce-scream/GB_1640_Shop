@@ -10,6 +10,7 @@
 		8B2DA0D6C2CC043DF3C62FD4 /* Pods_GB_1640_ShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5DF1E30EFCEA25B4CBA8AD /* Pods_GB_1640_ShopTests.framework */; };
 		CB1FE90D994A20043E883613 /* Pods_GB_1640_Shop_GB_1640_ShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4DB73061008A2FC5D1127C /* Pods_GB_1640_Shop_GB_1640_ShopUITests.framework */; };
 		E969D8CD0C385DC9EAD753EF /* Pods_GB_1640_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A5A34E52A9C196FCEBA6A4 /* Pods_GB_1640_Shop.framework */; };
+		FE006445282BFE0800D20050 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE006444282BFE0800D20050 /* Colors.swift */; };
 		FE01348428059B96000DB8B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01348328059B96000DB8B6 /* LoginViewController.swift */; };
 		FE0134882806D44A000DB8B6 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0134872806D44A000DB8B6 /* UserDataViewController.swift */; };
 		FE01348C280731F3000DB8B6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01348B280731F3000DB8B6 /* RegistrationViewController.swift */; };
@@ -103,6 +104,7 @@
 		C90BED02A610CB2779294D06 /* Pods-GB_1640_ShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GB_1640_ShopTests.release.xcconfig"; path = "Target Support Files/Pods-GB_1640_ShopTests/Pods-GB_1640_ShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		E47351D0B0CAF8F4736839B6 /* Pods-GB_1640_Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GB_1640_Shop.debug.xcconfig"; path = "Target Support Files/Pods-GB_1640_Shop/Pods-GB_1640_Shop.debug.xcconfig"; sourceTree = "<group>"; };
 		E8B42BAB9AFC033BE5433D67 /* Pods-GB_1640_ShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GB_1640_ShopTests.debug.xcconfig"; path = "Target Support Files/Pods-GB_1640_ShopTests/Pods-GB_1640_ShopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE006444282BFE0800D20050 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FE01348328059B96000DB8B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FE0134872806D44A000DB8B6 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		FE01348B280731F3000DB8B6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				FEFD348C27F7320F00BBCE2F /* ReviewListResponseResult.swift */,
 				FEAB42712811636B00C22D17 /* Reviews.swift */,
 				FE2C11BE28118271008EB888 /* FontSizes.swift */,
+				FE006444282BFE0800D20050 /* Colors.swift */,
 				FEF8947C281AE1E100F93E96 /* CrashlyticLogs.swift */,
 			);
 			path = Entity;
@@ -764,6 +767,7 @@
 				FED7521827DA22A100E8AC56 /* AbstractErrorParser.swift in Sources */,
 				FE013497280836CD000DB8B6 /* UserDataViewModel.swift in Sources */,
 				FED7521C27DA23A000E8AC56 /* DataRequest.swift in Sources */,
+				FE006445282BFE0800D20050 /* Colors.swift in Sources */,
 				FEA0C47B28042BB600565760 /* BasketRequestFactory.swift in Sources */,
 				FE2C11BF28118271008EB888 /* FontSizes.swift in Sources */,
 				FE2DBF28280D64DB0012F945 /* GoodsListViewModel.swift in Sources */,

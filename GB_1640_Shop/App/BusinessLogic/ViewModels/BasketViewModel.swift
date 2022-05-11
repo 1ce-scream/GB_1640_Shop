@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class BasketViewModel {
+final class BasketViewModel {
     
     private lazy var requestFactory = RequestFactory()
     

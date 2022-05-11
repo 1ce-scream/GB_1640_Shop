@@ -45,6 +45,7 @@ class GoodsDetailViewController: UIViewController {
         registerNib()
         setupView()
         getReviewData(product: good!)
+        addToBasketButton.tintColor = ButtonColors.standartButton.value
         addToBasketButton.accessibilityIdentifier = "addToBasket"
         
         Crashlytics.setLog(log: .goodsDetail)

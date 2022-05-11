@@ -103,7 +103,7 @@ class RegistrationViewController: UIViewController {
     
     private func setupButtonsView() {
         registrationButton.setTitle("Зарегистрироваться", for: .normal)
-        registrationButton.tintColor = .systemGreen
+        registrationButton.tintColor = ButtonColors.standartButton.value
         registrationButton.addTarget(self,
                                      action: #selector(presentUserDataVC(_ :)),
                                      for: .touchUpInside)
