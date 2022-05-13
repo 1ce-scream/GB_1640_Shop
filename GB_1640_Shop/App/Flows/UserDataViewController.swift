@@ -15,13 +15,13 @@ class UserDataViewController: UIViewController {
     @IBOutlet weak var userBioTextView: SubTextView!
     @IBOutlet weak var emailLabel: StandartLabel!
     @IBOutlet weak var genderLabel: StandartLabel!
-    @IBOutlet weak var editInfoButton: StandartButton!
+    @IBOutlet weak var editInfoButton: SubButton!
     @IBOutlet weak var emailTextView: SubTextView!
     @IBOutlet weak var genderTextView: SubTextView!
     @IBOutlet weak var saveEditedDataButton: StandartButton!
     @IBOutlet weak var creditCardLabel: StandartLabel!
     @IBOutlet weak var creditCardTextView: SubTextView!
-    @IBOutlet weak var exitButton: StandartButton!
+    @IBOutlet weak var exitButton: ExitButton!
     
     @IBAction func editUserData(_ sender: Any) {
         toggleEditInfo()
@@ -71,7 +71,7 @@ class UserDataViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = BackgroundsColor.standart.value
         userAvatarImageView.image = UIImage(named: "KyleBroflovski")
         setupLabelsView()
         setupTextViews()
@@ -81,19 +81,14 @@ class UserDataViewController: UIViewController {
     private func setupButtonsView() {
         editInfoButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
         editInfoButton.setTitle("Редактировать", for: .normal)
-        editInfoButton.tintColor = ButtonColors.subButton.value
         editInfoButton.accessibilityIdentifier = "editInfoButton"
         
         saveEditedDataButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
         saveEditedDataButton.setTitle("Сохранить", for: .normal)
-        saveEditedDataButton.tintColor = ButtonColors.standartButton.value
         saveEditedDataButton.isHidden = true
         saveEditedDataButton.accessibilityIdentifier = "saveInfoButton"
         
         exitButton.setTitle("Выход", for: .normal)
-        exitButton.setTitleColor(.systemBackground, for: .highlighted)
-        exitButton.tintColor = ButtonColors.exitButton.value
-        
     }
     
     private func setupLabelsView() {
@@ -107,7 +102,8 @@ class UserDataViewController: UIViewController {
     private func setupTextViews() {
         userNameTextView.text = "\(user.name) \(user.lastname)"
         userNameTextView.textAlignment = .center
-        userNameTextView.font = .systemFont(ofSize: FontSizes.bigTextView.rawValue, weight: .bold)
+        userNameTextView.font = .systemFont(ofSize: FontSizes.bigTextView.rawValue,
+                                            weight: .bold)
         userNameTextView.accessibilityIdentifier = "userNameTV"
         
         emailTextView.text = user.email

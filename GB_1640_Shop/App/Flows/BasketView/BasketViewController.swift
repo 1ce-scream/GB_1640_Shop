@@ -12,6 +12,7 @@ class BasketViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cleanBasketButton: UIBarButtonItem!
+    
     @IBAction func tapCleanBasketButton(_ sender: Any) {
         BasketSingleton.shared.basket.removeAll()
         self.goodsList.removeAll()
@@ -42,13 +43,14 @@ class BasketViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.keyboardDismissMode = .onDrag
-        tableView.backgroundColor = .systemBlue
+        tableView.backgroundColor = BackgroundsColor.standart.value
         tableView.accessibilityIdentifier = "basketTable"
     }
     
     private func registerNib() {
         let nibProduct = UINib(nibName: "GoodsListTableViewCell", bundle: nil)
-        tableView.register(nibProduct, forCellReuseIdentifier: "GoodsListTableViewCell")
+        tableView.register(nibProduct,
+                           forCellReuseIdentifier: "GoodsListTableViewCell")
         tableView.register(BasketFooterView.nib,
                            forHeaderFooterViewReuseIdentifier: "BasketFooterView"
         )

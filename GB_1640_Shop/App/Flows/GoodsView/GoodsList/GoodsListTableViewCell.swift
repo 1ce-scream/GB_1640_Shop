@@ -11,9 +11,9 @@ class GoodsListTableViewCell: CustomCell {
 
     @IBOutlet weak var backView: CellBackground!
     @IBOutlet weak var productIconImageView: AvatarImage!
-    @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var productDescriptionLabel: UILabel!
-    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productNameLabel: StandartLabel!
+    @IBOutlet weak var productDescriptionLabel: SmallLabel!
+    @IBOutlet weak var productPriceLabel: PriceLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,26 +35,14 @@ class GoodsListTableViewCell: CustomCell {
     }
     
     private func setupView() {
-        contentView.backgroundColor = .systemBlue
-        backView.backgroundColor = .clear
+        contentView.backgroundColor = BackgroundsColor.standart.value
+        backView.backgroundColor = BackgroundsColor.secondary.value
         
-        productNameLabel.textColor = .systemBackground
-        productNameLabel.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
         productNameLabel.accessibilityIdentifier = "productNameLabel"
         
-        productDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        productDescriptionLabel.textColor = .systemBackground
-        productDescriptionLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .regular)
         productDescriptionLabel.numberOfLines = 0
         productDescriptionLabel.lineBreakMode = .byWordWrapping
         
-        productPriceLabel.textColor = .systemBackground
         productPriceLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .semibold)
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

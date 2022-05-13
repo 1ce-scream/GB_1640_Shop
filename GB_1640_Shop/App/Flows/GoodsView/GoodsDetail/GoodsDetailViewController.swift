@@ -14,7 +14,7 @@ class GoodsDetailViewController: UIViewController {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productDescriptionTextView: StandartTextView!
     @IBOutlet weak var reviewsTableView: UITableView!
-    @IBOutlet weak var addToBasketButton: UIButton!
+    @IBOutlet weak var addToBasketButton: StandartButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func tapAddToBasketButton(_ sender: Any) {
@@ -45,7 +45,6 @@ class GoodsDetailViewController: UIViewController {
         registerNib()
         setupView()
         getReviewData(product: good!)
-        addToBasketButton.tintColor = ButtonColors.standartButton.value
         addToBasketButton.accessibilityIdentifier = "addToBasket"
         
         Crashlytics.setLog(log: .goodsDetail)
@@ -72,7 +71,7 @@ class GoodsDetailViewController: UIViewController {
         reviewsTableView.dataSource = self
         reviewsTableView.delegate = self
         reviewsTableView.keyboardDismissMode = .onDrag
-        reviewsTableView.backgroundColor = .systemBlue
+        reviewsTableView.backgroundColor = BackgroundsColor.standart.value
     }
     
     private func registerNib() {
@@ -89,7 +88,6 @@ class GoodsDetailViewController: UIViewController {
         
         productNameLabel.text = good?.productName
         productNameLabel.font = .systemFont(ofSize: FontSizes.bigLabel.rawValue, weight: .semibold)
-        productNameLabel.textColor = .systemBackground
         productNameLabel.textAlignment = .center
         productNameLabel.accessibilityIdentifier = "productName"
         
@@ -139,7 +137,7 @@ extension GoodsDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.textLabel?.textColor = .systemBackground
+            headerView.textLabel?.textColor = TextColors.standart.value
             headerView.textLabel?.textAlignment = .center
         }
     }

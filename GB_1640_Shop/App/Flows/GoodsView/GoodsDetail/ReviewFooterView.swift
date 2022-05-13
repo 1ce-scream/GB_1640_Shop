@@ -15,7 +15,8 @@ class ReviewFooterView: UITableViewHeaderFooterView {
     
     @IBAction func tapSendReviewButton(_ sender: Any) {
         guard reviewTextField.text != "" else { return }
-        viewModel.sendReview(userId: 123, text: reviewTextField.text ?? "")
+        viewModel.sendReview(userId: 123,
+                             text: reviewTextField.text ?? "")
         reviewTextField.text = ""
         alert.showAlert(title: "Отлично!", message: "Ваш отзыв отправлен на модерацию")
         
@@ -34,10 +35,9 @@ class ReviewFooterView: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.backView.backgroundColor = .systemBlue
+        self.backView.backgroundColor = BackgroundsColor.standart.value
         self.reviewTextField.placeholder = "Оставить отзыв"
-        self.reviewTextField.font = .systemFont(
-            ofSize: FontSizes.smallLabel.rawValue,
-            weight: .regular)
+        self.reviewTextField.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue,
+                                                weight: .regular)
     }
 }

@@ -8,21 +8,75 @@
 import UIKit
 
 enum ButtonColors {
-    case standartButton
-    case subButton
-    case exitButton
+    /// Green
+    case standart
+    /// Teal
+    case secondary
+    /// Red
+    case exit
+}
+
+enum TextColors {
+    /// Background
+    case standart
+    /// Blue
+    case secondary
+}
+
+enum BackgroundsColor {
+    /// Blue
+    case standart
+    /// Clear
+    case secondary
+    /// Background
+    case system
+    /// Teal
+    case extra
 }
 
 extension ButtonColors {
     var value: UIColor {
+        // swiftlint:disable implicit_getter
         get {
             switch self {
-            case .standartButton:
+            case .standart:
                 return UIColor.systemGreen
-            case .subButton:
+            case .secondary:
                 return UIColor.systemTeal
-            case .exitButton:
+            case .exit:
                 return UIColor.systemRed
+            }
+        }
+    }
+}
+
+extension TextColors {
+    var value: UIColor {
+        // swiftlint:disable implicit_getter
+        get {
+            switch self {
+            case .standart:
+                return UIColor.systemBackground
+            case .secondary:
+                return UIColor.systemBlue
+            }
+        }
+    }
+}
+
+extension BackgroundsColor {
+    var value: UIColor {
+        // swiftlint:disable implicit_getter
+        get {
+            switch self {
+            case .standart:
+                return UIColor.systemBlue
+            case .secondary:
+                return UIColor.clear
+            case .system:
+                return UIColor.systemBackground
+            case .extra:
+                return UIColor.systemTeal
             }
         }
     }

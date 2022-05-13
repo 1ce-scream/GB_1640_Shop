@@ -14,7 +14,7 @@ class StandartLabel: UILabel {
     override func awakeFromNib() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .bold)
-        self.textColor = .systemBackground
+        self.textColor = TextColors.standart.value
     }
 }
 
@@ -22,8 +22,17 @@ class SmallLabel: UILabel {
 
     override func awakeFromNib() {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .bold)
-        self.textColor = .systemBackground
+        self.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .regular )
+        self.textColor = TextColors.standart.value
+    }
+}
+
+class PriceLabel: UILabel {
+    
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .semibold )
+        self.textColor = TextColors.standart.value
     }
 }
 
@@ -38,7 +47,7 @@ class AvatarImage: UIImageView {
         self.layer.masksToBounds = true
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = BackgroundsColor.system.value
     }
 }
 
@@ -56,7 +65,7 @@ class AvatarBackgroundShadowView: UIView {
 
     override func awakeFromNib() {
         // Цвет фона View
-        self.backgroundColor = .clear
+        self.backgroundColor = BackgroundsColor.secondary.value
         self.layer.shadowColor = shadowColor.cgColor
         self.layer.shadowOffset = shadowOffset
         self.layer.shadowOpacity = shadowOpacity
@@ -70,7 +79,7 @@ class CellBackground: UIView {
         self.layer.cornerRadius = 12
         self.layer.masksToBounds = true
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.systemBackground.cgColor
+        self.layer.borderColor = BackgroundsColor.system.value.cgColor
     }
 }
 
@@ -83,8 +92,8 @@ class StandartTextView: UITextView {
         self.isEditable = false
         self.isSelectable = true
         self.isScrollEnabled = true
-        self.backgroundColor = .clear
-        self.textColor = .systemBackground
+        self.backgroundColor = BackgroundsColor.secondary.value
+        self.textColor = TextColors.standart.value
         self.font = .systemFont(ofSize: FontSizes.standartTextView.rawValue, weight: .regular)
     }
 }
@@ -99,7 +108,7 @@ class SubTextView: UITextView {
         self.font = .systemFont(ofSize: FontSizes.standartLabel.rawValue, weight: .regular)
         self.layer.cornerRadius = 12
         self.layer.masksToBounds = true
-        self.layer.borderColor = UIColor.systemBackground.cgColor
+        self.layer.borderColor = BackgroundsColor.system.value.cgColor
         self.layer.borderWidth = 1
     }
 }
@@ -112,8 +121,8 @@ class StandartTextField: UITextField {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.borderStyle = .roundedRect
         self.font = .systemFont(ofSize: FontSizes.standartTextFields.rawValue)
-        self.backgroundColor = .systemBackground
-        self.textColor = .systemBlue
+        self.backgroundColor = BackgroundsColor.system.value
+        self.textColor = TextColors.secondary.value
         self.autocapitalizationType = .none
     }
 }
@@ -127,11 +136,32 @@ class StandartButton: UIButton {
         self.isUserInteractionEnabled = true
         self.setTitleColor(.systemBackground, for: .normal)
         self.setTitleColor(.systemRed, for: .highlighted)
-        self.layer.masksToBounds = true
+        self.tintColor = ButtonColors.standart.value
     }
     
     override func updateConfiguration() {
         self.configuration?.cornerStyle = .capsule
+    }
+}
+
+class SubButton: StandartButton {
+    
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.isUserInteractionEnabled = true
+        self.setTitleColor(.systemBackground, for: .normal)
+        self.setTitleColor(.systemRed, for: .highlighted)
+        self.tintColor = ButtonColors.secondary.value
+    }
+}
+
+class ExitButton: StandartButton {
+    
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.isUserInteractionEnabled = true
+        self.tintColor = ButtonColors.exit.value
+        self.setTitleColor(.systemBackground, for: .highlighted)
     }
 }
 

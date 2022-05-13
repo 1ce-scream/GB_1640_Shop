@@ -31,7 +31,7 @@ class GoodsListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.keyboardDismissMode = .onDrag
-        tableView.backgroundColor = .systemBlue
+        tableView.backgroundColor = BackgroundsColor.standart.value
         tableView.accessibilityIdentifier = "goodsListTable"
     }
     
@@ -53,7 +53,7 @@ class GoodsListViewController: UIViewController {
         tableView.refreshControl?.addTarget(self,
                                             action: #selector(callPullToRefresh),
                                             for: .valueChanged)
-        tableView.refreshControl?.tintColor = .systemBackground
+        tableView.refreshControl?.tintColor = BackgroundsColor.system.value
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

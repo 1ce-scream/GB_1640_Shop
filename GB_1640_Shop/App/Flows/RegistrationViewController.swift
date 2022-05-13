@@ -28,12 +28,7 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var registrationButton: UIButton!
     
-    private lazy var user = User(login: loginTextField.text ?? "",
-                                 password: passwordTextField.text ?? "",
-                                 name: nameTextField.text ?? "",
-                                 lastname: lastnameTextField.text ?? "",
-                                 biography: biographyTextField.text ?? "",
-                                 email: emailTextField.text ?? "")
+//    private lazy var user = User()
     
     private lazy var viewModel = RegistrationViewModel()
     private lazy var keyboardHelper = KeyboardHelper()
@@ -59,7 +54,7 @@ class RegistrationViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = BackgroundsColor.standart.value
         setupLablesView()
         setupTextFieldsView()
         setupButtonsView()
@@ -87,7 +82,6 @@ class RegistrationViewController: UIViewController {
         passwordTextField.accessibilityIdentifier = "passwordTF"
         
         nameTextField.autocapitalizationType = .words
-        nameTextField.isSecureTextEntry = false
         nameTextField.accessibilityIdentifier = "nameTF"
         
         lastnameTextField.autocapitalizationType = .words
@@ -103,14 +97,22 @@ class RegistrationViewController: UIViewController {
     
     private func setupButtonsView() {
         registrationButton.setTitle("Зарегистрироваться", for: .normal)
-        registrationButton.tintColor = ButtonColors.standartButton.value
         registrationButton.addTarget(self,
                                      action: #selector(presentUserDataVC(_ :)),
                                      for: .touchUpInside)
         registrationButton.accessibilityIdentifier = "regButton"
+        
     }
     
     @objc func presentUserDataVC(_ sender: UIButton) {
+        
+        let user = User(login: loginTextField.text ?? "",
+                        password: passwordTextField.text ?? "",
+                        name: nameTextField.text ?? "",
+                        lastname: lastnameTextField.text ?? "",
+                        biography: biographyTextField.text ?? "",
+                        email: emailTextField.text ?? "")
+        
         viewModel.sendRegistrationRequest(user: user)
         
         let storyboard = UIStoryboard.init(name: "MainView", bundle: nil)

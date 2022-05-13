@@ -9,7 +9,7 @@ import UIKit
 
 class ReviewsTableViewCell: CustomCell {
 
-    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var authorLabel: PriceLabel!
     @IBOutlet weak var backView: CellBackground!
     @IBOutlet weak var textReviewTextView: StandartTextView!
     
@@ -29,12 +29,9 @@ class ReviewsTableViewCell: CustomCell {
     }
     
     private func setupView() {
-        contentView.backgroundColor = .systemBlue
+        contentView.backgroundColor = BackgroundsColor.standart.value
         
-        backView.backgroundColor = .systemTeal
-
-        authorLabel.textColor = .systemBlue
-        authorLabel.font = .systemFont(ofSize: FontSizes.smallLabel.rawValue, weight: .bold)
+        backView.backgroundColor = BackgroundsColor.extra.value
 
         textReviewTextView.contentMode = .topLeft
     }

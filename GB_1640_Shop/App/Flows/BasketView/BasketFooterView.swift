@@ -22,8 +22,7 @@ class BasketFooterView: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.backView.backgroundColor = .systemBlue
-        payButton.tintColor = ButtonColors.standartButton.value
+        self.backView.backgroundColor = BackgroundsColor.standart.value
         payButton.accessibilityIdentifier = "payButton"
     }
     

@@ -19,7 +19,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-7g-3z1">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2B-ie-xBI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2B-ie-xBI" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
                                         <rect key="frame" x="20" y="100" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -58,11 +58,8 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                                        <connections>
-                                                            <segue destination="Gsa-zj-OZm" kind="show" identifier="loginToTabbarSegue" id="Ivd-yr-VdU"/>
-                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAJ-VT-Njm" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAJ-VT-Njm" customClass="SubButton" customModule="GB_1640_Shop" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="51" width="67" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
@@ -71,7 +68,7 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-Zj-G79" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-Zj-G79" customClass="ExitButton" customModule="GB_1640_Shop" customModuleProvider="target">
                                         <rect key="frame" x="152.5" y="456.5" width="109" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Crash Button"/>
@@ -109,6 +106,7 @@
                         <outlet property="passwordTextField" destination="kaX-rQ-Ogg" id="5sv-Sv-YJN"/>
                         <outlet property="registrationButton" destination="rAJ-VT-Njm" id="8Ub-xx-1Rq"/>
                         <outlet property="scrollView" destination="hc3-7g-3z1" id="4OU-1e-vVQ"/>
+                        <segue destination="Gsa-zj-OZm" kind="show" identifier="loginToTabbarSegue" id="cha-Zg-BAt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -443,7 +441,7 @@
                                             <action selector="saveEditedData:" destination="lSv-Ve-pPP" eventType="touchUpInside" id="X21-Eb-UOy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuK-d5-BIz" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuK-d5-BIz" customClass="SubButton" customModule="GB_1640_Shop" customModuleProvider="target">
                                         <rect key="frame" x="173.5" y="500" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
@@ -451,7 +449,7 @@
                                             <action selector="editUserData:" destination="lSv-Ve-pPP" eventType="touchUpInside" id="BYT-Ri-3uX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-Ie-lBi" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-Ie-lBi" customClass="ExitButton" customModule="GB_1640_Shop" customModuleProvider="target">
                                         <rect key="frame" x="8" y="581" width="398" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Выход"/>
@@ -602,7 +600,7 @@
                                             <constraint firstAttribute="trailing" secondItem="seK-LY-D7F" secondAttribute="trailing" id="mlA-Ch-Dpd"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXR-Ah-TtX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXR-Ah-TtX" customClass="StandartLabel" customModule="GB_1640_Shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="414" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" systemColor="systemBackgroundColor"/>
@@ -619,7 +617,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbD-fY-in9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbD-fY-in9" customClass="StandartButton" customModule="GB_1640_Shop" customModuleProvider="target">
                                         <rect key="frame" x="4" y="306" width="406" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Добавить в корзину" cornerStyle="capsule">
